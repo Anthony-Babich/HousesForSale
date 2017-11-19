@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "539afe44cddddbcb1e99539d11f23c74",
+    "content-hash": "1eacd54f3e62b917b75c51f61ca7dbe6",
     "packages": [
+        {
+            "name": "behat/transliterator",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Behat/Transliterator.git",
+                "reference": "826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c",
+                "reference": "826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "chuyskywalker/rolling-curl": "^3.1",
+                "php-yaoi/php-yaoi": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Behat\\Transliterator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Artistic-1.0"
+            ],
+            "description": "String transliterator",
+            "keywords": [
+                "i18n",
+                "slug",
+                "transliterator"
+            ],
+            "time": "2017-04-04T11:38:05+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.5.0",
@@ -290,16 +334,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.6.2",
+            "version": "v2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "1a4ee83a5a709555f2c6f9057a3aacf892451c7e"
+                "reference": "e3eed9b1facbb0ced3a0995244843a189e7d1b13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1a4ee83a5a709555f2c6f9057a3aacf892451c7e",
-                "reference": "1a4ee83a5a709555f2c6f9057a3aacf892451c7e",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/e3eed9b1facbb0ced3a0995244843a189e7d1b13",
+                "reference": "e3eed9b1facbb0ced3a0995244843a189e7d1b13",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +403,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-08-28T11:02:56+00:00"
+            "time": "2017-11-19T13:38:54+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -782,6 +826,69 @@
             "time": "2017-10-23T18:21:04+00:00"
         },
         {
+            "name": "genemu/form-bundle",
+            "version": "dev-master",
+            "target-dir": "Genemu/Bundle/FormBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/genemu/GenemuFormBundle.git",
+                "reference": "26afe9b06bac280cffc15eb56160a93b11e6a3c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/26afe9b06bac280cffc15eb56160a93b11e6a3c9",
+                "reference": "26afe9b06bac280cffc15eb56160a93b11e6a3c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.8 || ^3.0",
+                "symfony/framework-bundle": "~2.8 || ^3.0",
+                "twig/twig": "~1.14"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "In order to use some form types with Doctrine",
+                "doctrine/mongodb-odm-bundle": "For MongoDB integration",
+                "symfony/finder": "For an image type",
+                "symfony/twig-bridge": "For integration into Twig templates"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Genemu\\Bundle\\FormBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Chauvel",
+                    "email": "olivier@generation-multiple.com"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/genemu/GenemuFormBundle/contributors"
+                },
+                {
+                    "name": "Bilal Amarni",
+                    "email": "bilal.amarni@gmail.com"
+                }
+            ],
+            "description": "Extra form types for your Symfony2 projects",
+            "keywords": [
+                "extra form",
+                "form"
+            ],
+            "time": "2017-06-19T15:54:16+00:00"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -923,6 +1030,57 @@
                 "sql"
             ],
             "time": "2014-01-12T16:20:24+00:00"
+        },
+        {
+            "name": "jms/metadata",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/metadata.git",
+                "reference": "6a06970a10e0a532fb52d3959547123b84a3b3ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/6a06970a10e0a532fb52d3959547123b84a3b3ab",
+                "reference": "6a06970a10e0a532fb52d3959547123b84a3b3ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.0",
+                "symfony/cache": "~3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Metadata\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Class/method/property metadata management in PHP",
+            "keywords": [
+                "annotations",
+                "metadata",
+                "xml",
+                "yaml"
+            ],
+            "time": "2016-12-05T10:18:33+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2103,21 +2261,20 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.4",
+            "version": "v1.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
-                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": ">=5.3.3"
             },
             "require-dev": {
                 "psr/container": "^1.0",
@@ -2127,7 +2284,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "1.35-dev"
                 }
             },
             "autoload": {
@@ -2165,7 +2322,135 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T18:10:31+00:00"
+            "time": "2017-09-27T18:06:46+00:00"
+        },
+        {
+            "name": "vich/uploader-bundle",
+            "version": "1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dustin10/VichUploaderBundle.git",
+                "reference": "5a5f27598ba3885104bce447539b5227704f0aa5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dustin10/VichUploaderBundle/zipball/5a5f27598ba3885104bce447539b5227704f0aa5",
+                "reference": "5a5f27598ba3885104bce447539b5227704f0aa5",
+                "shasum": ""
+            },
+            "require": {
+                "behat/transliterator": "^1.2",
+                "doctrine/annotations": "^1.3",
+                "jms/metadata": "^1.6",
+                "php": "^7.0",
+                "symfony/asset": "^2.8|^3.1",
+                "symfony/dependency-injection": "^2.8|^3.1",
+                "symfony/finder": "^2.8|^3.1",
+                "symfony/framework-bundle": "^2.8|^3.1",
+                "symfony/property-access": "^2.8|^3.1",
+                "symfony/security": "^2.8|^3.1",
+                "symfony/templating": "^2.8|^3.1"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "doctrine/mongodb-odm": "^1.1",
+                "doctrine/orm": "^2.5",
+                "ext-sqlite3": "*",
+                "knplabs/knp-gaufrette-bundle": "^0.4",
+                "matthiasnoback/symfony-dependency-injection-test": "^2.0",
+                "mikey179/vfsstream": "^1.6",
+                "oneup/flysystem-bundle": "^1.7",
+                "phpunit/phpunit": "^6.0",
+                "symfony/browser-kit": "^2.8|^3.1",
+                "symfony/css-selector": "^2.8|^3.1",
+                "symfony/dom-crawler": "^2.8|^3.1",
+                "symfony/form": "^2.8|^3.1",
+                "symfony/twig-bridge": "^2.8.10|^3.1",
+                "symfony/twig-bundle": "^2.8|^3.1",
+                "symfony/validator": "^2.8|^3.1",
+                "symfony/yaml": "^2.8|^3.1"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "doctrine/mongodb-odm-bundle": "*",
+                "doctrine/orm": "^2.5",
+                "doctrine/phpcr-odm": "^1.0",
+                "knplabs/knp-gaufrette-bundle": "^0.4",
+                "liip/imagine-bundle": "^1.7",
+                "symfony/yaml": "^2.8|^3.1",
+                "willdurand/propel-eventdispatcher-bundle": "^1.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vich\\UploaderBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dustin Dobervich",
+                    "email": "ddobervich@gmail.com"
+                }
+            ],
+            "description": "Ease file uploads attached to entities",
+            "homepage": "https://github.com/dustin10/VichUploaderBundle",
+            "keywords": [
+                "file uploads",
+                "upload"
+            ],
+            "time": "2017-07-08T08:10:50+00:00"
+        },
+        {
+            "name": "whiteoctober/breadcrumbs-bundle",
+            "version": "1.2.3",
+            "target-dir": "WhiteOctober/BreadcrumbsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/BreadcrumbsBundle.git",
+                "reference": "a4a7bbc8295b40c92cd91599a5c863cad003ac69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/BreadcrumbsBundle/zipball/a4a7bbc8295b40c92cd91599a5c863cad003ac69",
+                "reference": "a4a7bbc8295b40c92cd91599a5c863cad003ac69",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "~2.0|~3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\BreadcrumbsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rich Sage",
+                    "email": "rich.sage@gmail.com"
+                }
+            ],
+            "description": "A small breadcrumbs bundle for Symfony2",
+            "homepage": "https://github.com/whiteoctober/BreadcrumbsBundle",
+            "keywords": [
+                "breadcrumbs",
+                "symfony"
+            ],
+            "time": "2017-05-31T08:41:22+00:00"
         }
     ],
     "packages-dev": [
@@ -2284,7 +2569,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "genemu/form-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

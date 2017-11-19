@@ -4,18 +4,20 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
         <link rel="stylesheet" href="{{ asset('bundles/house/css/font-awesome.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-select.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-slider.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/main.css') }}">
 
-        <style>
-            section#header{
-                background-image: url({{ asset('bundles/house/img/banner.png') }});
-            }
-        </style>
+        {% block stylesheets %}
+            <style>
+                section#header{
+                    background-image: url({{ asset('bundles/house/img/banner.png') }});
+                }
+            </style>
+        {% endblock %}
 
     </head>
     <body>

@@ -1,28 +1,30 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-3 first-col">
+            <div class="col-xs-12 col-sm-6 col-md-3 first-col">
                 <h5 class="head">contact info</h5>
                 <p><img src="{{ asset('bundles/house/img/logo-footer.png') }}" alt="logo-footer"></p>
-                <p class="desc">We are the leading real estate and rental marketplace dedicated to empowering consumers with data.</p>
-                <p class="address"><i class="fa fa-map-marker text-right" aria-hidden="true"></i> Alanya utlar, Antalya, Turkey</p>
-                <p class="phone"><i class="fa fa-phone text-right" aria-hidden="true"></i>+077-028-73389</p>
-                <p class="mail"><i class="fa fa-envelope text-right" aria-hidden="true"></i>info@realhomes.com</p>
+                <p class="desc"> {{ footerdesc }}</p>
+                <p class="address"><i class="fa fa-map-marker text-right" aria-hidden="true"></i> {{ address }}</p>
+                {% for phone in phones %}
+                    <p class="phone"><i class="fa fa-phone text-right" aria-hidden="true"></i> {{ phone.setting }}</p>
+                {% endfor %}
+                <p class="mail"><i class="fa fa-envelope text-right" aria-hidden="true"></i> {{ email }}</p>
             </div>
-            <div class="col-12 col-md-3 second-col">
+            <div class="col-xs-12 col-sm-6 col-md-3 second-col">
                 <h5 class="head">quick links</h5>
-                <p><a href="#" title="home">home</a></p>
+                <p><a href="{{ path('homepage') }}" title="home">home</a></p>
                 <p><a href="#" title="sale">sale</a></p>
                 <p><a href="#" title="rent">rent</a></p>
-                <p><a href="#" title="contacts">contacts</a></p>
+                <p><a href="{{ path('contact') }}" title="contacts">contacts</a></p>
             </div>
-            <div class="col-12 col-md-3 third-col">
+            <div class="col-xs-12 col-sm-6 col-md-3 third-col">
                 <h5 class="head">
                     facebook <i class="fa fa-facebook" aria-hidden="true"></i>
                 </h5>
                 <div id="facebook"></div>
             </div>
-            <div class="col-12 col-md-3 last-col">
+            <div class="col-xs-12 col-sm-6 col-md-3 last-col">
                 <h5 class="head">
                     twitter <i class="fa fa-twitter" aria-hidden="true"></i>
                 </h5>

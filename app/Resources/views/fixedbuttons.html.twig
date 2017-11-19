@@ -15,7 +15,7 @@
                     <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
                     <p class="modal-title" id="myModalLabel">Use the form below to contact us!</p>
                 </div>
-                {{ form_start(formContactUS, { "action": path("contactus"), "method": "POST", "attr": {"class": "ajaxForm", "id": "contactus"} }) }}
+                {{ form_start(formContactUS, { "action": path('contactus'), "method": "POST", "attr": {"class": "ajaxForm", "id": "contactus"} }) }}
                 {{ form_errors(formContactUS) }}
                     <div class="modal-body">
                         <div class="form-group">

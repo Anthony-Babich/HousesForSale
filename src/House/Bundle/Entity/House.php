@@ -42,6 +42,29 @@ class House
      */
     private $price;
 
+    /**
+     * @var SalesRent
+     *
+     * @ORM\ManyToOne(targetEntity="House\Bundle\Entity\SalesRent", cascade={"persist"})
+     * @ORM\JoinColumn(name="id_sales_rent", referencedColumnName="id")
+     */
+    private $idSalesRent;
+
+    /**
+     * @var Type
+     *
+     * @ORM\ManyToOne(targetEntity="House\Bundle\Entity\Type", cascade={"persist"})
+     * @ORM\JoinColumn(name="id_type", referencedColumnName="id")
+     */
+    private $idType;
+
+    /**
+     * @var Bedrooms
+     *
+     * @ORM\ManyToOne(targetEntity="House\Bundle\Entity\Bedrooms", cascade={"persist"})
+     * @ORM\JoinColumn(name="id_bedrooms", referencedColumnName="id")
+     */
+    private $idBedrooms;
 
     /**
      * Get id
@@ -123,6 +146,62 @@ class House
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * @return SalesRent
+     */
+    public function getIdSalesRent()
+    {
+        return $this->idSalesRent;
+    }
+
+    /**
+     * @param SalesRent $idSalesRent
+     */
+    public function setIdSalesRent(SalesRent $idSalesRent)
+    {
+        $this->idSalesRent = $idSalesRent;
+    }
+
+    /**
+     * @return Type
+     */
+    public function getIdType()
+    {
+        return $this->idType;
+    }
+
+    /**
+     * @param Type $idType
+     */
+    public function setIdType(Type $idType)
+    {
+        $this->idType = $idType;
+    }
+
+    /**
+     * @return Bedrooms
+     */
+    public function getIdBedrooms()
+    {
+        return $this->idBedrooms;
+    }
+
+    /**
+     * @param Bedrooms $idBedrooms
+     */
+    public function setIdBedrooms(Bedrooms $idBedrooms)
+    {
+        $this->idBedrooms = $idBedrooms;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return strval($this->id);
     }
 }
 

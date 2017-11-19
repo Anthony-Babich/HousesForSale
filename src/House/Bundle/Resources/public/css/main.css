@@ -701,9 +701,10 @@ section#property {
     color: #fff; }
 
 section#contact-us-head {
+  margin-top: 20px;
   color: #bcbcbc;
   font-family: "MontserratRegular", serif;
-  font-size: 11px; }
+  font-size: 14px; }
   section#contact-us-head .strike {
     display: block;
     overflow: hidden;
