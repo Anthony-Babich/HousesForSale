@@ -1,0 +1,3 @@
+house:
+    resource: "@HouseBundle/Resources/config/routing.yml"
+    prefix:   /

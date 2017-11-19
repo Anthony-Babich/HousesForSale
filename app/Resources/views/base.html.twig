@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-select.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-slider.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/main.css') }}">
+
+        <style>
+            section#header{
+                background-image: url({{ asset('bundles/house/img/banner.png') }});
+            }
+        </style>
+
+    </head>
+    <body>
+        {% block body %}
+            {% include 'navigation.html.twig' %}
+            {% block header %}
+            {% endblock %}
+
+            {% block main %}
+            {% endblock %}
+
+            {% include 'footer.html.twig' %}
+            {% include 'copyright.html.twig' %}
+            {% include 'fixedbuttons.html.twig' %}
+        {% endblock %}
+
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('bundles/house/js/jquery-3.2.1.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-select.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-slider.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/main.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/ajax.js') }}"></script>
+            <script type="text/javascript" >
+                $("#ex12c").slider({ id: "slider12c", min: 0, max: 100000, range: true, value: [0, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
+            </script>
+            {# map #}
+            <script type="text/javascript">
+                function initMap() {
+                    var uluru = {lat: -25.363, lng: 131.044};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 4,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzz4dGN9I3osPw94Zk8hzr9dDQOJxUMoU&callback=initMap">
+            </script>
+            {# end map #}
+        {% endblock %}
+    </body>
+</html>

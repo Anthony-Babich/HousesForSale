@@ -1,0 +1,8 @@
+homepage:
+    path:     /
+    defaults: { _controller: HouseBundle:Default:index }
+contactus:
+    path:  /contactus
+    defaults: { _controller: "KuhniBundle:ContactUS:index" }
+    requirements:
+        methods:  GET|POST
