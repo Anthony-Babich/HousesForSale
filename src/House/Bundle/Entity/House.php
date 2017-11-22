@@ -383,7 +383,7 @@ class House
     /**
      * @return string
      */
-    public function getSq(): string
+    public function getSq()
     {
         return $this->sq;
     }
@@ -415,7 +415,7 @@ class House
     /**
      * @return int
      */
-    public function getCountBed(): int
+    public function getCountBed()
     {
         return $this->countBed;
     }
