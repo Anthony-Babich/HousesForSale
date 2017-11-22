@@ -41,7 +41,7 @@
             {% block main %}
             {% endblock %}
 
-            {% include 'footer.html.twig' %}
+            {#{% include 'footer.html.twig' %}#}
             {% include 'copyright.html.twig' %}
             {% include 'fixedbuttons.html.twig' %}
         {% endblock %}
@@ -58,8 +58,8 @@
                 for (i = 0; i < rev.length; i++){
                     rev.eq(i).text(rev.eq(i).text().slice(0, 130));
                 }
-                $('input[name="searchorg[price]"]').attr('id', 'ex12c');
-                $("#ex12c").slider({ id: "slider12c", min: 1, max: 100000, range: true, value: [1, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
+//                $('input[name="searchorg[price]"]').attr('id', 'ex12c');
+//                $("#ex12c").slider({ id: "slider12c", min: 1, max: 100000, range: true, value: [1, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
             </script>
             {# end map #}
         {% endblock %}

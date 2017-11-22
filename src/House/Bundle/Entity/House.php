@@ -329,7 +329,7 @@ class House
      */
     public function addImagesSmall(ImagesSmall $array)
     {
-        $this->images[] = $array;
+        $this->imagesSmall[] = $array;
         return $this;
     }
 

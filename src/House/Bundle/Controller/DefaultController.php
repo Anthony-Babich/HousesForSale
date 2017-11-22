@@ -21,27 +21,57 @@ class DefaultController extends Controller
             'email' => $this->getSetting('email'),
             'footerdesc' => $this->getSetting('footer-desc'),
             'homeDescTop' => $this->getSetting('home-desc-top'),
-            'houses' => $this->getHouses(['Buy', 'Rent']),
-            'priceType' => 'Buy',
+            'houses' => $this->getHouses(['Buy', 'Rent', 'Buy+Rent']),
+            'priceType' => ['Buy', 'Rent', 'Buy+Rent'],
         ));
     }
 
     public function ajaxAction(Request $request){
-        $types = $request->get('type');
-        $type = explode(",", $types);
+        $lastType = $request->get('type');
+        $type[] = $lastType;
+        switch ($type[0]){
+            case 'Buy':{
+                $type[] = 'Buy+Rent';
+                break;
+            }
+            case 'Rent':{
+                $type[] = 'Buy+Rent';
+                break;
+            }
+            case 'Buy+Rent':{
+                $type[] = 'Buy';
+                $type[] = 'Rent';
+                break;
+            }
+        }
         return $this->render('homepage/productcontainer.html.twig', array(
             'houses' => $this->getHouses($type),
-            'priceType' => $type[0],
+            'priceType' => $lastType,
         ));
     }
 
     public function loadMoreAjaxAction(Request $request){
-        $types = $request->get('type');
+        $lastType = $request->get('type');
+        $type[] = $request->get('type');
+        switch ($type[0]){
+            case 'Buy':{
+                $type[] = 'Buy+Rent';
+                break;
+            }
+            case 'Rent':{
+                $type[] = 'Buy+Rent';
+                break;
+            }
+            case 'Buy+Rent':{
+                $type[] = 'Buy';
+                $type[] = 'Rent';
+                break;
+            }
+        }
         $offset = $request->get('offset');
-        $type = explode(",", $types);
         return $this->render('homepage/productcontainer.html.twig', array(
             'houses' => $this->getMoreHouses($type, $offset),
-            'priceType' => $type[0],
+            'priceType' => $lastType,
         ));
     }
 
@@ -113,28 +143,17 @@ class DefaultController extends Controller
 
     private function getMoreHouses(array $type, $offset)
     {
-        if (count($type) == 2){
-            return $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
-                ->createQueryBuilder('n')
-                ->select('n')
-                ->orderBy('n.created', 'DESC')
-                ->setFirstResult($offset)
-                ->setMaxResults($offset + 6)
-                ->getQuery()
-                ->getResult();
-        }else{
-            return $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
-                ->createQueryBuilder('n')
-                ->select('n')
-                ->innerJoin('n.idSalesRent', 't')
-                ->orderBy('n.created', 'DESC')
-                ->where('t.title IN (:type)')
-                ->setParameters(array('type' => $type))
-                ->setFirstResult($offset)
-                ->setMaxResults(6)
-                ->getQuery()
-                ->getResult();
-        }
+        return $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
+            ->createQueryBuilder('n')
+            ->select('n')
+            ->innerJoin('n.idSalesRent', 't')
+            ->orderBy('n.created', 'DESC')
+            ->where('t.title IN (:type)')
+            ->setParameters(array('type' => $type))
+            ->setFirstResult($offset)
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult();
     }
 
     private function getSetting($param)

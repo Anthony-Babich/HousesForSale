@@ -11,11 +11,13 @@
         rentActive = $('button#salesRentHome[aria-controls="Rent"]').hasClass('active');
         salesActive = $('button#salesRentHome[aria-controls="Buy"]').hasClass('active');
         if (rentActive && salesActive){
-            myType = 'Buy,Rent'
+            myType = 'Buy+Rent'
         }else if(rentActive){
             myType = 'Rent'
-        }else{
+        }else if(salesActive){
             myType = 'Buy'
+        }else{
+            myType = 'Buy+Rent'
         }
         $('button').attr("disabled", "disabled");
         $.ajax({
@@ -41,18 +43,20 @@
         rentActive = $('button#salesRentHome[aria-controls="Rent"]').hasClass('active');
         salesActive = $('button#salesRentHome[aria-controls="Sales"]').hasClass('active');
         if (rentActive && salesActive){
-            myType = 'Buy,Rent'
+            myType = 'Buy+Rent'
         }else if(rentActive){
             myType = 'Rent'
-        }else{
+        }else if(salesActive){
             myType = 'Buy'
+        }else{
+            myType = 'Buy+Rent'
         }
         $('button').attr("disabled", "disabled");
         if (!inProgress) {
             $.ajax({
                 type: 'post',
                 url: $(this).attr('data-target'),
-                data: {type: myType, 'offset': startFrom},
+                data: {'type': myType, 'offset': startFrom},
                 beforeSend: function() {inProgress = true;}
             }).done(function(result){
                 $('button').removeAttr("disabled", "disabled");
