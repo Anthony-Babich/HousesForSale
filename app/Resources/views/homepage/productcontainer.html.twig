@@ -28,11 +28,13 @@
                 </div>
                 <div class="caption text-left">
                     <h4><a href="{{ path('product', {'name' : house.name}) }}">{{ house.street }}</a></h4>
-                    {% if priceType == 'Buy' %}
-                        <h6>{{ house.priceSale }}</h6>
-                    {% elseif priceType == 'Rent' %}
-                        <h6>{{ house.priceRent }} / {{ 'month'|trans }}</h6>
-                    {% endif %}
+                    <h6>
+                        {% if priceType == 'Buy' %}
+                            {{ house.priceSale }}
+                        {% elseif priceType == 'Rent' %}
+                            {{ house.priceRent }} / {{ 'month'|trans }}
+                        {% endif %}
+                    </h6>
                     <p class="description">{{ house.description }}<a href="{{ path('product', {'name' : house.name}) }}">[more]</a></p>
                     <div class="row icons">
                         {% if house.countBed != 0 %}

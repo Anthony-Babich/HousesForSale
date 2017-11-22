@@ -3,6 +3,7 @@
 namespace House\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * House
@@ -15,6 +16,10 @@ class House
     public function __construct()
     {
         $this->setCreated(new \DateTime());
+        $this->images = new ArrayCollection();
+        $this->imagesSmall = new ArrayCollection();
+        $this->features = new ArrayCollection();
+        $this->adDetails = new ArrayCollection();
     }
 
     /**
