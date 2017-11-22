@@ -28,7 +28,6 @@
                 </div>
                 <div class="caption text-left">
                     <h4><a href="{{ path('product', {'name' : house.name}) }}">{{ house.street }}</a></h4>
-
                     {% if priceType == 'Buy' %}
                         <h6>{{ house.priceSale }}</h6>
                     {% elseif priceType == 'Rent' %}
