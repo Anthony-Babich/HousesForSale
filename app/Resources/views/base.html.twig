@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-select.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-slider.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/slider-pro.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/slick/slick.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/slick/slick-theme.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/main.css') }}">
 
         {% block stylesheets %}
@@ -42,18 +45,21 @@
             <script type="text/javascript" src="{{ asset('bundles/house/js/main.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/ajax.js') }}"></script>
             <script type="text/javascript" >
-                $("#ex12c").slider({ id: "slider12c", min: 0, max: 100000, range: true, value: [0, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
+                $('input[name="searchorg[price]"]').attr('id', 'ex12c');
+                $("#ex12c").slider({ id: "slider12c", min: 1, max: 100000, range: true, value: [1, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
             </script>
-            {# map #}
+            {# end map #}
+        {% endblock %}
+
+        {% block map %}
             <script type="text/javascript">
                 function initMap() {
-                    var uluru = {lat: -25.363, lng: 131.044};
                     var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 4,
-                        center: uluru
+                        zoom: 19,
+                        center: {lat: 36.4878224, lng: 32.0989936}
                     });
                     var marker = new google.maps.Marker({
-                        position: uluru,
+                        position: {lat: 36.487706, lng: 32.09922},
                         map: map
                     });
                 }
@@ -61,7 +67,9 @@
             <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzz4dGN9I3osPw94Zk8hzr9dDQOJxUMoU&callback=initMap">
             </script>
-            {# end map #}
+        {% endblock %}
+
+        {% block ajax %}
         {% endblock %}
     </body>
 </html>

@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    {% include 'Product/header.html.twig' %}
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        section#header{
+            background-image: url({{ asset('bundles/house/img/header-land.png') }});
+            max-height: 190px;
+            min-height: 150px;
+        }
+    </style>
+{% endblock %}
+{% block main %}
+
+    {% include 'Product/products.html.twig' %}
+
+{% endblock %}
+{% block ajax %}
+    <script type="text/javascript" src="{{ asset('bundles/house/slick/slick.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/house/js/jquery.sliderPro.js') }}"></script>
+    <script type="text/javascript" >
+        $( document ).ready(function( $ ) {
+            $('.more-prod').slick({
+                dots: true,
+                infinite: false,
+                arrows: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+            $("#example3").sliderPro({
+                width: 960,
+                height: 500,
+                fade: true,
+                arrows: true,
+                buttons: false,
+                fullScreen: true,
+                shuffle: true,
+                smallSize: 500,
+                mediumSize: 1000,
+                largeSize: 3000,
+                thumbnailArrows: true,
+                autoplay: true,
+                autoplayDelay: 4000
+            });
+        });
+    </script>
+{% endblock %}

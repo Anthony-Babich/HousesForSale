@@ -1,0 +1,35 @@
+<script>
+    var inProgress = false;
+    var startFrom = 8;
+    $('body').on('click', '#loadMoreProd', function (e) {
+        e.preventDefault();
+        sales = $('button#loadMoreProd').attr('data-sale');
+        type = $('button#loadMoreProd').attr('data-type');
+        bed = $('button#loadMoreProd').attr('data-bed');
+
+        $('button').attr("disabled", "disabled");
+        if (!inProgress) {
+            $.ajax({
+                type: 'post',
+                url: $(this).attr('data-target'),
+                data: {sale: sales, type: type, bed: bed, offset: startFrom},
+                beforeSend: function() {inProgress = true;}
+            }).done(function(result){
+                $('button').removeAttr("disabled", "disabled");
+                $('#loadparamproducts').append(result);
+                inProgress = false;
+                startFrom += 8;
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                if (typeof jqXHR.responseJSON !== 'undefined') {
+                    if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                        $('#form_body').html(jqXHR.responseJSON.form);
+                    }
+                    $('.form_error').html(jqXHR.responseJSON.message);
+                } else {
+                    alert(errorThrown);
+                }
+                $('button').removeAttr("disabled", "disabled");
+            });
+        }
+    });
+</script>

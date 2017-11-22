@@ -1,0 +1,75 @@
+<script>
+    var inProgress = false;
+    var startFrom = 6;
+    $('body').on('click', '#salesRentHome', function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active');
+        }else{
+            $(this).addClass('active');
+        }
+        rentActive = $('button#salesRentHome[aria-controls="Rent"]').hasClass('active');
+        salesActive = $('button#salesRentHome[aria-controls="Buy"]').hasClass('active');
+        if (rentActive && salesActive){
+            myType = 'Buy,Rent'
+        }else if(rentActive){
+            myType = 'Rent'
+        }else{
+            myType = 'Buy'
+        }
+        $('button').attr("disabled", "disabled");
+        $.ajax({
+            type: 'post',
+            url: $(this).attr('data-target'),
+            data: {type:myType}
+        }).done(function (data, status) {
+            $('button').removeAttr("disabled", "disabled");
+            $('#product-container').html(data);
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            if (typeof jqXHR.responseJSON !== 'undefined') {
+                if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                    $('#form_body').html(jqXHR.responseJSON.form);
+                }
+                $('.form_error').html(jqXHR.responseJSON.message);
+            } else {
+                alert(errorThrown);
+            }
+            $('button').removeAttr("disabled", "disabled");
+        });
+    }).on('click', '#loadMoreProd', function (e) {
+        e.preventDefault();
+        rentActive = $('button#salesRentHome[aria-controls="Rent"]').hasClass('active');
+        salesActive = $('button#salesRentHome[aria-controls="Sales"]').hasClass('active');
+        if (rentActive && salesActive){
+            myType = 'Buy,Rent'
+        }else if(rentActive){
+            myType = 'Rent'
+        }else{
+            myType = 'Buy'
+        }
+        $('button').attr("disabled", "disabled");
+        if (!inProgress) {
+            $.ajax({
+                type: 'post',
+                url: $(this).attr('data-target'),
+                data: {type: myType, 'offset': startFrom},
+                beforeSend: function() {inProgress = true;}
+            }).done(function(result){
+                $('button').removeAttr("disabled", "disabled");
+                $('#product-container').append(result);
+                inProgress = false;
+                startFrom += 6;
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                if (typeof jqXHR.responseJSON !== 'undefined') {
+                    if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                        $('#form_body').html(jqXHR.responseJSON.form);
+                    }
+                    $('.form_error').html(jqXHR.responseJSON.message);
+                } else {
+                    alert(errorThrown);
+                }
+                $('button').removeAttr("disabled", "disabled");
+            });
+        }
+    });
+</script>

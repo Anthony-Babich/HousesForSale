@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h5>Featured Properties</h5>
+    </div>
+</div>
+{% for feature in features %}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        {% for image in feature.images %}
+                            {% if loop.first %}
+                                {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                <img class="media-object" src="{{ asset(imageSrc) }}" alt="{{ feature.title }}">
+                            {% endif %}
+                        {% endfor %}
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">{{ feature.title }}</h5>
+                    <hr>
+                    <h4><sup>$</sup>
+                        {% if feature.priceSale is not null %}
+                            {{ feature.priceSale }}
+                        {% elseif feature.priceRent is not null %}
+                            {{ feature.priceRent }}
+                        {% endif %}
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

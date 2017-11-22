@@ -1,0 +1,190 @@
+<section id="product">
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-xs-12 col-lg-9">
+                <div class="row marg30">
+                    <div class="col-xs-10">
+                        <h3 style="margin-bottom: 40px; margin-top: 30px; text-transform: uppercase;">
+                            Property for {{ priceType }}
+                        </h3>
+                    </div>
+                </div>
+                <div id="loadparamproducts">
+                    {% include 'Parameter/productcontainer.html.twig' %}
+                </div>
+                <div class="row marg30">
+                    <div class="col-xs-12 text-center">
+                        <button class="btn-orange" data-target="{{ path('loadmoreparam') }}" id="loadMoreProd" data-sale="{{ priceType }}" {% if slug is defined %} data-type="{{ slug }}" {% endif %} {% if last is defined %} data-bed="{{ last }}" {% endif %}>load more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-3">
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<h5>Search</h5>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<div class="input-group">#}
+                            {#<select class="selectpicker" data-size="4" title="Location">#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                            {#</select>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<div class="input-group">#}
+                            {#<select class="selectpicker" data-size="4" title="Location">#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                            {#</select>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<div class="input-group">#}
+                            {#<select class="selectpicker" data-size="4" title="Location">#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                                {#<option>Ketchup</option>#}
+                            {#</select>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<h6>Price:</h6>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row" id="line-price">#}
+                    {#<div class="col-xs-12">#}
+                        {#<input id="ex12c" type="text">#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<button class="btn-orange">search</button>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<hr size="1px" style="width: calc(100% + 38px); margin-left: -20px; border: 1px solid #354c63">#}
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h5>Featured Properties</h5>
+                    </div>
+                </div>
+                {% for feature in features %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        {% for image in feature.images %}
+                                            {% if loop.first %}
+                                                {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                                <img class="media-object" src="{{ asset(imageSrc) }}" alt="{{ feature.title }}">
+                                            {% endif %}
+                                        {% endfor %}
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading">{{ feature.title }}</h5>
+                                    <hr>
+                                    <h4><sup>$</sup>
+                                        {% if feature.priceSale is not null %}
+                                            {{ feature.priceSale }}
+                                        {% elseif feature.priceRent is not null %}
+                                            {{ feature.priceRent }}
+                                        {% endif %}}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {#<div class="container" id="more-prod">#}
+        {#<div class="row">#}
+            {#<div class="col-xs-12">#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-11">#}
+                        {#<h3 class="head">similar properties</h3>#}
+                        {#<p class="p-head">We have Properties in these Areas View a list of Featured Properties.</p>#}
+                        {#<div class="more-prod">#}
+                            {#{% for moreHouse in moreHouses %}#}
+                                {#<div class="col-xs-12 col-sm-6 col-md-4">#}
+                                    {#<div class="thumbnail">#}
+                                        {#<div id="moreHouse{{ loop.index0 }}" class="carousel slide" data-interval="false" data-ride="carousel">#}
+                                            {#<div class="carousel-inner">#}
+                                                {#{% for image in moreHouse.images %}#}
+                                                    {#{% if loop.first %}#}
+                                                        {#<div class="item active">#}
+                                                            {#{% set imageSrc = 'upload/house/' ~ image.imageName %}#}
+                                                            {#<img src="{{ asset(imageSrc) }}" class="img-responsive" alt="{{ moreHouse.title }}">#}
+                                                        {#</div>#}
+                                                    {#{% endif %}#}
+                                                    {#{% if not loop.first %}#}
+                                                        {#<div class="item">#}
+                                                            {#{% set imageSrc = 'upload/house/' ~ image.imageName %}#}
+                                                            {#<img src="{{ asset(imageSrc) }}" class="img-responsive" alt="{{ moreHouse.title }}">#}
+                                                        {#</div>#}
+                                                    {#{% endif %}#}
+                                                {#{% endfor %}#}
+                                            {#</div>#}
+                                            {#<a class="left carousel-control" href="#moreHouse{{ loop.index0 }}" data-slide="prev">#}
+                                                {#<i class="fa fa-angle-left" aria-hidden="true"></i>#}
+                                            {#</a>#}
+                                            {#<a class="right carousel-control" href="#moreHouse{{ loop.index0 }}" data-slide="next">#}
+                                                {#<i class="fa fa-angle-right" aria-hidden="true"></i>#}
+                                            {#</a>#}
+                                        {#</div>#}
+                                        {#<div class="caption text-left">#}
+                                            {#<h4>{{ moreHouse.street }}</h4>#}
+                                            {#{% if priceType == 'Buy' %}#}
+                                                {#<h6>{{ moreHouse.priceSale }}</h6>#}
+                                            {#{% elseif priceType == 'Rent' %}#}
+                                                {#<h6>{{ moreHouse.priceRent }} / mouth</h6>#}
+                                            {#{% endif %}#}
+                                            {#<p class="description">{{ moreHouse.description }}<a href="{{ path('product', {'name' : house.name}) }}">[more]</a></p>#}
+                                            {#<div class="row icons">#}
+                                                {#{% if moreHouse.countBed != 0 %}#}
+                                                    {#<div class="col-xs-3 text-left">#}
+                                                        {#<img src="{{ asset('bundles/house/img/bedroom.png') }}" alt="bedroom"><span>{{ moreHouse.countBed }}</span>#}
+                                                    {#</div>#}
+                                                {#{% endif %}#}
+                                                {#{% if moreHouse.countBath != 0 %}#}
+                                                    {#<div class="col-xs-3 text-center">#}
+                                                        {#<img src="{{ asset('bundles/house/img/bath.png') }}" alt="bath"><span>{{ moreHouse.countBath }}</span>#}
+                                                    {#</div>#}
+                                                {#{% endif %}#}
+                                                {#<div class="col-offset-xs-1 col-xs-5 text-right">#}
+                                                    {#<img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq"><span>{{ moreHouse.sq}} Sq Ft</span>#}
+                                                {#</div>#}
+                                            {#</div>#}
+                                        {#</div>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#{% endfor %}#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+</section>

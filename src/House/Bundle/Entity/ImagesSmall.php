@@ -1,0 +1,156 @@
+<?php
+
+namespace House\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
+/**
+ * ImagesSmall
+ * @Vich\Uploadable
+ *
+ * @ORM\Table(name="images_small")
+ * @ORM\Entity(repositoryClass="House\Bundle\Repository\ImagesSmallRepository")
+ */
+class ImagesSmall
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdated(): \DateTime
+    {
+        return $this->updated;
+    }
+
+    /**
+     * @param \DateTime $updated
+     * @return ImagesSmall
+     */
+    public function setUpdated(\DateTime $updated)
+    {
+        $this->updated = $updated;
+        return $this;
+    }
+
+    /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @Vich\UploadableField(mapping="house", fileNameProperty="imageName", size="imageSize")
+     *
+     * @var File
+     */
+    private $imageFile;
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     * @var string
+     */
+    private $imageName;
+    /**
+     * @ORM\Column(type="integer")
+     *
+     * @var integer
+     */
+    private $imageSize;
+    /**
+     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     */
+    private $updated;
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return ImagesSmall
+     */
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updated = new \DateTimeImmutable();
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param string $imageName
+     *
+     * @return ImagesSmall
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
+    }
+
+    /**
+     * @param integer $imageSize
+     *
+     * @return ImagesSmall
+     */
+    public function setImageSize($imageSize)
+    {
+        $this->imageSize = $imageSize;
+
+        return $this;
+    }
+
+    /**
+     * @return integer|null
+     */
+    public function getImageSize()
+    {
+        return $this->imageSize;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return strval($this->id);
+    }
+}

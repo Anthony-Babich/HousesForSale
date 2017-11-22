@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1eacd54f3e62b917b75c51f61ca7dbe6",
+    "content-hash": "a1e963b42e78bf4754d9a5ab801f2f8a",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2411,17 +2411,17 @@
         },
         {
             "name": "whiteoctober/breadcrumbs-bundle",
-            "version": "1.2.3",
+            "version": "dev-master",
             "target-dir": "WhiteOctober/BreadcrumbsBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/BreadcrumbsBundle.git",
-                "reference": "a4a7bbc8295b40c92cd91599a5c863cad003ac69"
+                "reference": "dee38bf2029e48956d4b28adf84ed7cc84df854b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/BreadcrumbsBundle/zipball/a4a7bbc8295b40c92cd91599a5c863cad003ac69",
-                "reference": "a4a7bbc8295b40c92cd91599a5c863cad003ac69",
+                "url": "https://api.github.com/repos/whiteoctober/BreadcrumbsBundle/zipball/dee38bf2029e48956d4b28adf84ed7cc84df854b",
+                "reference": "dee38bf2029e48956d4b28adf84ed7cc84df854b",
                 "shasum": ""
             },
             "require": {
@@ -2450,7 +2450,7 @@
                 "breadcrumbs",
                 "symfony"
             ],
-            "time": "2017-05-31T08:41:22+00:00"
+            "time": "2017-07-21T07:41:58+00:00"
         }
     ],
     "packages-dev": [
@@ -2570,7 +2570,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "genemu/form-bundle": 20
+        "genemu/form-bundle": 20,
+        "whiteoctober/breadcrumbs-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

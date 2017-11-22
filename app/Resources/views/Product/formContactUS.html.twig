@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h4 class="head">Contact us</h4>
+        {{ form_start(formContactUS, { "action": path('contactus'), "method": "POST", "attr": {"class": "ajaxForm form-group", "id": "contactus"} }) }}
+        {{ form_errors(formContactUS) }}
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                {{ form_row(formContactUS.name) }}
+                {{ form_row(formContactUS.email) }}
+                {{ form_row(formContactUS.phone) }}
+            </div>
+            <div class="col-xs-12 col-md-5">
+                {{ form_row(formContactUS.message) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-left">
+                <button type="submit" class="btn-orange">Send</button>
+            </div>
+        </div>
+        {{ form_rest(formContactUS)}}
+        {{ form_end(formContactUS) }}
+    </div>
+</div>

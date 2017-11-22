@@ -11,61 +11,61 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ path('homepage') }}">Home</a></li>
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sale</a>
+                    <a href="{{ path('parameter', {'parameter': 'Buy'}) }}">Buy</a>
                     <ul class="dropdown-menu multi-level">
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apartament</a>
+                            <a href="{{ path('secondParameter', {'parameter' : 'Buy', 'slug' : 'Apartment'}) }}" class="dropdown-toggle" data-toggle="dropdown">Apartment</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">1+1</a></li>
-                                <li><a href="#">2+1</a></li>
-                                <li><a href="#">3+1</a></li>
-                                <li><a href="#">More then 4</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Apartment', 'last' : 'Studio'}) }}">Studio</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Apartment', 'last' : '1+1'}) }}">1+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Apartment', 'last' : '2+1'}) }}">2+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Apartment', 'last' : '3+1'}) }}">3+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Apartment', 'last' : 'More then 4'}) }}">More then 4</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Villa</a></li>
+                        <li><a href="{{ path('secondParameter', {'parameter' : 'Buy', 'slug' : 'Villa'}) }}">Villa</a></li>
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hotel</a>
+                            <a href="{{ path('secondParameter', {'parameter' : 'Buy', 'slug' : 'Hotel'}) }}" class="dropdown-toggle" data-toggle="dropdown">Hotel</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">1+1</a></li>
-                                <li><a href="#">2+1</a></li>
-                                <li><a href="#">3+1</a></li>
-                                <li><a href="#">More then 4</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Hotel', 'last' : 'Studio'}) }}">Studio</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Hotel', 'last' : '1+1'}) }}">1+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Hotel', 'last' : '2+1'}) }}">2+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Hotel', 'last' : '3+1'}) }}">3+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Buy', 'slug' : 'Hotel', 'last' : 'More then 4'}) }}">More then 4</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Land</a></li>
+                        <li><a href="{{ path('secondParameter', {'parameter' : 'Buy', 'slug' : 'Land'}) }}">Land</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rent</a>
+                    <a href="{{ path('parameter', {'parameter': 'Rent'}) }}" class="dropdown-toggle" data-toggle="dropdown">Rent</a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apartament</a>
+                            <a href="{{ path('secondParameter', {'parameter' : 'Rent', 'slug' : 'Apartment'}) }}" class="dropdown-toggle" data-toggle="dropdown">Apartment</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">1+1</a></li>
-                                <li><a href="#">2+1</a></li>
-                                <li><a href="#">3+1</a></li>
-                                <li><a href="#">More then 4</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Apartment', 'last' : 'Studio'}) }}">Studio</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Apartment', 'last' : '1+1'}) }}">1+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Apartment', 'last' : '2+1'}) }}">2+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Apartment', 'last' : '3+1'}) }}">3+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Apartment', 'last' : 'More then 4'}) }}">More then 4</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Villa</a></li>
+                        <li><a href="{{ path('secondParameter', {'parameter' : 'Rent', 'slug' : 'Villa'}) }}">Villa</a></li>
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hotel</a>
+                            <a href="{{ path('secondParameter', {'parameter' : 'Rent', 'slug' : 'Hotel'}) }}" class="dropdown-toggle" data-toggle="dropdown">Hotel</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">1+1</a></li>
-                                <li><a href="#">2+1</a></li>
-                                <li><a href="#">3+1</a></li>
-                                <li><a href="#">More then 4</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Hotel', 'last' : 'Studio'}) }}">Studio</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Hotel', 'last' : '1+1'}) }}">1+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Hotel', 'last' : '2+1'}) }}">2+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Hotel', 'last' : '3+1'}) }}">3+1</a></li>
+                                <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Hotel', 'last' : 'More then 4'}) }}">More then 4</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">English <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu multi-level">

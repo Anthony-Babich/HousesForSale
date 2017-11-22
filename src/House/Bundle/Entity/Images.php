@@ -36,38 +36,6 @@ class Images
     }
 
     /**
-     * @var House
-     *
-     * @ORM\ManyToOne(targetEntity="House\Bundle\Entity\House", cascade={"persist"})
-     * @ORM\JoinColumn(name="id_house", referencedColumnName="id")
-     */
-    private $idHouse;
-
-    /**
-     * Set idHouse
-     *
-     * @param House $idHouse
-     *
-     * @return Images
-     */
-    public function setIdHouse(House $idHouse)
-    {
-        $this->idHouse = $idHouse;
-
-        return $this;
-    }
-
-    /**
-     * Get idHouse
-     *
-     * @return House
-     */
-    public function getIdHouse()
-    {
-        return $this->idHouse;
-    }
-
-    /**
      * @return \DateTime
      */
     public function getUpdated(): \DateTime
@@ -88,7 +56,7 @@ class Images
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      *
-     * @Vich\UploadableField(mapping="kuhni", fileNameProperty="imageName", size="imageSize")
+     * @Vich\UploadableField(mapping="house", fileNameProperty="imageName", size="imageSize")
      *
      * @var File
      */

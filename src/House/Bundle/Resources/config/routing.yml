@@ -11,3 +11,26 @@ contact:
     defaults: { _controller: "HouseBundle:Default:contact" }
     requirements:
         methods:  GET|POST
+salesrenthome:
+    path:  /salesrenthome
+    defaults: { _controller: "HouseBundle:Default:ajax" }
+    requirements:
+        methods:  GET|POST
+loadmoreprod:
+    path:  /loadmoreprod
+    defaults: { _controller: "HouseBundle:Default:loadMoreAjax" }
+    requirements:
+        methods:  GET|POST
+loadmoreparam:
+    path:  /loadmoreparam
+    defaults: { _controller: "HouseBundle:Parameters:loadMoreAjax" }
+    requirements:
+        methods:  GET|POST
+get:
+    resource: "@HouseBundle/Controller/ParametersController.php"
+    type:     annotation
+    requirements:
+        methods:  GET|POST
+product:
+     pattern:  /product/{name}
+     defaults: { _controller: HouseBundle:Product:index }
