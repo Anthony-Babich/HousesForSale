@@ -694,7 +694,8 @@ section#map-container {
       font-family: "MontserratRegular", serif;
       font-size: 13.1px;
       line-height: 1.8em;
-      color: #afb4b5; }
+      color: #afb4b5;
+      word-wrap: break-word; }
     .thumbnail .caption .icons {
       height: 45px;
       margin-top: 30px; }
