@@ -7,13 +7,13 @@
                         {% for image in house.images %}
                             {% if loop.first %}
                                 <div class="item active">
-                                    {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                    {% set imageSrc = '/upload/house/' ~ image.imageName %}
                                     <img src="{{ asset(imageSrc) }}" class="img-responsive" alt="{{ house.title }}">
                                 </div>
                             {% endif %}
                             {% if not loop.first %}
                                 <div class="item">
-                                    {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                    {% set imageSrc = '/upload/house/' ~ image.imageName %}
                                     <img src="{{ asset(imageSrc) }}" class="img-responsive" alt="{{ house.title }}">
                                 </div>
                             {% endif %}

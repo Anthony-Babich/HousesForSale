@@ -8,14 +8,14 @@
                             <div class="sp-slides">
                                 {% for image in house.images %}
                                     <div class="sp-slide">
-                                        {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                        {% set imageSrc = '/upload/house/' ~ image.imageName %}
                                         <img class="sp-image" src="{{ asset(imageSrc) }}"/>
                                     </div>
                                 {% endfor %}
                             </div>
                             <div class="sp-thumbnails">
                                 {% for image in house.imagesSmall %}
-                                    {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                    {% set imageSrc = '/upload/house/' ~ image.imageName %}
                                     <img class="sp-thumbnail" src="{{ asset(imageSrc) }}"/>
                                 {% endfor %}
                             </div>

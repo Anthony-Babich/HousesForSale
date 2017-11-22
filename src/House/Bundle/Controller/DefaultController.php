@@ -22,7 +22,7 @@ class DefaultController extends Controller
             'footerdesc' => $this->getSetting('footer-desc'),
             'homeDescTop' => $this->getSetting('home-desc-top'),
             'houses' => $this->getHouses(['Buy', 'Rent']),
-            'priceType' => 'Sales',
+            'priceType' => 'Buy',
         ));
     }
 

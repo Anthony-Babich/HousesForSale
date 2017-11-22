@@ -11,7 +11,7 @@
                     <a href="{{ path('product', {'name': feature.name}) }}">
                         {% for image in feature.images %}
                             {% if loop.first %}
-                                {% set imageSrc = 'upload/house/' ~ image.imageName %}
+                                {% set imageSrc = '/upload/house/' ~ image.imageName %}
                                 <img class="media-object" src="{{ asset(imageSrc) }}" alt="{{ feature.title }}">
                             {% endif %}
                         {% endfor %}
