@@ -441,7 +441,7 @@ section#product{
 					color: #393b41;
 				}
 			}
-			div.desc{
+			.desc{
 				color: #616566;
 				font-family: $font-regular;
 				font-size: 14px;
@@ -728,6 +728,7 @@ section#product{
 							font-size: 13px;
 							line-height: 1.8em;
 							color: #afb4b5;
+							word-wrap: break-word;
 						}
 						.icons{
 							height: 45px;
@@ -1059,6 +1060,11 @@ footer{
 		}
 	}
 	.third-col{
+		.facebook{
+			height: 300px;
+			overflow: auto;
+			margin-bottom: 40px;
+		}
 		.head{
 			i{
 				color: #3a589e;

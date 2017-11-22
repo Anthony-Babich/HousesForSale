@@ -25,7 +25,15 @@
 
     </head>
     <body>
-        {% block body %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    {% block body %}
             {% include 'navigation.html.twig' %}
             {% block header %}
             {% endblock %}
@@ -46,6 +54,9 @@
             <script type="text/javascript" src="{{ asset('bundles/house/js/main.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/ajax.js') }}"></script>
             <script type="text/javascript" >
+                var productDesc = $('section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption .description');
+                productDesc.text(productDesc.text().slice(0, 120));
+
                 $('input[name="searchorg[price]"]').attr('id', 'ex12c');
                 $("#ex12c").slider({ id: "slider12c", min: 1, max: 100000, range: true, value: [1, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
             </script>

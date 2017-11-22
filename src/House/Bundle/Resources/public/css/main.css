@@ -344,7 +344,7 @@ section#product .container#main .col-xs-12.col-lg-9 {
     font-family: "MontserratRegular", serif;
     font-size: 13px;
     color: #393b41; }
-  section#product .container#main .col-xs-12.col-lg-9 div.desc {
+  section#product .container#main .col-xs-12.col-lg-9 .desc {
     color: #616566;
     font-family: "MontserratRegular", serif;
     font-size: 14px;
@@ -572,7 +572,8 @@ section#product .container#more-prod {
             font-family: "MontserratRegular", serif;
             font-size: 13px;
             line-height: 1.8em;
-            color: #afb4b5; }
+            color: #afb4b5;
+            word-wrap: break-word; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption .icons {
             height: 45px;
             margin-top: 30px; }
@@ -819,6 +820,10 @@ footer {
       text-decoration: unset; }
   footer .second-col p:not(:last-child) {
     border-bottom: 1px solid #74717c; }
+  footer .third-col .facebook {
+    height: 300px;
+    overflow: auto;
+    margin-bottom: 40px; }
   footer .third-col .head i {
     color: #3a589e; }
   footer .last-col .twitter {
