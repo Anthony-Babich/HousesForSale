@@ -1,4 +1,86 @@
 services:
-#    house.example:
-#        class: House\Bundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+  app.admin.adDetails:
+    class: House\Bundle\Admin\AdDetailsAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Основные характеристики", label: "Характеристики" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\AdDetails
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.features:
+    class: House\Bundle\Admin\FeaturesAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Основные характеристики", label: "Особенности" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\Features
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.contactus:
+    class: House\Bundle\Admin\ContactUSAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Форма связи", label: "Связаться с нами" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\ContactUS
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.setting:
+    class: House\Bundle\Admin\SettingsAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Общие настройки", label: "Настройки" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\Settings
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.house:
+    class: House\Bundle\Admin\HouseAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Дома", label: "Дома" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\House
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.images:
+    class: House\Bundle\Admin\ImagesAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Картинки", label: "Большие картинки" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\Images
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.imagessmall:
+    class: House\Bundle\Admin\ImagesSmallAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Картинки", label: "Маленькие картинки" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\ImagesSmall
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  application_sonata_user.admin.user:
+    class: Application\Sonata\UserBundle\Admin\UserAdmin
+    arguments: [~, Application\Sonata\UserBundle\Entity\User, SonataAdminBundle:CRUD]
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Пользователи!!!!!", label: "Пользователи" }
+    calls:
+      - [ setTranslationDomain, [Application\Sonata\UserBundle]]
+    public: true

@@ -7,6 +7,7 @@ parameters:
     locale: en
 
 framework:
+    translator: ~
     secret: '%secret%'
     router:
         resource: '%kernel.root_dir%/config/routing.yml'
@@ -37,11 +38,48 @@ doctrine:
         user: '%database_user%'
         password: '%database_password%'
         charset: UTF8
-
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    HouseBundle:  ~
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~
+                    FOSUserBundle: ~
+sonata_block:
+  default_contexts: [cms]
+  blocks:
+    # Enable the SonataAdminBundle block
+    sonata.admin.block.admin_list:
+      contexts:  [admin]
+    sonata.user.block.menu:  # used to display the menu in profile pages
+    sonata.user.block.account: # used to display menu option (login option)
+    sonata.block.service.text: # used to if you plan to use Sonata user routes
+
+sonata_user:
+  manager_type: orm
+
+fos_user:
+  db_driver:  orm
+  firewall_name:  main
+  user_class:  Application\Sonata\UserBundle\Entity\User
+  from_email:
+    address: '%mailer_user%'
+    sender_name: Anthony
+  group:
+    group_class:  Application\Sonata\UserBundle\Entity\Group
+    group_manager: sonata.user.orm.group_manager
+  service:
+    user_manager: sonata.user.orm.user_manager
+
+sonata_user:
+    manager_type: orm
+
+sonata_admin:
+    show_mosaic_button: false
 
 # Swiftmailer Configuration
 swiftmailer:
