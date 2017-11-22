@@ -11,6 +11,23 @@
     {% include 'homepage/property.html.twig' %}
 
 {% endblock %}
+{% block map %}
+    <script type="text/javascript">
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 19,
+                center: {lat: 36.4878224, lng: 32.0989936}
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 36.487706, lng: 32.09922},
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzz4dGN9I3osPw94Zk8hzr9dDQOJxUMoU&callback=initMap">
+    </script>
+{% endblock %}
 {% block ajax %}
     {% include 'homepage/ajaxHome.html.twig' %}
 {% endblock %}
