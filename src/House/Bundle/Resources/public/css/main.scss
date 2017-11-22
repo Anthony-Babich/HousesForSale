@@ -441,11 +441,13 @@ section#product{
 					color: #393b41;
 				}
 			}
-			p.desc{
+			div.desc{
 				color: #616566;
 				font-family: $font-regular;
 				font-size: 14px;
 				margin-bottom: 30px;
+				-ms-word-wrap: break-word;
+				word-wrap: break-word;
 			}
 			p.desc:last-child{
 				margin-bottom: 10px;
@@ -1064,6 +1066,11 @@ footer{
 		}
 	}
 	.last-col{
+		.twitter{
+			height: 300px;
+			overflow: auto;
+			margin-bottom: 40px;
+		}
 		.head{
 			i{
 				color: #429cd6;

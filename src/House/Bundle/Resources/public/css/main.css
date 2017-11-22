@@ -344,11 +344,13 @@ section#product .container#main .col-xs-12.col-lg-9 {
     font-family: "MontserratRegular", serif;
     font-size: 13px;
     color: #393b41; }
-  section#product .container#main .col-xs-12.col-lg-9 p.desc {
+  section#product .container#main .col-xs-12.col-lg-9 div.desc {
     color: #616566;
     font-family: "MontserratRegular", serif;
     font-size: 14px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word; }
   section#product .container#main .col-xs-12.col-lg-9 p.desc:last-child {
     margin-bottom: 10px; }
   section#product .container#main .col-xs-12.col-lg-9 h4.head {
@@ -819,6 +821,10 @@ footer {
     border-bottom: 1px solid #74717c; }
   footer .third-col .head i {
     color: #3a589e; }
+  footer .last-col .twitter {
+    height: 300px;
+    overflow: auto;
+    margin-bottom: 40px; }
   footer .last-col .head i {
     color: #429cd6; }
 
