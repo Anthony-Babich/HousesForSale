@@ -1,6 +1,12 @@
 homepage:
+    path:     /{_locale}
+    defaults: { _controller: HouseBundle:Default:index }
+    requirements:
+        _locale: en|ru|ar
+homepage_nolang:
     path:     /
     defaults: { _controller: HouseBundle:Default:index }
+
 contactus:
     path:  /contactus
     defaults: { _controller: "HouseBundle:ContactUS:index" }
@@ -32,5 +38,7 @@ get:
     requirements:
         methods:  GET|POST
 product:
-     pattern:  /product/{name}
-     defaults: { _controller: HouseBundle:Product:index }
+    path:  /{_locale}/product/{name}
+    defaults: { _controller: HouseBundle:Product:index }
+    requirements:
+        _locale: en|ru|ar

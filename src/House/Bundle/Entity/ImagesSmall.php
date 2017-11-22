@@ -56,7 +56,7 @@ class ImagesSmall
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      *
-     * @Vich\UploadableField(mapping="house", fileNameProperty="imageName", size="imageSize")
+     * @Vich\UploadableField(mapping="housesmall", fileNameProperty="imageName", size="imageSize")
      *
      * @var File
      */

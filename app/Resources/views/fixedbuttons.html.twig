@@ -12,8 +12,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
-                    <p class="modal-title" id="myModalLabel">Use the form below to contact us!</p>
+                    <h4 class="modal-title" id="myModalLabel">{{ 'contactus'|trans }}</h4>
+                    <p class="modal-title" id="myModalLabel">{{ 'usetheform'|trans }}</p>
                 </div>
                 {{ form_start(formContactUS, { "action": path('contactus'), "method": "POST", "attr": {"class": "ajaxForm", "id": "contactus"} }) }}
                 {{ form_errors(formContactUS) }}

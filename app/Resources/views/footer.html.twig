@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 first-col">
-                <h5 class="head">contact info</h5>
+                <h5 class="head">{{ 'contact.info'|trans }}</h5>
                 <p><img src="{{ asset('bundles/house/img/logo-footer.png') }}" alt="logo-footer"></p>
                 <p class="desc"> {{ footerdesc }}</p>
                 <p class="address"><i class="fa fa-map-marker text-right" aria-hidden="true"></i> {{ address }}</p>
@@ -12,22 +12,18 @@
                 <p class="mail"><i class="fa fa-envelope text-right" aria-hidden="true"></i> {{ email }}</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 second-col">
-                <h5 class="head">quick links</h5>
-                <p><a href="{{ path('homepage') }}" title="home">home</a></p>
-                <p><a href="#" title="sale">buy</a></p>
-                <p><a href="#" title="rent">rent</a></p>
-                <p><a href="{{ path('contact') }}" title="contacts">contacts</a></p>
+                <h5 class="head">{{ 'quicklinks'|trans }}</h5>
+                <p><a href="{{ path('homepage') }}" title="home">{{ 'home'|trans }}</a></p>
+                <p><a href="{{ path('parameter', {'parameter': 'Buy'}) }}" title="Buy">{{ 'buy'|trans }}</a></p>
+                <p><a href="{{ path('parameter', {'parameter': 'Rent'}) }}" title="rent">{{ 'rent'|trans }}</a></p>
+                <p><a href="{{ path('contact') }}" title="contacts">{{ 'contact'|trans }}</a></p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 third-col">
                 <h5 class="head">
                     facebook <i class="fa fa-facebook" aria-hidden="true"></i>
                 </h5>
                 <div id="facebook">
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flayan.emlak&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                        width="100%" height="300px"
-                        style="border:none; overflow:hidden"
-                        scrolling="no" frameborder="0" allowTransparency="true">
-                    </iframe>
+                    <div class="fb-page" data-href="https://www.facebook.com/layan.emlak/" data-tabs="timeline" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/layan.emlak/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/layan.emlak/">‎ليان للعقارات في تركيا‎</a></blockquote></div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 last-col">

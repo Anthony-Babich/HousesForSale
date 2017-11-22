@@ -351,7 +351,7 @@ class House
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -367,7 +367,7 @@ class House
     /**
      * @return string
      */
-    public function getStreet(): string
+    public function getStreet()
     {
         return $this->street;
     }
@@ -399,7 +399,7 @@ class House
     /**
      * @return int
      */
-    public function getCountBath(): int
+    public function getCountBath()
     {
         return $this->countBath;
     }
@@ -564,4 +564,3 @@ class House
         return strval($this->id);
     }
 }
-

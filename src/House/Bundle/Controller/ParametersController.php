@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class ParametersController
  * @package House\Bundle\Controller
- * @Route("/search")
+ * @Route("/{_locale}/search")
  */
 class ParametersController extends Controller
 {

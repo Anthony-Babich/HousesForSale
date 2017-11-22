@@ -7,7 +7,11 @@ parameters:
     locale: en
 
 framework:
-    translator: ~
+    translator:
+        paths:
+            - '%kernel.root_dir%/../src/House/Bundle/Resources/translations'
+#     { fallbacks : [%locale%] }
+    default_locale: en
     secret: '%secret%'
     router:
         resource: '%kernel.root_dir%/config/routing.yml'
@@ -98,6 +102,12 @@ vich_uploader:
     db_driver: orm
     mappings:
         house:
+            uri_prefix:         /web/upload/house
+            upload_destination: %kernel.root_dir%/../web/upload/house
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        housesmall:
             uri_prefix:         /web/upload/house
             upload_destination: %kernel.root_dir%/../web/upload/house
             inject_on_load:     false

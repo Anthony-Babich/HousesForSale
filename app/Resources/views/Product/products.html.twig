@@ -34,7 +34,7 @@
                             {% if house.priceSale is not null %}
                                 {{ house.priceSale }}
                             {% elseif priceType is not null %}
-                                {{ house.priceRent }} / per day
+                                {{ house.priceRent }} / {{ 'month'|trans }}
                             {% endif %}
                         </button>
                         {% if house.sq != 0 %}
@@ -59,7 +59,7 @@
                     <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
                     <div class="row">
                         <div class="col-xs-12 text-left">
-                            <h4 class="head">additional details</h4>
+                            <h4 class="head">{{ 'additionaldetails'|trans }}</h4>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     {% set count = (house.adDetails|length / 2)|round %}
@@ -82,7 +82,7 @@
                 {% if house.features[0] is defined %}
                     <div class="row" id="product-feature">
                         <div class="col-xs-12 text-left">
-                            <h4 class="head">Features</h4>
+                            <h4 class="head">{{ 'features'|trans }}</h4>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     {% set count = (house.features|length / 3)|round %}
@@ -101,7 +101,7 @@
                 <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
                 <div class="row">
                     <div class="col-xs-12" id="location">
-                        <h4 class="head">location</h4>
+                        <h4 class="head">{{ 'location'|trans }}</h4>
                         <div id="map" style="width: 100%; height: 300px;"></div>
                         <div id="buttons">
                             <button>Share this</button>
