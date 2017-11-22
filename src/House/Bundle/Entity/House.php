@@ -320,7 +320,7 @@ class House
      */
     public function getImagesSmall()
     {
-        return $this->images;
+        return $this->imagesSmall;
     }
 
     /**
@@ -339,7 +339,7 @@ class House
      */
     public function removeImagesSmall(ImagesSmall $element)
     {
-        $this->images->removeElement($element);
+        $this->imagesSmall->removeElement($element);
         return $this;
     }
 
