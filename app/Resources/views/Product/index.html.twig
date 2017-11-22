@@ -22,6 +22,9 @@
     <script type="text/javascript" src="{{ asset('bundles/house/js/jquery.sliderPro.js') }}"></script>
     <script type="text/javascript" >
         $( document ).ready(function( $ ) {
+            var rev = $('p.desc');
+            rev.text(rev.text().slice(0, 198));
+
             $('.more-prod').slick({
                 dots: true,
                 infinite: false,

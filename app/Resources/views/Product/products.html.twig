@@ -50,50 +50,54 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 text-left">
-                        <p class="desc">
+                        <div class="desc">
                             {{ house.description }}
-                        </p>
-                    </div>
-                </div>
-                <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
-                <div class="row">
-                    <div class="col-xs-12 text-left">
-                        <h4 class="head">additional details</h4>
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                {% set count = (house.adDetails|length / 2)|round %}
-                                {% for i in 0..count-1 %}
-                                    <tr>
-                                        <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
-                                        <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
-                                        {% if house.adDetails|length > i+count %}
-                                            <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
-                                            <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
-                                        {% endif %}
-                                    </tr>
-                                {% endfor %}
-                            </table>
                         </div>
                     </div>
                 </div>
-                <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
-                <div class="row" id="product-feature">
-                    <div class="col-xs-12 text-left">
-                        <h4 class="head">Features</h4>
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                {% set count = (house.features|length / 3)|round %}
-                                {% for i in 0..count-1 %}
-                                    <tr>
-                                        <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>
-                                        <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>
-                                        <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
+                {% if house.adDetails[0] is defined %}
+                    <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
+                    <div class="row">
+                        <div class="col-xs-12 text-left">
+                            <h4 class="head">additional details</h4>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    {% set count = (house.adDetails|length / 2)|round %}
+                                    {% for i in 0..count-1 %}
+                                        <tr>
+                                            <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
+                                            <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                            {% if house.adDetails|length > i+count %}
+                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
+                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                            {% endif %}
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endif %}
+                <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
+                {% if house.features[0] is defined %}
+                    <div class="row" id="product-feature">
+                        <div class="col-xs-12 text-left">
+                            <h4 class="head">Features</h4>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    {% set count = (house.features|length / 3)|round %}
+                                    {% for i in 0..count-1 %}
+                                        <tr>
+                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>
+                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>
+                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
                 <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
                 <div class="row">
                     <div class="col-xs-12" id="location">
