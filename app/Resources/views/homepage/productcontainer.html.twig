@@ -29,9 +29,9 @@
                 <div class="caption text-left">
                     <h4><a href="{{ path('product', {'name' : house.name}) }}">{{ house.title }}</a></h4>
                     <h6>$
-                        {% if priceType[0] == 'Buy' %}
+                        {% if priceType == 'Buy' %}
                             {{ house.priceSale }}
-                        {% elseif priceType[0] == 'Rent' %}
+                        {% elseif priceType == 'Rent' %}
                             {{ house.priceRent }} / {{ 'month'|trans }}
                         {% else %}
                             {{ house.priceSale }} / {{ 'month'|trans }}

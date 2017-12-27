@@ -129,7 +129,7 @@ class DefaultController extends Controller
 
     private function getHouses(array $type)
     {
-        return $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
+        $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
             ->createQueryBuilder('n')
             ->select('n')
             ->innerJoin('n.idSalesRent', 't')
@@ -139,6 +139,7 @@ class DefaultController extends Controller
             ->setMaxResults(6)
             ->getQuery()
             ->getResult();
+        return $qb;
     }
 
     private function getMoreHouses(array $type, $offset)

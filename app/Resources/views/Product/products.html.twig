@@ -31,7 +31,7 @@
                 <div class="row" id="price-button">
                     <div class="col-xs-12 text-left">
                         <button class="btn-blue-price">
-                            {% if house.priceSale is not null %}
+                            $ {% if house.priceSale is not null %}
                                 {{ house.priceSale }}
                             {% elseif priceType is not null %}
                                 {{ house.priceRent }} / {{ 'month'|trans }}
