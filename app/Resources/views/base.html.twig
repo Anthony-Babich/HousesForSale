@@ -4,7 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <title>{% block title %}LAYAN REAL ESTATE AGENCY{% endblock %}</title>
+        <title>
+            {% block title %}
+                {% set lan = app.request.getLocale() %}
+                {% if lan == 'en' %}
+                    Layan Real Estate Agency
+                {% elseif lan == 'ru' %}
+                    Агенство Недвижимости ЛАЯН
+                {% else %}
+                    ليان العقارية
+                {% endif %}
+            {% endblock %}
+        </title>
 
         <link rel="stylesheet" href="{{ asset('bundles/house/css/font-awesome.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap.css') }}">

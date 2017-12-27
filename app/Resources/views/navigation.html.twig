@@ -52,7 +52,7 @@
                                 <li><a href="{{ path('lastParameter', {'parameter' : 'Rent', 'slug' : 'Apartment', 'last' : 'More then 4'}) }}">{{ 'morethan'|trans }}</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ path('secondParameter', {'parameter' : 'Rent', 'slug' : 'Villa'}) }}">Villa</a></li>
+                        <li><a href="{{ path('secondParameter', {'parameter' : 'Rent', 'slug' : 'Villa'}) }}">{{ 'villa'|trans }}</a></li>
                         <li class="dropdown-submenu">
                             <a href="{{ path('secondParameter', {'parameter' : 'Rent', 'slug' : 'Hotel'}) }}" class="dropdown-toggle" data-toggle="dropdown">{{ 'hotel'|trans }}</a>
                             <ul class="dropdown-menu">
@@ -67,11 +67,26 @@
                 </li>
                 <li><a href="{{ path('contact') }}">{{ 'contact'|trans }}</a></li>
                 <li>
-                    <a href="{{ path('homepage', {'_locale' : 'en'}) }}" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('bundles/house/img/languages/usa.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> English <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <ul class="dropdown-menu multi-level">
-                        <li><a href="{{ path('homepage', {'_locale' : 'ru'}) }}"><img src="{{ asset('bundles/house/img/languages/ru.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> Русский</a></li>
-                        <li><a href="{{ path('homepage', {'_locale' : 'ar'}) }}"><img src="{{ asset('bundles/house/img/languages/ar.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> العربية </a></li>
-                    </ul>
+                    {% set lan = app.request.getLocale() %}
+                    {% if lan == 'en' %}
+                        <a href="{{ path('homepage', {'_locale' : 'en'}) }}" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('bundles/house/img/languages/usa.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> English <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu multi-level">
+                            <li><a href="{{ path('homepage', {'_locale' : 'ru'}) }}"><img src="{{ asset('bundles/house/img/languages/ru.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> Русский</a></li>
+                            <li><a href="{{ path('homepage', {'_locale' : 'ar'}) }}"><img src="{{ asset('bundles/house/img/languages/ar.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> العربية </a></li>
+                        </ul>
+                    {% elseif lan == 'ru' %}
+                        <a href="{{ path('homepage', {'_locale' : 'ru'}) }}" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('bundles/house/img/languages/ru.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> Русский <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu multi-level">
+                            <li><a href="{{ path('homepage', {'_locale' : 'en'}) }}"><img src="{{ asset('bundles/house/img/languages/usa.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> English</a></li>
+                            <li><a href="{{ path('homepage', {'_locale' : 'ar'}) }}"><img src="{{ asset('bundles/house/img/languages/ar.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> العربية </a></li>
+                        </ul>
+                    {% else %}
+                        <a href="{{ path('homepage', {'_locale' : 'ar'}) }}" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ asset('bundles/house/img/languages/ar.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> العربية <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu multi-level">
+                            <li><a href="{{ path('homepage', {'_locale' : 'ru'}) }}"><img src="{{ asset('bundles/house/img/languages/ru.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> Русский</a></li>
+                            <li><a href="{{ path('homepage', {'_locale' : 'en'}) }}"><img src="{{ asset('bundles/house/img/languages/usa.png') }}" alt="" class="img-circle" style="margin-right: 10px; margin-bottom: 5px;"> English </a></li>
+                        </ul>
+                    {% endif %}
                 </li>
                 <li class="text-center">
                     <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
