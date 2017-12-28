@@ -31,6 +31,8 @@ class ProductController extends Controller
             'formContactUS' => $this->getContactUS(),
             'house' => $house,
             'features' => $this->features(),
+            //продукт на продажу, аренду - для календаря
+            'type' => $parameter,
 
             'similarProperties' => $this->searchSimilarProperties($idType),
 

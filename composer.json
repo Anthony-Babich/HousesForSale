@@ -14,8 +14,10 @@
     },
     "require": {
         "php": ">=7.1",
+        "adesigns/calendar-bundle": "^1.1",
         "doctrine/doctrine-bundle": "~1.4",
         "doctrine/orm": "^2.4.8",
+        "friendsofsymfony/jsrouting-bundle": "1.6.3",
         "friendsofsymfony/rest-bundle": "^2.2",
         "friendsofsymfony/user-bundle": "v2.0.1",
         "genemu/form-bundle": "^3.0@dev",

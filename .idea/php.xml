@@ -62,6 +62,8 @@
       <path value="$PROJECT_DIR$/vendor/sonata-project/user-bundle" />
       <path value="$PROJECT_DIR$/vendor/sonata-project/easy-extends-bundle" />
       <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle" />
+      <path value="$PROJECT_DIR$/vendor/adesigns/calendar-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

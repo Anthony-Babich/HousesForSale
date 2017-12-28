@@ -17,9 +17,45 @@
     {% include 'Product/products.html.twig' %}
 
 {% endblock %}
+
 {% block ajax %}
     <script type="text/javascript" src="{{ asset('bundles/house/slick/slick.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/house/js/jquery.sliderPro.js') }}"></script>
+
+    {% if (type == 'Rent') or (type == 'Buy+Rent')  %}
+        <script type="text/javascript" >
+            $(function () {
+                var date = new Date();
+                var d = date.getDate();
+                var m = date.getMonth();
+                var y = date.getFullYear();
+
+                $('#calendar-holder').fullCalendar({
+                    header: {
+                        left: 'prev',
+                        center: 'title',
+                        right: 'next'
+                    },
+                    lazyFetching: true,
+                    timeFormat: {
+                        agenda: 'h:mmt',
+                        '': 'h:mmt'
+                    },
+                    eventSources: [
+                        {
+                            url: Routing.generate('fullcalendar_loader'),
+                            type: 'POST',
+                            data: {
+                                'type':{{ house.id }}
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+    {% endif %}
+
+
     <script type="text/javascript" >
         $( document ).ready(function( $ ) {
             var rev = $('p.desc');

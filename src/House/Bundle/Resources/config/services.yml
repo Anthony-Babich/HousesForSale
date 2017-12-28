@@ -84,3 +84,10 @@ services:
     calls:
       - [ setTranslationDomain, [Application\Sonata\UserBundle]]
     public: true
+  house.calendar_listener:
+    class: House\Bundle\EventListener\CalendarEventListener
+    arguments:
+        entityManager: "@doctrine.orm.entity_manager"
+    tags:
+      - { name: kernel.event_listener, method: loadEvents, event: calendar.load_events }
+    public: true

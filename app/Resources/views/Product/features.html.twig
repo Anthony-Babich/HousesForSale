@@ -32,13 +32,11 @@
         </div>
     </div>
 {% endfor %}
-<hr>
-<div class="row">
-    <div class="col-xs-12">
+{% if (type == 'Rent') or (type == 'Buy+Rent')  %}
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="calendar-holder"></div>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-
-    </div>
-</div>
+{% endif %}
