@@ -22,8 +22,8 @@ class CalendarEventListener
         $companyEvents = $this->entityManager->getRepository('HouseBundle:RentalDates')->findBy(array('idHouse' => $id));
 
         foreach($companyEvents as $companyEvent) {
-            $start = new \DateTime($companyEvent->getStartDate());
-            $end = new \DateTime($companyEvent->getEndDate());
+            $start = new \DateTime($companyEvent->getStartDateFormat());
+            $end = new \DateTime($companyEvent->getEndDateFormat());
             $eventEntity = new EventEntity('', $start, $end, true);
 
             //optional calendar event settings

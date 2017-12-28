@@ -10,6 +10,17 @@ services:
     calls:
       - [ setTranslationDomain, [House\Bundle]]
     public: true
+  app.admin.addRent:
+    class: House\Bundle\Admin\RentalDatesAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "Дома", label: "Аренда" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\RentalDates
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
   app.admin.features:
     class: House\Bundle\Admin\FeaturesAdmin
     tags:

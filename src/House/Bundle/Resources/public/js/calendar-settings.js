@@ -6,26 +6,21 @@ $(function () {
 
     $('#calendar-holder').fullCalendar({
         header: {
-            left: 'prev, next',
+            left: 'prev',
             center: 'title',
-            right: 'month, basicWeek, basicDay,'
+            right: 'next'
         },
         lazyFetching: true,
         timeFormat: {
-            // for agendaWeek and agendaDay
-            agenda: 'h:mmt',    // 5:00 - 6:30
-
-            // for all other views
-            '': 'h:mmt'         // 7p
+            agenda: 'h:mmt',
+            '': 'h:mmt'
         },
         eventSources: [
             {
                 url: Routing.generate('fullcalendar_loader'),
                 type: 'POST',
                 data: {
-                },
-                error: function() {
-                   alert('There was an error while fetching Google Calendar!');
+
                 }
             }
         ]

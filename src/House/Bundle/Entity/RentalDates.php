@@ -3,6 +3,7 @@
 namespace House\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
 
 /**
  * RentalDates
@@ -12,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class RentalDates
 {
+    public function __construct()
+    {
+        $this->setStartDate(new DateTime());
+        $this->setStartDate(new DateTime());
+        $this->setStartDate(new DateTime());
+    }
+
     /**
      * @var int
      *
@@ -30,16 +38,16 @@ class RentalDates
     private $idHouse;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      *
-     * @ORM\Column(name="start_date", type="datetime")
+     * @ORM\Column(name="start_date", type="datetime", nullable=true)
      */
     private $startDate;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      *
-     * @ORM\Column(name="end_date", type="datetime")
+     * @ORM\Column(name="end_date", type="datetime", nullable=true)
      */
     private $endDate;
 
@@ -56,7 +64,7 @@ class RentalDates
     /**
      * Set startDate
      *
-     * @param \DateTime $startDate
+     * @param DateTime $startDate
      *
      * @return RentalDates
      */
@@ -70,9 +78,19 @@ class RentalDates
     /**
      * Get startDate
      *
-     * @return \DateTime|string
+     * @return DateTime|string|null
      */
     public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return DateTime|string|null
+     */
+    public function getStartDateFormat()
     {
         return $this->startDate->format('Y-m-d H:i:s');
     }
@@ -80,7 +98,7 @@ class RentalDates
     /**
      * Set endDate
      *
-     * @param \DateTime $endDate
+     * @param DateTime $endDate
      *
      * @return RentalDates
      */
@@ -94,9 +112,19 @@ class RentalDates
     /**
      * Get endDate
      *
-     * @return \DateTime|string
+     * @return DateTime|string|null
      */
     public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return DateTime|string|null
+     */
+    public function getEndDateFormat()
     {
         return $this->endDate->format('Y-m-d H:i:s');
     }
