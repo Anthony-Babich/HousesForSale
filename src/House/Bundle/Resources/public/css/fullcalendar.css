@@ -385,6 +385,7 @@ table.fc-border-separate {
 	color: #335272;
 	font-family: "MontserratSemiBold", serif;
 	font-size: 8px;
+	padding-bottom: 10px;
 }
 	
 .fc-border-separate tbody tr.fc-first td,
