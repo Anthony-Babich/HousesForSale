@@ -428,6 +428,12 @@ section#product .container#main .col-xs-12.col-lg-3 {
   padding: 10px 20px;
   font-family: "MontserratExtraLight", serif;
   font-size: 17px; }
+  section#product .container#main .col-xs-12.col-lg-3 hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+    width: calc(100% + 38px);
+    border: 1px solid #354c63; }
   section#product .container#main .col-xs-12.col-lg-3 .row:last-child {
     margin-bottom: 15px; }
   section#product .container#main .col-xs-12.col-lg-3 button:hover, section#product .container#main .col-xs-12.col-lg-3 button:active, section#product .container#main .col-xs-12.col-lg-3 button:focus {

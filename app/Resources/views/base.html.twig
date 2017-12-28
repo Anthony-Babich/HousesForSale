@@ -45,16 +45,16 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     {% block body %}
-            {% include 'navigation.html.twig' %}
+            {#{% include 'navigation.html.twig' %}#}
             {% block header %}
             {% endblock %}
 
             {% block main %}
             {% endblock %}
 
-            {% include 'footer.html.twig' %}
-            {% include 'copyright.html.twig' %}
-            {% include 'fixedbuttons.html.twig' %}
+            {#{% include 'footer.html.twig' %}#}
+            {#{% include 'copyright.html.twig' %}#}
+            {#{% include 'fixedbuttons.html.twig' %}#}
         {% endblock %}
 
         {% block javascripts %}

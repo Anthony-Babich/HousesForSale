@@ -22,96 +22,96 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h3>{{ house.street }}</h3>
-                        <h6 class="address">{{ house.street }}</h6>
-                    </div>
-                </div>
-                <div class="row" id="price-button">
-                    <div class="col-xs-12 text-left">
-                        <button class="btn-blue-price">
-                            $ {% if house.priceSale is not null %}
-                                {{ house.priceSale }}
-                            {% elseif priceType is not null %}
-                                {{ house.priceRent }} / {{ 'month'|trans }}
-                            {% endif %}
-                        </button>
-                        {% if house.sq != 0 %}
-                            <img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq" class="icons"><span>{{ house.sq}} Sq Ft</span>
-                        {% endif %}
-                        {% if house.countBed != 0 %}
-                            <img src="{{ asset('bundles/house/img/bedroom.png') }}" alt="bedroom" class="icons"><span>{{ house.countBed }}</span>
-                        {% endif %}
-                        {% if house.countBath != 0 %}
-                            <img src="{{ asset('bundles/house/img/bath.png') }}" alt="bath" class="icons"><span>{{ house.countBath }}</span>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 text-left">
-                        <div class="desc">
-                            {{ house.description }}
-                        </div>
-                    </div>
-                </div>
-                {% if house.adDetails[0] is defined %}
-                    <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
-                    <div class="row">
-                        <div class="col-xs-12 text-left">
-                            <h4 class="head">{{ 'additionaldetails'|trans }}</h4>
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    {% set count = (house.adDetails|length / 2)|round %}
-                                    {% for i in 0..count-1 %}
-                                        <tr>
-                                            <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
-                                            <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
-                                            {% if house.adDetails|length > i+count %}
-                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
-                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
-                                            {% endif %}
-                                        </tr>
-                                    {% endfor %}
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-                <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
-                {% if house.features[0] is defined %}
-                    <div class="row" id="product-feature">
-                        <div class="col-xs-12 text-left">
-                            <h4 class="head">{{ 'features'|trans }}</h4>
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    {% set count = (house.features|length / 3)|round %}
-                                    {% for i in 0..count-1 %}
-                                        <tr>
-                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>
-                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>
-                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>
-                                        </tr>
-                                    {% endfor %}
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-                <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">
-                <div class="row">
-                    <div class="col-xs-12" id="location">
-                        <h4 class="head">{{ 'location'|trans }}</h4>
-                        <div id="map" style="width: 100%; height: 300px;"></div>
-                        <div id="buttons">
-                            <button>Share this</button>
-                            <button type="button"><i class="fa fa-facebook" aria-hidden="true"></i>facebook</button>
-                            <button type="button"><i class="fa fa-twitter" aria-hidden="true"></i>twitter</button>
-                        </div>
-                    </div>
-                </div>
-                <hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 30px;" width="calc(100%+15px);">
-                {% include 'Product/formContactUS.html.twig' %}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<h3>{{ house.street }}</h3>#}
+                        {#<h6 class="address">{{ house.street }}</h6>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row" id="price-button">#}
+                    {#<div class="col-xs-12 text-left">#}
+                        {#<button class="btn-blue-price">#}
+                            {#$ {% if house.priceSale is not null %}#}
+                                {#{{ house.priceSale }}#}
+                            {#{% elseif priceType is not null %}#}
+                                {#{{ house.priceRent }} / {{ 'month'|trans }}#}
+                            {#{% endif %}#}
+                        {#</button>#}
+                        {#{% if house.sq != 0 %}#}
+                            {#<img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq" class="icons"><span>{{ house.sq}} Sq Ft</span>#}
+                        {#{% endif %}#}
+                        {#{% if house.countBed != 0 %}#}
+                            {#<img src="{{ asset('bundles/house/img/bedroom.png') }}" alt="bedroom" class="icons"><span>{{ house.countBed }}</span>#}
+                        {#{% endif %}#}
+                        {#{% if house.countBath != 0 %}#}
+                            {#<img src="{{ asset('bundles/house/img/bath.png') }}" alt="bath" class="icons"><span>{{ house.countBath }}</span>#}
+                        {#{% endif %}#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12 text-left">#}
+                        {#<div class="desc">#}
+                            {#{{ house.description }}#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#{% if house.adDetails[0] is defined %}#}
+                    {#<hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">#}
+                    {#<div class="row">#}
+                        {#<div class="col-xs-12 text-left">#}
+                            {#<h4 class="head">{{ 'additionaldetails'|trans }}</h4>#}
+                            {#<div class="table-responsive">#}
+                                {#<table class="table table-striped">#}
+                                    {#{% set count = (house.adDetails|length / 2)|round %}#}
+                                    {#{% for i in 0..count-1 %}#}
+                                        {#<tr>#}
+                                            {#<th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>#}
+                                            {#<td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>#}
+                                            {#{% if house.adDetails|length > i+count %}#}
+                                                {#<th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>#}
+                                                {#<td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>#}
+                                            {#{% endif %}#}
+                                        {#</tr>#}
+                                    {#{% endfor %}#}
+                                {#</table>#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#{% endif %}#}
+                {#<hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">#}
+                {#{% if house.features[0] is defined %}#}
+                    {#<div class="row" id="product-feature">#}
+                        {#<div class="col-xs-12 text-left">#}
+                            {#<h4 class="head">{{ 'features'|trans }}</h4>#}
+                            {#<div class="table-responsive">#}
+                                {#<table class="table table-striped">#}
+                                    {#{% set count = (house.features|length / 3)|round %}#}
+                                    {#{% for i in 0..count-1 %}#}
+                                        {#<tr>#}
+                                            {#<td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>#}
+                                            {#<td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>#}
+                                            {#<td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>#}
+                                        {#</tr>#}
+                                    {#{% endfor %}#}
+                                {#</table>#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#{% endif %}#}
+                {#<hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 10px;" width="calc(100%+15px);">#}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12" id="location">#}
+                        {#<h4 class="head">{{ 'location'|trans }}</h4>#}
+                        {#<div id="map" style="width: 100%; height: 300px;"></div>#}
+                        {#<div id="buttons">#}
+                            {#<button>Share this</button>#}
+                            {#<button type="button"><i class="fa fa-facebook" aria-hidden="true"></i>facebook</button>#}
+                            {#<button type="button"><i class="fa fa-twitter" aria-hidden="true"></i>twitter</button>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<hr size="1px" style="color: #dedede; margin-left: -15px; margin-top: 30px;" width="calc(100%+15px);">#}
+                {#{% include 'Product/formContactUS.html.twig' %}#}
             </div>
             <div class="col-xs-12 col-lg-3">
                 {% include 'Product/features.html.twig' %}

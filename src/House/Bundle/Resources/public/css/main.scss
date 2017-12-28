@@ -541,6 +541,13 @@ section#product{
 			}
 		}
 		.col-xs-12.col-lg-3{
+			hr{
+				margin-top: 20px;
+				margin-bottom: 20px;
+				margin-left: -20px;
+				width: calc(100% + 38px);
+				border: 1px solid #354c63;
+			}
 			margin-top: 20px;
 			.row:last-child{
 				margin-bottom: 15px;
