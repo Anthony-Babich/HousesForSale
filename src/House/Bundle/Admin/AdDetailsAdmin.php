@@ -15,10 +15,16 @@ class AdDetailsAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name', TextType::class, array(
-                'label' => 'Название'
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', TextType::class, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', TextType::class, array(
+                'label' => 'Name Ar'
             ))
             ->add('feature', TextType::class, array(
-                'label' => 'Описание'
+                'label' => 'Description'
             ))
         ;
     }
@@ -27,10 +33,16 @@ class AdDetailsAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('name', null, array(
-                'label' => 'Название'
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', null, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', null, array(
+                'label' => 'Name Ar'
             ))
             ->add('feature', null, array(
-                'label' => 'Описание'
+                'label' => 'Description'
             ));
     }
     // Fields to be shown on lists
@@ -38,10 +50,16 @@ class AdDetailsAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('name', null, array(
-                'label' => 'Название'
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', null, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', null, array(
+                'label' => 'Name Ar'
             ))
             ->add('feature', null, array(
-                'label' => 'Описание'
+                'label' => 'Description'
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -55,10 +73,16 @@ class AdDetailsAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('name', null, array(
-                'label' => 'Название'
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', null, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', null, array(
+                'label' => 'Name Ar'
             ))
             ->add('feature', null, array(
-                'label' => 'Описание'
+                'label' => 'Description'
             ));
     }
 }

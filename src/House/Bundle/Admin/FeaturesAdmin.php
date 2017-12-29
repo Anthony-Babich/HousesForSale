@@ -15,7 +15,13 @@ class FeaturesAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name', TextType::class, array(
-                'label' => 'Название'
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', TextType::class, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', TextType::class, array(
+                'label' => 'Name Ar'
             ))
         ;
     }
@@ -24,15 +30,28 @@ class FeaturesAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('name', null, array(
-                'label' => 'Название'
-            ));
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', null, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', null, array(
+                'label' => 'Name Ar'
+            ))
+        ;
     }
     // Fields to be shown on lists
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
             ->add('name', null, array(
-                'label' => 'Название'
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', null, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', null, array(
+                'label' => 'Name Ar'
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -46,7 +65,14 @@ class FeaturesAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('name', null, array(
-                'label' => 'Название'
-            ));
+                'label' => 'Name En'
+            ))
+            ->add('nameRu', null, array(
+                'label' => 'Name Ru'
+            ))
+            ->add('nameAr', null, array(
+                'label' => 'Name Ar'
+            ))
+        ;
     }
 }
