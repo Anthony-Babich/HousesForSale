@@ -4,6 +4,8 @@ namespace House\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Oh\GoogleMapFormTypeBundle\Validator\Constraints as OhAssert;
 
 /**
  * House
@@ -20,6 +22,24 @@ class House
         $this->imagesSmall = new ArrayCollection();
         $this->features = new ArrayCollection();
         $this->adDetails = new ArrayCollection();
+    }
+
+    public function setLatLng($latlng)
+    {
+        $this->setLatitude($latlng['lat']);
+        $this->setLongitude($latlng['lng']);
+        return $this;
+    }
+
+    /**
+     * @Assert\NotBlank()
+     * @OhAssert\LatLng()
+     *
+     * @return array
+     */
+    public function getLatLng()
+    {
+        return array('lat'=>$this->getLatitude(),'lng'=>$this->getLongitude());
     }
 
     /**
@@ -57,14 +77,14 @@ class House
      *
      * @ORM\Column(name="priceRent", type="float")
      */
-    private $priceRent;
+    private $priceRent = 0;
 
     /**
      * @var float
      *
      * @ORM\Column(name="priceSale", type="float")
      */
-    private $priceSale;
+    private $priceSale = 0;
 
     /**
      * @var SalesRent

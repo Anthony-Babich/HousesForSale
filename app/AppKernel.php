@@ -34,6 +34,8 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             //calendar
             new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
+            // Google Map in admin panel
+            new Oh\GoogleMapFormTypeBundle\OhGoogleMapFormTypeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

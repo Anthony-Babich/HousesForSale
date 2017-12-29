@@ -2,6 +2,7 @@
 
 namespace House\Bundle\Admin;
 
+use Oh\GoogleMapFormTypeBundle\Form\Type\GoogleMapType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -28,16 +29,12 @@ class HouseAdmin extends AbstractAdmin
                         'label' => 'Уникальное название на англ. для поиска'
                     ))
                     ->add('priceRent', IntegerType::class, array(
-                        'label' => 'Цена для аренды'
+                        'label' => 'Цена для аренды',
+                        'required' => false
                     ))
                     ->add('priceSale', IntegerType::class, array(
-                        'label' => 'Цена для продажи'
-                    ))
-                    ->add('latitude', TextType::class, array(
-                        'label' => 'Широта'
-                    ))
-                    ->add('longitude', TextType::class, array(
-                        'label' => 'Долгота'
+                        'label' => 'Цена для продажи',
+                        'required' => false
                     ))
                     ->add('countBath', IntegerType::class, array(
                         'label' => 'Количество душевых'
@@ -89,26 +86,26 @@ class HouseAdmin extends AbstractAdmin
             ->end()
 
             ->tab('Картинки')
-            ->with('Большие картинки', array('class' => 'col-xs-12 col-md-6'))
-            ->add('images', 'sonata_type_model', array(
-                'class' => 'HouseBundle:Images',
-                'property' => 'imageName',
-                'multiple' => true,
-                'expanded' => true,
-                'required' => false,
-                'label' => false
-            ))
-            ->end()
-            ->with('Маленькие картинки', array('class' => 'col-xs-12 col-md-6'))
-            ->add('imagesSmall', 'sonata_type_model', array(
-                'class' => 'HouseBundle:ImagesSmall',
-                'property' => 'imageName',
-                'multiple' => true,
-                'expanded' => true,
-                'required' => false,
-                'label' => false
-            ))
-            ->end()
+                ->with('Большие картинки', array('class' => 'col-xs-12 col-md-6'))
+                    ->add('images', 'sonata_type_model', array(
+                        'class' => 'HouseBundle:Images',
+                        'property' => 'imageName',
+                        'multiple' => true,
+                        'expanded' => true,
+                        'required' => false,
+                        'label' => false
+                    ))
+                ->end()
+                ->with('Маленькие картинки', array('class' => 'col-xs-12 col-md-6'))
+                    ->add('imagesSmall', 'sonata_type_model', array(
+                        'class' => 'HouseBundle:ImagesSmall',
+                        'property' => 'imageName',
+                        'multiple' => true,
+                        'expanded' => true,
+                        'required' => false,
+                        'label' => false
+                    ))
+                ->end()
             ->end()
 
             ->tab('Подробная информация и особенности')
@@ -132,6 +129,10 @@ class HouseAdmin extends AbstractAdmin
                 'label' => false
             ))
             ->end()
+            ->end()
+
+            ->tab('Map')
+                ->add('latlng', 'oh_google_maps', array())
             ->end()
         ;
     }

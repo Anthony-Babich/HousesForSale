@@ -21,9 +21,9 @@
                     <h5 class="media-heading">{{ feature.title }}</h5>
                     <hr>
                     <h4><sup>$</sup>
-                        {% if feature.priceSale is not null %}
+                        {% if type == 'Buy'%}
                             {{ feature.priceSale }}
-                        {% elseif feature.priceRent is not null %}
+                        {% else %}
                             {{ feature.priceRent }}
                         {% endif %}
                     </h4>

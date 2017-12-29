@@ -24,16 +24,16 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <h3>{{ house.street }}</h3>
+                        <h3>{{ house.title }}</h3>
                         <h6 class="address">{{ house.street }}</h6>
                     </div>
                 </div>
                 <div class="row" id="price-button">
                     <div class="col-xs-12 text-left">
                         <button class="btn-blue-price">
-                            $ {% if house.priceSale is not null %}
+                            $ {% if type == 'Buy'%}
                                 {{ house.priceSale }}
-                            {% elseif priceType is not null %}
+                            {% else %}
                                 {{ house.priceRent }} / {{ 'month'|trans }}
                             {% endif %}
                         </button>
