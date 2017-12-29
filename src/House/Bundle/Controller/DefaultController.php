@@ -15,6 +15,8 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return $this->render('homepage/index.html.twig', array(
+            'newLng' => $this->get('translator')->getLocale(),
+
             'formContactUS' => $this->getContactUS(),
             'address' => $this->getSetting('address'),
             'phones' => $this->getPhone('phone'),
@@ -23,10 +25,18 @@ class DefaultController extends Controller
             'homeDescTop' => $this->getSetting('home-desc-top'),
             'houses' => $this->getHouses(['Buy', 'Rent', 'Buy+Rent']),
             'priceType' => ['Buy', 'Rent', 'Buy+Rent'],
+
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $this->get('translator')->getLocale()
+            )
         ));
     }
 
     public function ajaxAction(Request $request){
+        $lang = $request->get('lang');
         $lastType = $request->get('type');
         $type[] = $lastType;
         switch ($type[0]){
@@ -46,13 +56,21 @@ class DefaultController extends Controller
         }
         return $this->render('homepage/productcontainer.html.twig', array(
             'houses' => $this->getHouses($type),
+            'newLng' => $lang,
             'priceType' => $lastType,
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $lang
+            )
         ));
     }
 
     public function loadMoreAjaxAction(Request $request){
         $lastType = $request->get('type');
         $type[] = $request->get('type');
+        $lang = $request->get('lang');
         switch ($type[0]){
             case 'Buy':{
                 $type[] = 'Buy+Rent';
@@ -72,6 +90,13 @@ class DefaultController extends Controller
         return $this->render('homepage/productcontainer.html.twig', array(
             'houses' => $this->getMoreHouses($type, $offset),
             'priceType' => $lastType,
+            'newLng' => $lang,
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $lang
+            )
         ));
     }
 
@@ -94,14 +119,14 @@ class DefaultController extends Controller
         $formCostProject = $this->createFormBuilder($costProject)
             ->add('name', TextType::class, array(
                 'attr' => [
-                    'placeholder' => 'Your Name',
+                    'placeholder' => $this->get('translator')->trans('yourname', array(), 'messages', $language),
                     'class' => 'form-control'
                 ],
                 'label' => false
             ))
             ->add('email', EmailType::class, array(
                 'attr' => [
-                    'placeholder' => 'Your E-mail',
+                    'placeholder' => $this->get('translator')->trans('youremail', array(), 'messages', $language),
                     'class' => 'form-control',
                 ],
                 'required' => false,
@@ -110,14 +135,14 @@ class DefaultController extends Controller
             ->add('phone', NumberType::class, array(
                 'attr' => [
                     'class' => 'form-control',
-                    'placeholder' => 'Your Phone',
+                    'placeholder' => $this->get('translator')->trans('yournumber', array(), 'messages', $language),
                     'type' => 'tel',
                 ],
                 'label' => false,
             ))
             ->add('message', TextAreaType::class, array(
                 'attr' => [
-                    'placeholder' => 'Type your message...',
+                    'placeholder' => $this->get('translator')->trans('typeyoumessage', array(), 'messages', $language),
                     'class' => 'form-control',
                 ],
                 'label' => false,

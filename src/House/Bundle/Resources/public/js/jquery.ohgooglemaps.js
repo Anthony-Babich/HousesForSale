@@ -2,17 +2,17 @@
 
 	function GoogleMapType(settings, map_el) {
 
-		settings = $.extend( {
+		var settings = $.extend( {
 			  'search_input_el'    : null,
 			  'search_action_el'   : null,
 			  'search_error_el'    : null,
 			  'current_position_el': null,
-			  'default_lat'        : '36.4878224',
-			  'default_lng'        : '32.0989936',
-			  'default_zoom'       : 5,
+			  'default_lat'        : '1',
+			  'default_lng'        : '-1',
+			  'default_zoom'       : 10,
 			  'lat_field'          : null,
 			  'lng_field'          : null,
-			  'addr_field'         : null,
+			  'addr_field'         : 'Turkey',
 			  'callback'           : function (location, gmap) {},
 			  'error_callback'     : function(status) {
 			  	$this.settings.search_error_el.text(status);
@@ -30,9 +30,12 @@
 	GoogleMapType.prototype = {
 		initMap : function(center) {
 
-			mapOptions = {
+			var center = new google.maps.LatLng(this.settings.default_lat, this.settings.default_lng);
+
+			var mapOptions = {
 				zoom: this.settings.default_zoom,
-				center: {lat: this.settings.default_lat,lng: this.settings.default_lng}
+				center: center,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
 
 			var $this = this;
@@ -140,12 +143,12 @@
 			this.updateAddress(position);
 		},
 		removeMarker : function () {
-			if(!this.marker){
+			if(this.marker != undefined){
 				this.marker.setMap(null);
 			}
 		}
 
-	};
+	}
 
 	$.fn.ohGoogleMapType = function(settings) {
 
@@ -163,19 +166,20 @@
 	};
 
 	$.fn.ohGoogleMapType.defaultSettings = {
-		'search_input_el'    : null,
-		'search_action_el'   : null,
-		'search_error_el'    : null,
-		'current_position_el': null,
-        'default_lat'        : '36.4878224',
-        'default_lng'        : '32.0989936',
-        'default_zoom'       : 5,
-		'lat_field'          : null,
-		'lng_field'          : null,
-		'addr_field'         : null,
-		'callback'           : function (location, gmap) {},
-		'error_callback'     : function(status) {
-			$this.settings.search_error_el.text(status);
-		}
-	}
+			  'search_input_el'    : null,
+			  'search_action_el'   : null,
+			  'search_error_el'    : null,
+			  'current_position_el': null,
+			  'default_lat'        : '1',
+			  'default_lng'        : '-1',
+			  'default_zoom'       : 10,
+			  'lat_field'          : null,
+			  'lng_field'          : null,
+			  'addr_field'         : null,
+			  'callback'           : function (location, gmap) {},
+			  'error_callback'     : function(status) {
+			  	$this.settings.search_error_el.text(status);
+			  }
+			}
+
 })( jQuery );

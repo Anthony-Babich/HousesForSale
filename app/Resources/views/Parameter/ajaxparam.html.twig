@@ -12,7 +12,13 @@
             $.ajax({
                 type: 'post',
                 url: $(this).attr('data-target'),
-                data: {sale: sales, type: type, bed: bed, offset: startFrom},
+                data: {
+                    sale: sales,
+                    type: type,
+                    bed: bed,
+                    offset: startFrom,
+                    lang: '{{ app.request.getLocale() }}'
+                },
                 beforeSend: function() {inProgress = true;}
             }).done(function(result){
                 $('button').removeAttr("disabled", "disabled");

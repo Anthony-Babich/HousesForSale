@@ -18,14 +18,33 @@ class ProductController extends Controller
         $parameter = $house->getIdSalesRent()->getTitle();
         $slug = $house->getIdType()->getTitle();
         $last = $house->getIdBedrooms()->getTitle();
+        $language = $this->get('translator')->getLocale();
 
         $router = $this->get('router');
         $breadcrumbs = $this->get('white_october_breadcrumbs');
-        $breadcrumbs->addItem('Home', $router->generate('homepage'));
-        $breadcrumbs->addItem($parameter, $router->generate('parameter', [ 'parameter' => $parameter ]));
-        $breadcrumbs->addItem($slug, $router->generate('secondParameter', [ 'parameter' => $parameter, 'slug' => $slug ]));
-        $breadcrumbs->addItem($last, $router->generate('lastParameter', [ 'parameter' => $parameter, 'slug' => $slug, 'last' => $last ]));
-        $breadcrumbs->addItem($house->getTitle());
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans('home', array(), 'messages', $language),
+            $router->generate('homepage')
+        );
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $language),
+            $router->generate('parameter', [ 'parameter' => $parameter ])
+        );
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans(strtolower($slug), array(), 'messages', $language),
+            $router->generate('secondParameter', [ 'parameter' => $parameter, 'slug' => $slug ])
+        );
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans(strtolower($last), array(), 'messages', $language),
+            $router->generate('lastParameter', [ 'parameter' => $parameter, 'slug' => $slug, 'last' => $last ])
+        );
+        if ($language == 'en') {
+            $breadcrumbs->addItem($house->getTitle());
+        }elseif ($language == 'ru') {
+            $breadcrumbs->addItem($house->getTitleRu());
+        }else{
+            $breadcrumbs->addItem($house->getTitleAr());
+        }
 
         return $this->render('Product/index.html.twig', array(
             'formContactUS' => $this->getContactUS(),
@@ -59,17 +78,18 @@ class ProductController extends Controller
     {
         $costProject = new ContactUS();
 
+        $language = $this->get('translator')->getLocale();
         $formCostProject = $this->createFormBuilder($costProject)
             ->add('name', TextType::class, array(
                 'attr' => [
-                    'placeholder' => 'Your Name',
+                    'placeholder' => $this->get('translator')->trans('yourname', array(), 'messages', $language),
                     'class' => 'form-control input-contact-us'
                 ],
                 'label' => false
             ))
             ->add('email', EmailType::class, array(
                 'attr' => [
-                    'placeholder' => 'Your E-mail',
+                    'placeholder' => $this->get('translator')->trans('youremail', array(), 'messages', $language),
                     'class' => 'form-control input-contact-us',
                 ],
                 'required' => false,
@@ -78,14 +98,14 @@ class ProductController extends Controller
             ->add('phone', NumberType::class, array(
                 'attr' => [
                     'class' => 'form-control input-contact-us',
-                    'placeholder' => 'Your Phone',
+                    'placeholder' => $this->get('translator')->trans('yournumber', array(), 'messages', $language),
                     'type' => 'tel',
                 ],
                 'label' => false,
             ))
             ->add('message', TextAreaType::class, array(
                 'attr' => [
-                    'placeholder' => 'Type your message...',
+                    'placeholder' => $this->get('translator')->trans('typeyoumessage', array(), 'messages', $language),
                     'class' => 'form-control input-contact-us textarea',
                     'min' => 5,
                     'max' => 999,

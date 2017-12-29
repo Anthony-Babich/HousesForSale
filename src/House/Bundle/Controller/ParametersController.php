@@ -27,16 +27,20 @@ class ParametersController extends Controller
     {
         $router = $this->get('router');
         $breadcrumbs = $this->get('white_october_breadcrumbs');
-        $breadcrumbs->addItem('Home', $router->generate('homepage'));
-        $breadcrumbs->addItem($parameter);
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans('home', array(), 'messages', $this->get('translator')->getLocale()),
+            $router->generate('homepage')
+        );
+        $breadcrumbs->addItem($this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()));
 
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchParameter($parameter),
             'features' => $this->features(),
             'formContactUS' => $this->getContactUS(),
 
+            'newLng' => $this->get('translator')->getLocale(),
             'priceType' => $parameter,
-            'head' => $parameter,
+            'head' => $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()),
             'number' => 0,
 
             'address' => $this->getSetting('address'),
@@ -56,17 +60,25 @@ class ParametersController extends Controller
     {
         $router = $this->get('router');
         $breadcrumbs = $this->get('white_october_breadcrumbs');
-        $breadcrumbs->addItem('Home', $router->generate('homepage'));
-        $breadcrumbs->addItem($parameter, $router->generate('parameter', [ 'parameter' => $parameter ]));
-        $breadcrumbs->addItem($slug);
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans('home', array(), 'messages', $this->get('translator')->getLocale()),
+            $router->generate('homepage')
+        );
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()),
+            $router->generate('parameter', [ 'parameter' => $parameter ])
+        );
+        $breadcrumbs->addItem($this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale()));
 
-        $head = $parameter . ' ' . $slug;
+        $head = $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale())
+            . ' ' . $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale());
 
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchSecondParameter($parameter, $slug),
             'features' => $this->features(),
             'formContactUS' => $this->getContactUS(),
 
+            'newLng' => $this->get('translator')->getLocale(),
             'priceType' => $parameter,
             'slug' => $slug,
             'head' => $head,
@@ -90,18 +102,30 @@ class ParametersController extends Controller
     {
         $router = $this->get('router');
         $breadcrumbs = $this->get('white_october_breadcrumbs');
-        $breadcrumbs->addItem('Home', $router->generate('homepage'));
-        $breadcrumbs->addItem($parameter, $router->generate('parameter', [ 'parameter' => $parameter ]));
-        $breadcrumbs->addItem($slug, $router->generate('secondParameter', [ 'parameter' => $parameter, 'slug' => $slug ]));
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans('home', array(), 'messages', $this->get('translator')->getLocale()),
+            $router->generate('homepage')
+        );
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()),
+            $router->generate('parameter', [ 'parameter' => $parameter ])
+        );
+        $breadcrumbs->addItem(
+            $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale()),
+            $router->generate('secondParameter', [ 'parameter' => $parameter, 'slug' => $slug ])
+        );
         $breadcrumbs->addItem($last);
 
-        $head = $parameter . ' ' . $slug . ' ' . $last;
+        $head = $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale())
+            . ' ' . $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale())
+            . ' ' . $this->get('translator')->trans(strtolower($last), array(), 'messages', $this->get('translator')->getLocale());
 
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchLastParameter($parameter, $slug, $last),
             'features' => $this->features(),
             'formContactUS' => $this->getContactUS(),
 
+            'newLng' => $this->get('translator')->getLocale(),
             'priceType' => $parameter,
             'slug' => $slug,
             'last' => $last,
@@ -124,6 +148,7 @@ class ParametersController extends Controller
         $sale = $request->get('sale');
         $bed = $request->get('bed');
         $offset = $request->get('offset');
+        $lang = $request->get('lang');
 
         if ( isset($_POST['bed']) ){
             $houses = $this->getMoreHouses($offset, $sale, $type, $bed);
@@ -135,6 +160,7 @@ class ParametersController extends Controller
             $houses = $this->getMoreHouses($offset);
         }
         return $this->render('Parameter/productcontainer.html.twig', array(
+            'newLng' => $lang,
             'houses' => $houses,
             'priceType' => $sale,
             'number' => 1000,

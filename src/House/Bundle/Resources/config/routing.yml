@@ -3,10 +3,14 @@ homepage:
     defaults: { _controller: HouseBundle:Default:index }
     requirements:
         _locale: en|ru|ar
+product:
+    path:  /{_locale}/product/{name}
+    defaults: { _controller: HouseBundle:Product:index }
+    requirements:
+        _locale: en|ru|ar
 homepage_nolang:
     path:     /
     defaults: { _controller: HouseBundle:Default:index }
-
 contactus:
     path:  /contactus
     defaults: { _controller: "HouseBundle:ContactUS:index" }
@@ -37,8 +41,3 @@ get:
     type:     annotation
     requirements:
         methods:  GET|POST
-product:
-    path:  /{_locale}/product/{name}
-    defaults: { _controller: HouseBundle:Product:index }
-    requirements:
-        _locale: en|ru|ar

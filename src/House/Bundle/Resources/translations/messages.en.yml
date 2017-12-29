@@ -14,6 +14,7 @@ similar: Similar Properties
 yourname: Your Name
 youremail: Your Email
 yournumber: Your Number
+typeyoumessage: Type your message...
 message: Message
 home: Home
 rent: Rent
@@ -34,3 +35,7 @@ select: Select
 type: Type
 bedrooms: Bedrooms
 land: Land
+ourLatestListings: our latest listings
+sharethis: Share this
+send: Send
+buy+rent: Rent/Buy

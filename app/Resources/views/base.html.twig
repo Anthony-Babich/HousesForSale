@@ -57,7 +57,9 @@
 
             {% include 'footer.html.twig' %}
             {% include 'copyright.html.twig' %}
-            {% include 'fixedbuttons.html.twig' %}
+            {% block fixedbuttons %}
+                {% include 'fixedbuttons.html.twig' %}
+            {% endblock %}
         {% endblock %}
 
         {% block javascripts %}

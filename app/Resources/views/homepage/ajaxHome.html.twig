@@ -23,7 +23,10 @@
         $.ajax({
             type: 'post',
             url: $(this).attr('data-target'),
-            data: {type:myType}
+            data: {
+                'type': myType,
+                'lang': '{{ app.request.getLocale() }}'
+            }
         }).done(function (data, status) {
             $('button').removeAttr("disabled", "disabled");
             $('#product-container').html(data);
@@ -41,7 +44,7 @@
     }).on('click', '#loadMoreProd', function (e) {
         e.preventDefault();
         rentActive = $('button#salesRentHome[aria-controls="Rent"]').hasClass('active');
-        salesActive = $('button#salesRentHome[aria-controls="Sales"]').hasClass('active');
+        salesActive = $('button#salesRentHome[aria-controls="Buy"]').hasClass('active');
         if (rentActive && salesActive){
             myType = 'Buy+Rent'
         }else if(rentActive){
@@ -56,7 +59,11 @@
             $.ajax({
                 type: 'post',
                 url: $(this).attr('data-target'),
-                data: {'type': myType, 'offset': startFrom},
+                data: {
+                    'type': myType,
+                    'offset': startFrom,
+                    'lang': '{{ app.request.getLocale() }}'
+                },
                 beforeSend: function() {inProgress = true;}
             }).done(function(result){
                 $('button').removeAttr("disabled", "disabled");

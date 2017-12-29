@@ -3,9 +3,6 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
 
-parameters:
-    locale: en
-
 framework:
     translator:
         paths:
@@ -99,6 +96,9 @@ genemu_form:
     tinymce: ~
 
 white_october_breadcrumbs: ~
+
+oh_google_map_form_type:
+    api_key: "AIzaSyA0NeKC9z-ySxK6OrDBR9oS2FZWDltgLE0"
 
 vich_uploader:
     db_driver: orm

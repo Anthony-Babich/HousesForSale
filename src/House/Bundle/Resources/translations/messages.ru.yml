@@ -12,8 +12,9 @@ additionaldetails: Дополнительные детали
 bathrooms: Ванные комнаты
 similar: Похожие предложения
 yourname: Ваше Имя
-youremail: Ваше Email
-yournumber: Ваше Номер
+youremail: Ваш Email
+yournumber: Ваш Номер
+typeyoumessage: Введите Ваше сообщение...
 message: Письмо
 home: Главная
 rent: Аренда
@@ -21,7 +22,7 @@ buy: Покупка
 contact: Контакты
 quicklinks: Ссылки
 contact.info: Контактная Информация
-propertiesforsalerent: НЕДВИЖИМОСТЬ В/НА
+propertiesforsalerent: НЕДВИЖИМОСТЬ
 month: день
 price: Цена
 search: Поиск
@@ -34,3 +35,7 @@ select: Выбрать
 type: Тип
 bedrooms: Комнаты
 land: Земля
+ourLatestListings: наши последние объявления
+sharethis: Поделись этим
+send: Отправить
+buy+rent: Аренда/Покупка

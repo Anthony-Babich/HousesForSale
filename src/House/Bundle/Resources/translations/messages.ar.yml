@@ -14,6 +14,7 @@ similar: عقارات مشابهة
 yourname: الاسم
 youremail: الايميل
 yournumber: الرقم
+typeyoumessage: اكتب رسالتك...
 message: الرسالة
 home: الصفحة الرئيسية
 contact: تواصل معنا
@@ -34,3 +35,7 @@ select: اختار
 type: النوع
 bedrooms: غرف نوم
 land: أرض
+ourLatestListings: أحدث قوائمنا
+sharethis: شارك هذا
+send: إرسال
+buy+rent: استئجار / شراء

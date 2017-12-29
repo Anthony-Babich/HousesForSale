@@ -31,10 +31,23 @@ class AdDetails
     /**
      * @var string
      *
+     * @ORM\Column(name="name_ru", type="string", length=255)
+     */
+    private $nameRu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name_ar", type="string", length=255)
+     */
+    private $nameAr;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="feature", type="string", length=255)
      */
     private $feature;
-
 
     /**
      * Get id
@@ -68,6 +81,54 @@ class AdDetails
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set nameRu
+     *
+     * @param string $nameRu
+     *
+     * @return AdDetails
+     */
+    public function setNameRu($nameRu)
+    {
+        $this->nameRu = $nameRu;
+
+        return $this;
+    }
+
+    /**
+     * Get nameRu
+     *
+     * @return string
+     */
+    public function getNameRu()
+    {
+        return $this->nameRu;
+    }
+
+    /**
+     * Set nameAr
+     *
+     * @param string $nameAr
+     *
+     * @return AdDetails
+     */
+    public function setNameAr($nameAr)
+    {
+        $this->nameAr = $nameAr;
+
+        return $this;
+    }
+
+    /**
+     * Get nameAr
+     *
+     * @return string
+     */
+    public function getNameAr()
+    {
+        return $this->nameAr;
     }
 
     /**

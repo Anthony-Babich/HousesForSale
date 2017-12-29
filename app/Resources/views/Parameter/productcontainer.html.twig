@@ -8,13 +8,27 @@
                             {% if loop.first %}
                                 <div class="item active">
                                     {% set imageSrc = '/upload/house/' ~ image.imageName %}
-                                    <img src="{{ asset(imageSrc) }}" class="img-responsive" alt="{{ house.title }}">
+                                    <img src="{{ asset(imageSrc) }}" class="img-responsive" alt="
+                                    {% if newLng == 'en' %}
+                                       {{ house.title }}">
+                                    {% elseif newLng == 'ru' %}
+                                        {{ house.titleRu }}">
+                                    {% else %}
+                                        {{ house.titleAr }}">
+                                    {% endif %}
                                 </div>
                             {% endif %}
                             {% if not loop.first %}
                                 <div class="item">
                                     {% set imageSrc = '/upload/house/' ~ image.imageName %}
-                                    <img src="{{ asset(imageSrc) }}" class="img-responsive" alt="{{ house.title }}">
+                                    <img src="{{ asset(imageSrc) }}" class="img-responsive" alt="
+                                    {% if newLng == 'en' %}
+                                       {{ house.title }}">
+                                    {% elseif newLng == 'ru' %}
+                                        {{ house.titleRu }}">
+                                    {% else %}
+                                        {{ house.titleAr }}">
+                                    {% endif %}
                                 </div>
                             {% endif %}
                         {% endfor %}
@@ -27,15 +41,36 @@
                     </a>
                 </div>
                 <div class="caption text-left">
-                    <h4><a href="{{ path('product', {'name' : house.name}) }}">{{ house.street }}</a></h4>
-                    <h6>
-                        {% if priceType == 'Buy' %}
+                    <h4>
+                        <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">
+                            {% if newLng == 'en' %}
+                                {{ house.title }}
+                            {% elseif newLng == 'ru' %}
+                                {{ house.titleRu }}
+                            {% else %}
+                                {{ house.titleAr }}
+                            {% endif %}
+                        </a>
+                    </h4>
+                    <h6>$
+                        {% if house.idSalesRent.title == 'Buy'  %}
                             {{ house.priceSale }}
-                        {% elseif priceType == 'Rent' %}
-                            {{ house.priceRent }} / per day
+                        {% elseif priceType == 'Buy' %}
+                            {{ house.priceSale }}
+                        {% else %}
+                            {{ house.priceRent }} / {{ 'month'|trans }}
                         {% endif %}
                     </h6>
-                    <p class="description">{{ house.description }}<a href="{{ path('product', {'name' : house.name}) }}">[more]</a></p>
+                    <p class="description">
+                        {% if newLng == 'en' %}
+                            {{ house.description }}
+                        {% elseif newLng == 'ru' %}
+                            {{ house.descriptionRu }}
+                        {% else %}
+                            {{ house.descriptionAr }}
+                        {% endif %}
+                        <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">[more]</a>
+                    </p>
                     <div class="row icons">
                         {% if house.countBed != 0 %}
                             <div class="col-xs-3 text-left">

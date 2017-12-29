@@ -1,3 +1,4 @@
+{% set lan = app.request.getLocale() %}
 <section id="product">
     <div class="container" id="main">
         <div class="row">
@@ -24,14 +25,33 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <h3>{{ house.title }}</h3>
-                        <h6 class="address">{{ house.street }}</h6>
+                        <h3>
+                            {% if lan == 'en' %}
+                                {{ house.title }}
+                            {% elseif lan == 'ru' %}
+                                {{ house.titleRu }}
+                            {% else %}
+                                {{ house.titleAr }}
+                            {% endif %}
+                        </h3>
+                        <h6 class="address">
+                            {% if lan == 'en' %}
+                                {{ house.street }}
+                            {% elseif lan == 'ru' %}
+                                {{ house.streetRu }}
+                            {% else %}
+                                {{ house.streetAr }}
+                            {% endif %}
+                        </h6>
                     </div>
                 </div>
                 <div class="row" id="price-button">
                     <div class="col-xs-12 text-left">
                         <button class="btn-blue-price">
-                            $ {% if type == 'Buy'%}
+                            $
+                            {% if house.idSalesRent.title == 'Buy'  %}
+                                {{ house.priceSale }}
+                            {% elseif type == 'Buy' %}
                                 {{ house.priceSale }}
                             {% else %}
                                 {{ house.priceRent }} / {{ 'month'|trans }}
@@ -51,7 +71,13 @@
                 <div class="row">
                     <div class="col-xs-12 text-left">
                         <div class="desc">
-                            {{ house.description }}
+                            {% if lan == 'en' %}
+                                {{ house.description }}
+                            {% elseif lan == 'ru' %}
+                                {{ house.descriptionRu }}
+                            {% else %}
+                                {{ house.descriptionAr }}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -65,11 +91,27 @@
                                     {% set count = (house.adDetails|length / 2)|round %}
                                     {% for i in 0..count-1 %}
                                         <tr>
-                                            <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
-                                            <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
-                                            {% if house.adDetails|length > i+count %}
-                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
-                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                            {% if lan == 'en' %}
+                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
+                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                                {% if house.adDetails|length > i+count %}
+                                                    <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
+                                                    <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                                {% endif %}
+                                            {% elseif lan == 'ru' %}
+                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i].nameRu }}</th>
+                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                                {% if house.adDetails|length > i+count %}
+                                                    <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].nameRu }}</th>
+                                                    <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                                {% endif %}
+                                            {% else %}
+                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i].nameAr }}</th>
+                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                                {% if house.adDetails|length > i+count %}
+                                                    <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].nameAr }}</th>
+                                                    <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                                {% endif %}
                                             {% endif %}
                                         </tr>
                                     {% endfor %}
@@ -88,9 +130,19 @@
                                     {% set count = (house.features|length / 3)|round %}
                                     {% for i in 0..count-1 %}
                                         <tr>
-                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>
-                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>
-                                            <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>
+                                            {% if lan == 'en' %}
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>
+                                            {% elseif lan == 'ru' %}
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].nameRu }}</td>
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].nameRu }}</td>
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].nameRu }}</td>
+                                            {% else %}
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].nameAr }}</td>
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].nameAr }}</td>
+                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].nameAr }}</td>
+                                            {% endif %}
                                         </tr>
                                     {% endfor %}
                                 </table>
@@ -104,7 +156,7 @@
                         <h4 class="head">{{ 'location'|trans }}</h4>
                         <div id="map" style="width: 100%; height: 300px;"></div>
                         <div id="buttons">
-                            <button>Share this</button>
+                            <button>{{ 'sharethis'|trans }}</button>
                             <button type="button"><i class="fa fa-facebook" aria-hidden="true"></i>facebook</button>
                             <button type="button"><i class="fa fa-twitter" aria-hidden="true"></i>twitter</button>
                         </div>

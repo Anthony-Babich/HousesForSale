@@ -61,9 +61,37 @@ class House
     /**
      * @var string
      *
+     * @ORM\Column(name="title_ru", type="string", length=255)
+     */
+    private $titleRu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title_ar", type="string", length=255)
+     */
+    private $titleAr;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="string", length=3000)
      */
     private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_ru", type="string", length=3000)
+     */
+    private $descriptionRu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_ar", type="string", length=3000)
+     */
+    private $descriptionAr;
 
     /**
      * @var string
@@ -100,6 +128,20 @@ class House
      * @ORM\Column(name="street", type="string", length=255)
      */
     private $street;
+
+    /**
+     * @var string street
+     *
+     * @ORM\Column(name="street_ru", type="string", length=255)
+     */
+    private $streetRu;
+
+    /**
+     * @var string street
+     *
+     * @ORM\Column(name="street_ar", type="string", length=255)
+     */
+    private $streetAr;
 
     /**
      * @var string latitude
@@ -383,10 +425,51 @@ class House
 
     /**
      * @param string $description
+     * @return House
      */
     public function setDescription(string $description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionRu()
+    {
+        return $this->descriptionRu;
+    }
+
+    /**
+     * @param string $descriptionRu
+     * @return House
+     */
+    public function setDescriptionRu(string $descriptionRu)
+    {
+        $this->descriptionRu = $descriptionRu;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionAr()
+    {
+        return $this->descriptionAr;
+    }
+
+    /**
+     * @param string $descriptionAr
+     * @return House
+     */
+    public function setDescriptionAr(string $descriptionAr)
+    {
+        $this->descriptionAr = $descriptionAr;
+
+        return $this;
     }
 
     /**
@@ -399,10 +482,48 @@ class House
 
     /**
      * @param string $street
+     * @return House
      */
     public function setStreet(string $street)
     {
         $this->street = $street;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreetRu()
+    {
+        return $this->streetRu;
+    }
+
+    /**
+     * @param string $streetRu
+     * @return House
+     */
+    public function setStreetRu(string $streetRu)
+    {
+        $this->streetRu = $streetRu;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreetAr()
+    {
+        return $this->streetAr;
+    }
+
+    /**
+     * @param string $streetAr
+     * @return House
+     */
+    public function setStreetAr(string $streetAr)
+    {
+        $this->streetAr = $streetAr;
+        return $this;
     }
 
     /**
@@ -415,10 +536,12 @@ class House
 
     /**
      * @param string $sq
+     * @return House
      */
     public function setSq(string $sq)
     {
         $this->sq = $sq;
+        return $this;
     }
 
     /**
@@ -431,10 +554,12 @@ class House
 
     /**
      * @param int $countBath
+     * @return House
      */
     public function setCountBath(int $countBath)
     {
         $this->countBath = $countBath;
+        return $this;
     }
 
     /**
@@ -447,10 +572,12 @@ class House
 
     /**
      * @param int $countBed
+     * @return House
      */
     public function setCountBed(int $countBed)
     {
         $this->countBed = $countBed;
+        return $this;
     }
 
     /**
@@ -475,6 +602,54 @@ class House
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set titleRu
+     *
+     * @param string $titleRu
+     *
+     * @return House
+     */
+    public function setTitleRu($titleRu)
+    {
+        $this->titleRu = $titleRu;
+
+        return $this;
+    }
+
+    /**
+     * Get titleRu
+     *
+     * @return string
+     */
+    public function getTitleRu()
+    {
+        return $this->titleRu;
+    }
+
+    /**
+     * Set titleAr
+     *
+     * @param string $titleAr
+     *
+     * @return House
+     */
+    public function setTitleAr($titleAr)
+    {
+        $this->titleAr = $titleAr;
+
+        return $this;
+    }
+
+    /**
+     * Get titleAr
+     *
+     * @return string
+     */
+    public function getTitleAr()
+    {
+        return $this->titleAr;
     }
 
     /**
@@ -511,10 +686,12 @@ class House
 
     /**
      * @param float $priceRent
+     * @return House
      */
     public function setPriceRent(float $priceRent)
     {
         $this->priceRent = $priceRent;
+        return $this;
     }
 
     /**
@@ -527,10 +704,12 @@ class House
 
     /**
      * @param float $priceSale
+     * @return House
      */
     public function setPriceSale(float $priceSale)
     {
         $this->priceSale = $priceSale;
+        return $this;
     }
 
     /**
@@ -543,10 +722,12 @@ class House
 
     /**
      * @param SalesRent $idSalesRent
+     * @return House
      */
     public function setIdSalesRent(SalesRent $idSalesRent)
     {
         $this->idSalesRent = $idSalesRent;
+        return $this;
     }
 
     /**
@@ -559,10 +740,12 @@ class House
 
     /**
      * @param Type $idType
+     * @return House
      */
     public function setIdType(Type $idType)
     {
         $this->idType = $idType;
+        return $this;
     }
 
     /**
@@ -575,10 +758,12 @@ class House
 
     /**
      * @param Bedrooms $idBedrooms
+     * @return House
      */
     public function setIdBedrooms(Bedrooms $idBedrooms)
     {
         $this->idBedrooms = $idBedrooms;
+        return $this;
     }
 
     /**
