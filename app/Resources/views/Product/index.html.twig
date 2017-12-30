@@ -106,5 +106,9 @@
                 autoplayDelay: 4000
             });
         });
+        $('.tooltip.tooltip-max.top').css('left', 0);
+        $( window ).resize(function() {
+            $('.tooltip.tooltip-max.top').css('left', 0);
+        });
     </script>
 {% endblock %}
