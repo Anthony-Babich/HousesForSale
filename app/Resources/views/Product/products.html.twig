@@ -49,16 +49,16 @@
                     <div class="col-xs-12 text-left">
                         <button class="btn-blue-price">
                             $
-                            {% if house.idSalesRent.title == 'Buy'  %}
-                                {{ house.priceSale }}
-                            {% elseif type == 'Buy' %}
-                                {{ house.priceSale }}
+                            {% if house.idSalesRent.title == 'Rent'  %}
+                                {{ house.priceRent }} / {{ month }}
+                            {% elseif type == 'Rent' %}
+                                {{ house.priceRent }} / {{ month }}
                             {% else %}
-                                {{ house.priceRent }} / {{ 'month'|trans }}
+                                {{ house.priceSale }}
                             {% endif %}
                         </button>
                         {% if house.sq != 0 %}
-                            <img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq" class="icons"><span>{{ house.sq}} Sq Ft</span>
+                            <img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq" class="icons"><span>{{ house.sq}} m<sup>2</sup></span>
                         {% endif %}
                         {% if house.countBed != 0 %}
                             <img src="{{ asset('bundles/house/img/bedroom.png') }}" alt="bedroom" class="icons"><span>{{ house.countBed }}</span>

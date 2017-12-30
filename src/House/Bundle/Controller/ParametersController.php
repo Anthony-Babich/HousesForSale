@@ -37,9 +37,16 @@ class ParametersController extends Controller
             'search_form' => $searchForm->createView(),
 
             'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
-            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'salesrentGet' => htmlspecialchars($_GET['searchorg']['salesrent']),
             'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
             'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
+
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $this->get('translator')->getLocale()
+            ),
 
             'newLng' => $this->get('translator')->getLocale(),
             'priceType' => 'Buy+Rent',
@@ -80,9 +87,16 @@ class ParametersController extends Controller
             'search_form' => $searchForm->createView(),
 
             'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
-            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'salesrentGet' => htmlspecialchars($_GET['searchorg']['salesrent']),
             'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
             'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
+
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $this->get('translator')->getLocale()
+            ),
 
             'newLng' => $this->get('translator')->getLocale(),
             'type' => $parameter,
@@ -131,9 +145,16 @@ class ParametersController extends Controller
             'search_form' => $searchForm->createView(),
 
             'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
-            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'salesrentGet' => htmlspecialchars($_GET['searchorg']['salesrent']),
             'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
             'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
+
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $this->get('translator')->getLocale()
+            ),
 
             'newLng' => $this->get('translator')->getLocale(),
             'type' => $parameter,
@@ -189,9 +210,16 @@ class ParametersController extends Controller
             'search_form' => $searchForm->createView(),
 
             'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
-            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'salesrentGet' => htmlspecialchars($_GET['searchorg']['salesrent']),
             'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
             'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
+
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $this->get('translator')->getLocale()
+            ),
 
             'newLng' => $this->get('translator')->getLocale(),
             'type' => $parameter,
@@ -218,21 +246,21 @@ class ParametersController extends Controller
         $bed = $request->get('bed');
 
         $bedGet = $request->get('bedGet');
-        $bathGet = $request->get('bathGet');
+        $salerentGet = $request->get('salerent');
         $typeGet = $request->get('typeGet');
         $priceGet = $request->get('priceGet');
 
         $offset = $request->get('offset');
         $lang = $request->get('lang');
 
-        if (!is_null($bedGet)&&!is_null($bathGet)&&!is_null($typeGet)&&!is_null($priceGet)){
-            $houses = $this->getMoreSearchHouse($offset, $bedGet, $bathGet, $typeGet, $priceGet);
+        if (!empty($bedGet)&&!empty($salerentGet)&&!empty($typeGet)&&!empty($priceGet)){
+            $houses = $this->getMoreSearchHouse($offset, $bedGet, $salerentGet, $typeGet, $priceGet);
         }else{
-            if ( isset($_POST['bed']) ){
+            if ( !empty($_POST['bed']) ){
                 $houses = $this->getMoreHouses($offset, $sale, $type, $bed);
-            }elseif ( isset($_POST['type']) ){
+            }elseif ( !empty($_POST['type']) ){
                 $houses = $this->getMoreHouses($offset, $sale, $type);
-            }elseif ( isset($_POST['sale']) ){
+            }elseif ( !empty($_POST['sale']) ){
                 $houses = $this->getMoreHouses($offset, $sale);
             }else{
                 $houses = $this->getMoreHouses($offset);
@@ -244,6 +272,13 @@ class ParametersController extends Controller
             'houses' => $houses,
             'priceType' => $sale,
             'number' => 1000,
+
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $lang
+            ),
         ));
     }
 
@@ -256,22 +291,25 @@ class ParametersController extends Controller
             ->innerJoin('n.idType', 't')
             ->innerJoin('n.idBedrooms', 'b')
             ->orderBy('n.created', 'DESC')
-            ->where('1 = 1');
+            ->where('1 = 1')
+        ;
 
-        if (!is_null($bed)){
+        if (!empty($bed)){
             $qb
-                ->andWhere('b.bed = :bed')
-                ->setParameter('bed', $bed);
+                ->andWhere('b.title LIKE :bed')
+                ->setParameter('bed', '%'.$bed.'%');
         }
-        if (!is_null($type)){
+        if (!empty($type)){
             $qb
-                ->andWhere('t.title = :type')
-                ->setParameter('type', $type);
+                ->andWhere('t.title LIKE :type')
+                ->setParameter('type', '%'.$type.'%');
         }
-        if (!is_null($sale)){
+        if (!empty($sale)){
             $qb
-                ->andWhere('s.title = :sale')
-                ->setParameter('sale', $sale);
+                ->andWhere('(s.title LIKE :buyRent) OR (s.title LIKE :sale)')
+                ->setParameter('buyRent', '%Buy+Rent%')
+                ->setParameter('sale', '%'.$sale.'%')
+            ;
         }
         return $qb->setFirstResult($offset)
             ->setMaxResults(8)
@@ -279,7 +317,7 @@ class ParametersController extends Controller
             ->getResult();
     }
 
-    private function getMoreSearchHouse($offset, $bedGet = null, $bathGet = null, $typeGet = null, $priceGet = null)
+    private function getMoreSearchHouse($offset, $bedGet = null, $salerentGet = null, $typeGet = null, $priceGet = null)
     {
         $price = explode(',', $priceGet);
         $min = $price[0];
@@ -288,20 +326,24 @@ class ParametersController extends Controller
         $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
             ->createQueryBuilder('n')
             ->select('n')
-            ->innerJoin('n.idType', 's')
+            ->innerJoin('n.idSalesRent', 's')
+            ->innerJoin('n.idType', 't')
+            ->innerJoin('n.idBedrooms', 'b')
             ->where('n.priceSale > :min')
             ->andWhere('n.priceSale < :max');
+
         if (!empty($typeGet)){
-            $qb->andWhere('s.id = :type')
+            $qb->andWhere('t.id = :type')
                 ->setParameter('type', $typeGet);
         }
         if (!empty($bedGet)){
-            $qb->andWhere('n.countBed = :bed')
+            $qb->andWhere('b.id = :bed')
                 ->setParameter('bed', $bedGet);
         }
-        if (!empty($bathGet)){
-            $qb->andWhere('n.countBath = :bath')
-                ->setParameter('bath', $bathGet);
+        if (!empty($salerentGet)){
+            $qb->andWhere('(s.title LIKE :buyRent) OR (s.id = :type)')
+                ->setParameter('buyRent', '%Buy+Rent%')
+                ->setParameter('type', $typeGet);
         }
         return $qb
             ->setParameter('min', $min)

@@ -28,6 +28,8 @@ class DefaultController extends Controller
             'address' => $this->getSetting('address'),
             'phones' => $this->getSettingLng('phone'),
             'email' => $this->getSetting('email'),
+            'centerLat' => $this->getSetting('centerLat'),
+            'centerLong' => $this->getSetting('centerLong'),
             'footerdesc' => $this->getSettingLng('footer-desc'),
             'homeDescTop' => $this->getSettingLng('home-desc-top'),
             'houses' => $this->getHouses(['Buy', 'Rent', 'Buy+Rent']),

@@ -53,12 +53,12 @@
                         </a>
                     </h4>
                     <h6>$
-                        {% if house.idSalesRent.title == 'Buy'  %}
-                            {{ house.priceSale }}
-                        {% elseif priceType == 'Buy' %}
-                            {{ house.priceSale }}
+                        {% if house.idSalesRent.title == 'Rent'  %}
+                            {{ house.priceRent }} / {{ month }}
+                        {% elseif priceType == 'Rent' %}
+                            {{ house.priceRent }} / {{ month }}
                         {% else %}
-                            {{ house.priceRent }} / {{ 'month'|trans }}
+                            {{ house.priceSale }}
                         {% endif %}
                     </h6>
                     <p class="description">
@@ -83,7 +83,7 @@
                             </div>
                         {% endif %}
                         <div class="col-offset-xs-1 col-xs-5 text-right">
-                            <img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq"><span>{{ house.sq}} Sq Ft</span>
+                            <img src="{{ asset('bundles/house/img/sq.png') }}" alt="sq"><span>{{ house.sq}} m<sup>2</sup></span>
                         </div>
                     </div>
                 </div>

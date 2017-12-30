@@ -60,6 +60,12 @@ class ProductController extends Controller
             'type' => $parameter,
             'search_form' => $searchForm->createView(),
 
+            'month' => $this->get('translator')->trans(
+                'month',
+                array(),
+                'messages',
+                $this->get('translator')->getLocale()
+            ),
             'similarProperties' => $this->searchSimilarProperties($idType),
 
             'address' => $this->getSetting('address'),

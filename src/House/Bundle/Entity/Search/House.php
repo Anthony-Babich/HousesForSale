@@ -12,7 +12,7 @@ class House
     /**
      * @var string
      */
-    protected $bathrooms;
+    protected $salesrent;
 
     /**
      * @var string
@@ -46,18 +46,18 @@ class House
     /**
      * @return string
      */
-    public function getBathrooms()
+    public function getSalesrent()
     {
-        return $this->bathrooms;
+        return $this->salesrent;
     }
 
     /**
-     * @param string $bathrooms
+     * @param string $salesrent
      * @return House
      */
-    public function setBathrooms(string $bathrooms)
+    public function setSalesrent(string $salesrent)
     {
-        $this->bathrooms = $bathrooms;
+        $this->salesrent = $salesrent;
 
         return $this;
     }

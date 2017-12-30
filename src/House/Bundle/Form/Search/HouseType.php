@@ -22,23 +22,33 @@ class HouseType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add("bedrooms", ChoiceType::class, array(
-                "label" => false,
-                "choices" => $this->getCountBeds(),
-                "attr" => [
+            ->add('bedrooms', EntityType::class, array(
+                'class' => 'HouseBundle:Bedrooms',
+                'required' => false,
+                'label' => false,
+                'placeholder' => 'Select Bedrooms',
+                'attr' => [
                     'class' => 'selectpicker',
                 ],
-                'required' => false,
-                'placeholder' => 'Select Bedrooms'
+                'choice_label' => 'title',
             ))
-            ->add("bathrooms", ChoiceType::class, array(
-                "label" => false,
-                "choices" => $this->getCountBaths(),
-                "attr" => [
+            ->add('salesrent', EntityType::class, array(
+                'class' => 'HouseBundle:SalesRent',
+                'required' => false,
+                'label' => false,
+                'placeholder' => 'Select Status',
+                'query_builder' => function (EntityRepository $er) {
+                    $qb = $er->createQueryBuilder('u');
+                    return
+                        $qb
+                            ->select('u')
+                            ->where('u.title NOT LIKE :salesRent')
+                            ->setParameter('salesRent','%Buy+Rent%');
+                },
+                'attr' => [
                     'class' => 'selectpicker',
                 ],
-                'required' => false,
-                'placeholder' => 'Select Bathrooms'
+                'choice_label' => 'title',
             ))
             ->add('type', EntityType::class, array(
                 'class' => 'HouseBundle:Type',
@@ -64,40 +74,6 @@ class HouseType extends AbstractType
                 'required' => false,
             ))
         ;
-    }
-
-    private function getCountBeds(){
-        $results = $this->entityManager->getRepository('HouseBundle:House')
-            ->createQueryBuilder('e')
-            ->select('e.countBed')
-            ->groupBy('e.countBed')
-            ->orderBy('e.countBed', 'ASC')
-            ->getQuery()
-            ->getResult();
-
-        $businessUnit = array();
-        foreach($results as $bu){
-            $businessUnit[$bu['countBed']] = $bu['countBed'];
-        }
-
-        return $businessUnit;
-    }
-
-    private function getCountBaths(){
-        $results = $this->entityManager->getRepository('HouseBundle:House')
-            ->createQueryBuilder('e')
-            ->select('e.countBath')
-            ->groupBy('e.countBath')
-            ->orderBy('e.countBath', 'ASC')
-            ->getQuery()
-            ->getResult();
-
-        $businessUnit = array();
-        foreach($results as $bu){
-            $businessUnit[$bu['countBath']] = $bu['countBath'];
-        }
-
-        return $businessUnit;
     }
 
     public function getDefaultOptions()
