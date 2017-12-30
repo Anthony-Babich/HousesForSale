@@ -6,15 +6,15 @@
 <div id="form">
     <div class="row">
         <div class="col-xs-12">
-            {{ form_start(search_form, { "action": path('search_product'), "method": "GET", "attr": {"class": "searchProductFormForm", "id": "searchproductform"} }) }}
+            {{ form_start(search_form, { "action": path('search_product'), "method": "GET" }) }}
                 <div class="input-group">
-                    {{ form_row(search_form.bedrooms) }}
-                </div>
-                <div class="input-group">
-                    {{ form_row(search_form.bathrooms)}}
+                    {{ form_row(search_form.salesrent)}}
                 </div>
                 <div class="input-group">
                     {{ form_row(search_form.type)}}
+                </div>
+                <div class="input-group">
+                    {{ form_row(search_form.bedrooms) }}
                 </div>
                 <div id="line-price">
                     {{ form_row(search_form.price)}}
