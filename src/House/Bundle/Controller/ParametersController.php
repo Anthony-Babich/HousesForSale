@@ -417,8 +417,8 @@ class ParametersController extends Controller
             ->select('n')
             ->innerJoin('n.idSalesRent', 's')
             ->orderBy('n.created', 'DESC')
-            ->where('s.title = :idFirst')
-            ->setParameter('idFirst', $parameter)
+            ->where('s.title LIKE :idFirst')
+            ->setParameter('idFirst', '%'.$parameter.'%')
             ->setMaxResults(8)
             ->getQuery()
             ->getResult();
@@ -426,7 +426,7 @@ class ParametersController extends Controller
 
     private function searchProduct(){
         $bedrooms = htmlspecialchars($_GET['searchorg']['bedrooms']);
-        $bathrooms = htmlspecialchars($_GET['searchorg']['bathrooms']);
+        $salesrent = htmlspecialchars($_GET['searchorg']['salesrent']);
         $type = htmlspecialchars($_GET['searchorg']['type']);
         $price = explode(',', htmlspecialchars($_GET['searchorg']['price']));
         $min = $price[0];
@@ -435,20 +435,23 @@ class ParametersController extends Controller
         $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
             ->createQueryBuilder('n')
             ->select('n')
-            ->innerJoin('n.idType', 's')
+            ->innerJoin('n.idSalesRent', 's')
+            ->innerJoin('n.idType', 't')
+            ->innerJoin('n.idBedrooms', 'b')
             ->where('n.priceSale > :min')
             ->andWhere('n.priceSale < :max');
         if (!empty($type)){
-            $qb->andWhere('s.id = :type')
+            $qb->andWhere('t.id = :type')
                 ->setParameter('type', $type);
         }
         if (!empty($bedrooms)){
-            $qb->andWhere('n.countBed = :bed')
+            $qb->andWhere('b.id = :bed')
                 ->setParameter('bed', $bedrooms);
         }
-        if (!empty($bathrooms)){
-            $qb->andWhere('n.countBath = :bath')
-                ->setParameter('bath', $bathrooms);
+        if (!empty($salesrent)){
+            $qb->andWhere('(s.title LIKE :buyRent) OR (s.id = :salesrent)')
+                ->setParameter('buyRent', '%Buy+Rent%')
+                ->setParameter('salesrent', $salesrent);
         }
         return $qb
             ->setParameter('min', $min)
@@ -466,9 +469,9 @@ class ParametersController extends Controller
             ->innerJoin('n.idSalesRent', 's')
             ->innerJoin('n.idType', 't')
             ->orderBy('n.created', 'DESC')
-            ->where('s.title = :idFirst')
-            ->andWhere('t.title = :idSecond')
-            ->setParameters(['idFirst' => $parameter, 'idSecond' => $slug])
+            ->where('s.title LIKE :idFirst')
+            ->andWhere('t.title LIKE :idSecond')
+            ->setParameters(['idFirst' => '%'.$parameter.'%', 'idSecond' => '%'.$slug.'%'])
             ->setMaxResults(8)
             ->getQuery()
             ->getResult();
@@ -482,10 +485,10 @@ class ParametersController extends Controller
             ->innerJoin('n.idType', 't')
             ->innerJoin('n.idBedrooms', 'b')
             ->orderBy('n.created', 'DESC')
-            ->where('s.title = :idFirst')
-            ->andWhere('t.title = :idSecond')
-            ->andWhere('b.title = :idLast')
-            ->setParameters(['idFirst' => $parameter, 'idSecond' => $slug, 'idLast' => $last])
+            ->where('s.title LIKE :idFirst')
+            ->andWhere('t.title LIKE :idSecond')
+            ->andWhere('b.title LIKE :idLast')
+            ->setParameters(['idFirst' => '%'.$parameter.'%', 'idSecond' => '%'.$slug.'%', 'idLast' => '%'.$last.'%'])
             ->setMaxResults(8)
             ->getQuery()
             ->getResult();
