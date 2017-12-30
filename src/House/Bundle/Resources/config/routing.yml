@@ -17,7 +17,7 @@ contactus:
     requirements:
         methods:  GET|POST
 contact:
-    path:  /contact
+    path:  /{_locale}/contact
     defaults: { _controller: "HouseBundle:Default:contact" }
     requirements:
         methods:  GET|POST

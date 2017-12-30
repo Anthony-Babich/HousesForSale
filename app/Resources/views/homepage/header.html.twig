@@ -6,60 +6,35 @@
                 <h1 class="text-left">{{ 'layanrealestate'|trans }}</h1>
             </div>
         </div>
-        {#<div id="form">#}
-            {#<div class="row">#}
-                {#<div class="col-xs-12 col-sm-4">#}
-                    {#<div class="input-group">#}
-                        {#<select class="selectpicker" data-size="4" title="Location">#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                        {#</select>#}
-                    {#</div>#}
-                {#</div>#}
-                {#<div class="col-xs-12 col-sm-4">#}
-                    {#<div class="input-group">#}
-                        {#<select class="selectpicker" data-size="4" title="Status">#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                        {#</select>#}
-                    {#</div>#}
-                {#</div>#}
-                {#<div class="col-xs-12 col-sm-4">#}
-                    {#<div class="input-group">#}
-                        {#<select class="selectpicker" data-size="4" title="Bedrooms">#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                            {#<option>Ketchup</option>#}
-                        {#</select>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</div>#}
-            {#<div class="row" id="price-text">#}
-                {#<div class="col-xs-12">#}
-                    {#<p>Price</p>#}
-                {#</div>#}
-            {#</div>#}
-            {#<div class="row" id="line-price">#}
-                {#<div class="col-xs-12 col-sm-10 text-left">z#}
-                    {#<input id="ex12c" type="text"/>#}
-                {#</div>#}
-                {#<div class="col-xs-12 col-sm-2 text-right">#}
-                    {#<button type="button" class="btn-orange">#}
-                        {#search#}
-                    {#</button>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
+        <div id="form">
+            {{ form_start(search_form, { "action": path('search_product'), "method": "GET", "attr": {"class": "searchProductFormForm", "id": "searchproductform"} }) }}
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="input-group">
+                        {{ form_row(search_form.bedrooms) }}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="input-group">
+                        {{ form_row(search_form.bathrooms)}}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="input-group">
+                        {{ form_row(search_form.type)}}
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="line-price">
+                <div class="col-xs-12 col-sm-10 text-left">
+                    {{ form_row(search_form.price)}}
+                </div>
+                <div class="col-xs-12 col-sm-2 text-right">
+                    <button class="btn-orange" type="submit">{{ 'search'|trans }}</button>
+                </div>
+            </div>
+            {{ form_rest(search_form) }}
+            {{ form_end(search_form) }}
+        </div>
     </div>
 </section>

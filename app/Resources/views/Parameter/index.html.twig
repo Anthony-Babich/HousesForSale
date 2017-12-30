@@ -18,11 +18,14 @@
 
 {% endblock %}
 {% block ajax %}
-    {% include 'Parameter/ajaxparam.html.twig' %}
-    <script type="text/javascript" src="{{ asset('bundles/house/slick/slick.js') }}"></script>
+
     <script type="text/javascript" >
         $( document ).ready(function( $ ) {
-            $("#ex12c").slider({ id: "slider12c", min: 0, max: 100000, range: true, value: [0, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
+            $('input[name="searchorg[price]"]').attr('id', 'ex12c');
+            $("#ex12c").slider({ id: "slider12c", min: 100, max: 1000000, range: true, value: [100, 1000000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
         });
     </script>
+    {% include 'Parameter/ajaxparam.html.twig' %}
+    <script type="text/javascript" src="{{ asset('bundles/house/slick/slick.js') }}"></script>
+
 {% endblock %}

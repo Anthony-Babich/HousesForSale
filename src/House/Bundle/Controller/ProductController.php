@@ -2,6 +2,8 @@
 
 namespace House\Bundle\Controller;
 
+use House\Bundle\Form\Search\HouseType as SearchProductsType;
+use House\Bundle\Entity\Search\House as SearchProducts;
 use House\Bundle\Entity\ContactUS;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -13,6 +15,10 @@ class ProductController extends Controller
 {
     public function indexAction(string $name)
     {
+        $em = $this->getDoctrine()->getEntityManager();
+        $searchProducts = new SearchProducts();
+        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+
         $house = $this->findHouse($name);
         $idType = $house->getIdType()->getId();
         $parameter = $house->getIdSalesRent()->getTitle();
@@ -52,13 +58,14 @@ class ProductController extends Controller
             'features' => $this->features(),
             //продукт на продажу, аренду - для календаря
             'type' => $parameter,
+            'search_form' => $searchForm->createView(),
 
             'similarProperties' => $this->searchSimilarProperties($idType),
 
             'address' => $this->getSetting('address'),
-            'phones' => $this->getPhone('phone'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
+            'phones' => $this->getSettingLng('phones'),
             'email' => $this->getSetting('email'),
-            'footerdesc' => $this->getSetting('footer-desc'),
         ));
     }
 
@@ -71,7 +78,13 @@ class ProductController extends Controller
     private function searchSimilarProperties($idType)
     {
         return $this->getDoctrine()->getManager()->getRepository( 'HouseBundle:House' )
-            ->findByIdType($idType);
+            ->createQueryBuilder('n')
+            ->where('n.idType = :type')
+            ->setParameter('type', $idType)
+            ->setMaxResults(9)
+            ->orderBy('n.created', 'DESC')
+            ->getQuery()
+            ->getResult();
     }
 
     private function getContactUS()
@@ -143,17 +156,15 @@ class ProductController extends Controller
             ->getResult();
     }
 
-    private function getPhone($param)
+    private function getSettingLng($param)
     {
         $trans = $this->get('translator')->getLocale();
-        if ($param == 'phone'){
-            if ($trans == 'ru'){
-                $param .= '-ru';
-            }elseif ($trans == 'en'){
-                $param .= '-en';
-            }elseif ($trans == 'ar'){
-                $param .= '-ar';
-            }
+        if ($trans == 'ru'){
+            $param .= '-ru';
+        }elseif ($trans == 'en'){
+            $param .= '-en';
+        }elseif ($trans == 'ar'){
+            $param .= '-ar';
         }
         $res = $this->getDoctrine()->getManager()->getRepository('HouseBundle:Settings')
             ->createQueryBuilder('n')

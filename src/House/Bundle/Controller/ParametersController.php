@@ -2,6 +2,8 @@
 
 namespace House\Bundle\Controller;
 
+use House\Bundle\Form\Search\HouseType as SearchProductsType;
+use House\Bundle\Entity\Search\House as SearchProducts;
 use House\Bundle\Entity\ContactUS;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -19,6 +21,40 @@ use Symfony\Component\Routing\Annotation\Route;
 class ParametersController extends Controller
 {
     /**
+     * @Route("/", name="search_product")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function searchProductAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $searchProducts = new SearchProducts();
+        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+
+        return $this->render('Parameter/index.html.twig', array(
+            'houses' => $this->searchProduct(),
+            'features' => $this->features(),
+            'formContactUS' => $this->getContactUS(),
+            'search_form' => $searchForm->createView(),
+
+            'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
+            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
+            'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
+
+            'newLng' => $this->get('translator')->getLocale(),
+            'priceType' => 'Buy+Rent',
+            'type' => 'Buy+Rent',
+            'number' => 0,
+            'head' => $this->get('translator')->trans('search', array(), 'messages', $this->get('translator')->getLocale()),
+
+            'address' => $this->getSetting('address'),
+            'phones' => $this->getSettingLng('phone'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
+            'email' => $this->getSetting('email'),
+        ));
+    }
+
+    /**
      * @Route("/{parameter}/", name="parameter")
      * @param string $parameter
      * @return \Symfony\Component\HttpFoundation\Response
@@ -33,20 +69,31 @@ class ParametersController extends Controller
         );
         $breadcrumbs->addItem($this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()));
 
+        $em = $this->getDoctrine()->getEntityManager();
+        $searchProducts = new SearchProducts();
+        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchParameter($parameter),
             'features' => $this->features(),
             'formContactUS' => $this->getContactUS(),
+            'search_form' => $searchForm->createView(),
+
+            'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
+            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
+            'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
 
             'newLng' => $this->get('translator')->getLocale(),
+            'type' => $parameter,
             'priceType' => $parameter,
             'head' => $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()),
             'number' => 0,
 
             'address' => $this->getSetting('address'),
-            'phones' => $this->getPhone('phone'),
+            'phones' => $this->getSettingLng('phone'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
             'email' => $this->getSetting('email'),
-            'footerdesc' => $this->getSetting('footer-desc'),
         ));
     }
 
@@ -70,6 +117,10 @@ class ParametersController extends Controller
         );
         $breadcrumbs->addItem($this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale()));
 
+        $em = $this->getDoctrine()->getEntityManager();
+        $searchProducts = new SearchProducts();
+        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+
         $head = $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale())
             . ' ' . $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale());
 
@@ -77,17 +128,24 @@ class ParametersController extends Controller
             'houses' => $this->searchSecondParameter($parameter, $slug),
             'features' => $this->features(),
             'formContactUS' => $this->getContactUS(),
+            'search_form' => $searchForm->createView(),
+
+            'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
+            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
+            'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
 
             'newLng' => $this->get('translator')->getLocale(),
+            'type' => $parameter,
             'priceType' => $parameter,
             'slug' => $slug,
             'head' => $head,
             'number' => 0,
 
             'address' => $this->getSetting('address'),
-            'phones' => $this->getPhone('phone'),
+            'phones' => $this->getSettingLng('phone'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
             'email' => $this->getSetting('email'),
-            'footerdesc' => $this->getSetting('footer-desc'),
         ));
     }
 
@@ -116,6 +174,10 @@ class ParametersController extends Controller
         );
         $breadcrumbs->addItem($last);
 
+        $em = $this->getDoctrine()->getEntityManager();
+        $searchProducts = new SearchProducts();
+        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+
         $head = $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale())
             . ' ' . $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale())
             . ' ' . $this->get('translator')->trans(strtolower($last), array(), 'messages', $this->get('translator')->getLocale());
@@ -124,8 +186,15 @@ class ParametersController extends Controller
             'houses' => $this->searchLastParameter($parameter, $slug, $last),
             'features' => $this->features(),
             'formContactUS' => $this->getContactUS(),
+            'search_form' => $searchForm->createView(),
+
+            'bedGet' => htmlspecialchars($_GET['searchorg']['bedrooms']),
+            'bathGet' => htmlspecialchars($_GET['searchorg']['bathrooms']),
+            'typeGet' => htmlspecialchars($_GET['searchorg']['type']),
+            'priceGet' => htmlspecialchars($_GET['searchorg']['price']),
 
             'newLng' => $this->get('translator')->getLocale(),
+            'type' => $parameter,
             'priceType' => $parameter,
             'slug' => $slug,
             'last' => $last,
@@ -133,9 +202,9 @@ class ParametersController extends Controller
             'number' => 0,
 
             'address' => $this->getSetting('address'),
-            'phones' => $this->getPhone('phone'),
+            'phones' => $this->getSettingLng('phone'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
             'email' => $this->getSetting('email'),
-            'footerdesc' => $this->getSetting('footer-desc'),
         ));
     }
 
@@ -147,18 +216,29 @@ class ParametersController extends Controller
         $type = $request->get('type');
         $sale = $request->get('sale');
         $bed = $request->get('bed');
+
+        $bedGet = $request->get('bedGet');
+        $bathGet = $request->get('bathGet');
+        $typeGet = $request->get('typeGet');
+        $priceGet = $request->get('priceGet');
+
         $offset = $request->get('offset');
         $lang = $request->get('lang');
 
-        if ( isset($_POST['bed']) ){
-            $houses = $this->getMoreHouses($offset, $sale, $type, $bed);
-        }elseif ( isset($_POST['type']) ){
-            $houses = $this->getMoreHouses($offset, $sale, $type);
-        }elseif ( isset($_POST['sale']) ){
-            $houses = $this->getMoreHouses($offset, $sale);
+        if (!is_null($bedGet)&&!is_null($bathGet)&&!is_null($typeGet)&&!is_null($priceGet)){
+            $houses = $this->getMoreSearchHouse($offset, $bedGet, $bathGet, $typeGet, $priceGet);
         }else{
-            $houses = $this->getMoreHouses($offset);
+            if ( isset($_POST['bed']) ){
+                $houses = $this->getMoreHouses($offset, $sale, $type, $bed);
+            }elseif ( isset($_POST['type']) ){
+                $houses = $this->getMoreHouses($offset, $sale, $type);
+            }elseif ( isset($_POST['sale']) ){
+                $houses = $this->getMoreHouses($offset, $sale);
+            }else{
+                $houses = $this->getMoreHouses($offset);
+            }
         }
+
         return $this->render('Parameter/productcontainer.html.twig', array(
             'newLng' => $lang,
             'houses' => $houses,
@@ -194,6 +274,40 @@ class ParametersController extends Controller
                 ->setParameter('sale', $sale);
         }
         return $qb->setFirstResult($offset)
+            ->setMaxResults(8)
+            ->getQuery()
+            ->getResult();
+    }
+
+    private function getMoreSearchHouse($offset, $bedGet = null, $bathGet = null, $typeGet = null, $priceGet = null)
+    {
+        $price = explode(',', $priceGet);
+        $min = $price[0];
+        $max = $price[1];
+
+        $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
+            ->createQueryBuilder('n')
+            ->select('n')
+            ->innerJoin('n.idType', 's')
+            ->where('n.priceSale > :min')
+            ->andWhere('n.priceSale < :max');
+        if (!empty($typeGet)){
+            $qb->andWhere('s.id = :type')
+                ->setParameter('type', $typeGet);
+        }
+        if (!empty($bedGet)){
+            $qb->andWhere('n.countBed = :bed')
+                ->setParameter('bed', $bedGet);
+        }
+        if (!empty($bathGet)){
+            $qb->andWhere('n.countBath = :bath')
+                ->setParameter('bath', $bathGet);
+        }
+        return $qb
+            ->setParameter('min', $min)
+            ->setParameter('max', $max)
+            ->orderBy('n.created', 'DESC')
+            ->setFirstResult($offset)
             ->setMaxResults(8)
             ->getQuery()
             ->getResult();
@@ -255,32 +369,6 @@ class ParametersController extends Controller
         }
     }
 
-    private function getPhone($param)
-    {
-        $trans = $this->get('translator')->getLocale();
-        if ($param == 'phone'){
-            if ($trans == 'ru'){
-                $param .= '-ru';
-            }elseif ($trans == 'en'){
-                $param .= '-en';
-            }elseif ($trans == 'ar'){
-                $param .= '-ar';
-            }
-        }
-        $res = $this->getDoctrine()->getManager()->getRepository('HouseBundle:Settings')
-            ->createQueryBuilder('n')
-            ->select('n')
-            ->where('n.title = :param')
-            ->setParameter('param', $param)
-            ->getQuery()
-            ->getResult();
-        if(empty($res)){
-            return 'error';
-        }else{
-            return $res;
-        }
-    }
-
     private function searchParameter(string $parameter){
         return $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
             ->createQueryBuilder('n')
@@ -289,6 +377,41 @@ class ParametersController extends Controller
             ->orderBy('n.created', 'DESC')
             ->where('s.title = :idFirst')
             ->setParameter('idFirst', $parameter)
+            ->setMaxResults(8)
+            ->getQuery()
+            ->getResult();
+    }
+
+    private function searchProduct(){
+        $bedrooms = htmlspecialchars($_GET['searchorg']['bedrooms']);
+        $bathrooms = htmlspecialchars($_GET['searchorg']['bathrooms']);
+        $type = htmlspecialchars($_GET['searchorg']['type']);
+        $price = explode(',', htmlspecialchars($_GET['searchorg']['price']));
+        $min = $price[0];
+        $max = $price[1];
+
+        $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
+            ->createQueryBuilder('n')
+            ->select('n')
+            ->innerJoin('n.idType', 's')
+            ->where('n.priceSale > :min')
+            ->andWhere('n.priceSale < :max');
+        if (!empty($type)){
+            $qb->andWhere('s.id = :type')
+                ->setParameter('type', $type);
+        }
+        if (!empty($bedrooms)){
+            $qb->andWhere('n.countBed = :bed')
+                ->setParameter('bed', $bedrooms);
+        }
+        if (!empty($bathrooms)){
+            $qb->andWhere('n.countBath = :bath')
+                ->setParameter('bath', $bathrooms);
+        }
+        return $qb
+            ->setParameter('min', $min)
+            ->setParameter('max', $max)
+            ->orderBy('n.created', 'DESC')
             ->setMaxResults(8)
             ->getQuery()
             ->getResult();
@@ -334,5 +457,29 @@ class ParametersController extends Controller
             ->setMaxResults(5)
             ->getQuery()
             ->getResult();
+    }
+
+    private function getSettingLng($param)
+    {
+        $trans = $this->get('translator')->getLocale();
+        if ($trans == 'ru'){
+            $param .= '-ru';
+        }elseif ($trans == 'en'){
+            $param .= '-en';
+        }elseif ($trans == 'ar'){
+            $param .= '-ar';
+        }
+        $res = $this->getDoctrine()->getManager()->getRepository('HouseBundle:Settings')
+            ->createQueryBuilder('n')
+            ->select('n')
+            ->where('n.title = :param')
+            ->setParameter('param', $param)
+            ->getQuery()
+            ->getResult();
+        if(empty($res)){
+            return 'error';
+        }else{
+            return $res;
+        }
     }
 }

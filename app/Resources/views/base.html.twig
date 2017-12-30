@@ -41,6 +41,13 @@
     <body>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <script>(function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
                 js = d.createElement(s); js.id = id;
@@ -76,8 +83,6 @@
                 for (i = 0; i < rev.length; i++){
                     rev.eq(i).text(rev.eq(i).text().slice(0, 130));
                 }
-//                $('input[name="searchorg[price]"]').attr('id', 'ex12c');
-//                $("#ex12c").slider({ id: "slider12c", min: 1, max: 100000, range: true, value: [1, 100000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
             </script>
             {# end map #}
         {% endblock %}

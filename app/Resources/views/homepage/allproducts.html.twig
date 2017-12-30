@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row" id="title">
             <div class="col-xs-12">
-                <h3>our latest listings</h3>
-                {{ homeDescTop|raw }}
+                <h3>{{ 'ourLatestListings'|trans }}</h3>
+                {{ homeDescTop[0].setting|raw }}
             </div>
         </div>
         <div class="row">

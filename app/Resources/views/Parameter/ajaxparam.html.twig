@@ -6,6 +6,10 @@
         sales = $('button#loadMoreProd').attr('data-sale');
         type = $('button#loadMoreProd').attr('data-type');
         bed = $('button#loadMoreProd').attr('data-bed');
+        bedGet = $('button[data-id="searchorg_bedrooms"]').attr('title');
+        bathGet = $('button[data-id="searchorg_bathrooms"]').attr('title');
+        typeGet = $('button[data-id="searchorg_type"]').attr('title');
+        priceGet = $('button[name="searchorg[price]"]').attr('data-value');
 
         $('button').attr("disabled", "disabled");
         if (!inProgress) {
@@ -13,6 +17,11 @@
                 type: 'post',
                 url: $(this).attr('data-target'),
                 data: {
+                    bedGet: '{{ bedGet }}',
+                    bathGet: '{{ bathGet }}',
+                    typeGet: '{{ typeGet }}',
+                    priceGet: '{{ priceGet }}',
+
                     sale: sales,
                     type: type,
                     bed: bed,

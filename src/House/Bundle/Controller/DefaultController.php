@@ -2,6 +2,8 @@
 
 namespace House\Bundle\Controller;
 
+use House\Bundle\Form\Search\HouseType as SearchProductsType;
+use House\Bundle\Entity\Search\House as SearchProducts;
 use House\Bundle\Entity\ContactUS;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -14,15 +16,20 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $em = $this->getDoctrine()->getEntityManager();
+        $searchProducts = new SearchProducts();
+        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+
         return $this->render('homepage/index.html.twig', array(
             'newLng' => $this->get('translator')->getLocale(),
 
+            'search_form' => $searchForm->createView(),
             'formContactUS' => $this->getContactUS(),
             'address' => $this->getSetting('address'),
-            'phones' => $this->getPhone('phone'),
+            'phones' => $this->getSettingLng('phone'),
             'email' => $this->getSetting('email'),
-            'footerdesc' => $this->getSetting('footer-desc'),
-            'homeDescTop' => $this->getSetting('home-desc-top'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
+            'homeDescTop' => $this->getSettingLng('home-desc-top'),
             'houses' => $this->getHouses(['Buy', 'Rent', 'Buy+Rent']),
             'priceType' => ['Buy', 'Rent', 'Buy+Rent'],
 
@@ -105,9 +112,9 @@ class DefaultController extends Controller
         return $this->render('contact/index.html.twig', array(
             'formContactUS' => $this->getContactUS(),
             'address' => $this->getSetting('address'),
-            'phones' => $this->getPhone('phone'),
+            'footerdesc' => $this->getSettingLng('footer-desc'),
+            'phones' => $this->getSettingLng('phone'),
             'email' => $this->getSetting('email'),
-            'footerdesc' => $this->getSetting('footer-desc'),
             'contactusdesc' => $this->getSetting('contactus-desc'),
         ));
     }
@@ -115,6 +122,7 @@ class DefaultController extends Controller
     private function getContactUS()
     {
         $costProject = new ContactUS();
+        $language = $this->get('translator')->getLocale();
 
         $formCostProject = $this->createFormBuilder($costProject)
             ->add('name', TextType::class, array(
@@ -198,17 +206,15 @@ class DefaultController extends Controller
         }
     }
 
-    private function getPhone($param)
+    private function getSettingLng($param)
     {
         $trans = $this->get('translator')->getLocale();
-        if ($param == 'phone'){
-            if ($trans == 'ru'){
-                $param .= '-ru';
-            }elseif ($trans == 'en'){
-                $param .= '-en';
-            }elseif ($trans == 'ar'){
-                $param .= '-ar';
-            }
+        if ($trans == 'ru'){
+            $param .= '-ru';
+        }elseif ($trans == 'en'){
+            $param .= '-en';
+        }elseif ($trans == 'ar'){
+            $param .= '-ar';
         }
         $res = $this->getDoctrine()->getManager()->getRepository('HouseBundle:Settings')
             ->createQueryBuilder('n')
@@ -223,43 +229,4 @@ class DefaultController extends Controller
             return $res;
         }
     }
-//    private function getFormSearch()
-//    {
-//        $costProject = new ContactUS();
-//
-//        $formCostProject = $this->createFormBuilder($costProject)
-//            ->add('name', TextType::class, array(
-//                'attr' => [
-//                    'placeholder' => 'Your Name',
-//                    'class' => 'form-control'
-//                ],
-//                'label' => false
-//            ))
-//            ->add('email', EmailType::class, array(
-//                'attr' => [
-//                    'placeholder' => 'Your E-mail',
-//                    'class' => 'form-control',
-//                ],
-//                'required' => false,
-//                'label' => false,
-//            ))
-//            ->add('phone', NumberType::class, array(
-//                'attr' => [
-//                    'class' => 'form-control',
-//                    'placeholder' => 'Your Phone',
-//                    'type' => 'tel',
-//                ],
-//                'label' => false,
-//            ))
-//            ->add('message', TextAreaType::class, array(
-//                'attr' => [
-//                    'placeholder' => 'Type your message...',
-//                    'class' => 'form-control',
-//                ],
-//                'label' => false,
-//            ))
-//            ->getForm()->createView();
-//
-//        return $formCostProject;
-//    }
 }

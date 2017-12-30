@@ -22,9 +22,15 @@ class RentalDatesAdmin extends AbstractAdmin
             ))
             ->add('startDate', DateTimeType::class, array(
                 'label' => 'Аренда с',
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+                'attr' => array('class' => 'date')
             ))
             ->add('endDate', DateTimeType::class, array(
                 'label' => 'по',
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+                'attr' => array('class' => 'date')
             ))
         ;
     }

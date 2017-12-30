@@ -13,6 +13,9 @@
 {% endblock %}
 {% block map %}
     <script type="text/javascript">
+        $('input[name="searchorg[price]"]').attr('id', 'ex12c');
+        $("#ex12c").slider({ id: "slider12c", min: 100, max: 1000000, range: true, value: [100, 1000000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
+
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 19,
