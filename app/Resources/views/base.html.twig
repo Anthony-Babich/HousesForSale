@@ -72,7 +72,6 @@
         {% block javascripts %}
             <script type="text/javascript" src="{{ asset('bundles/house/js/jquery-3.2.1.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/jquery.fullcalendar.min.js') }}"></script>
-            {#<script type="text/javascript" src="{{ asset('bundles/house/js/fullcalendar.min.js') }}"></script>#}
             <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-select.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-slider.js') }}"></script>
@@ -84,7 +83,6 @@
                     rev.eq(i).text(rev.eq(i).text().slice(0, 130));
                 }
             </script>
-            {# end map #}
         {% endblock %}
 
         {% block map %}
@@ -92,5 +90,11 @@
 
         {% block ajax %}
         {% endblock %}
+        <script type="text/javascript" >
+            $('.tooltip.tooltip-max.top').css('left', 0);
+            $( window ).resize(function() {
+                $('.tooltip.tooltip-max.top').css('left', 0);
+            });
+        </script>
     </body>
 </html>

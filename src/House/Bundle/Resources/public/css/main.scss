@@ -1379,6 +1379,10 @@ ol.breadcrumb li:not(:last-child):after {
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		background-color: #f8f8f8;
 	}
+	section#product .container#main .col-xs-12.col-lg-9 .row.marg30 {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
 }
 @media (max-width: 576px){
 	section#header{
