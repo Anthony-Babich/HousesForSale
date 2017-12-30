@@ -900,20 +900,22 @@ footer {
       color: #546c85;
       margin-right: 10px;
       font-size: 16px; }
-  footer .second-col p {
-    padding-bottom: 5px;
-    line-height: 30px;
-    margin-bottom: 6px;
-    font-size: 13px;
-    font-family: "MontserratRegular", serif; }
-    footer .second-col p a {
-      color: #AFB4B5;
-      text-transform: uppercase; }
-    footer .second-col p a:hover {
-      color: #FA9B1B;
-      text-decoration: unset; }
-  footer .second-col p:not(:last-child) {
-    border-bottom: 1px solid #74717c; }
+  footer .second-col {
+    min-height: 420px; }
+    footer .second-col p {
+      padding-bottom: 5px;
+      line-height: 30px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-family: "MontserratRegular", serif; }
+      footer .second-col p a {
+        color: #AFB4B5;
+        text-transform: uppercase; }
+      footer .second-col p a:hover {
+        color: #FA9B1B;
+        text-decoration: unset; }
+    footer .second-col p:not(:last-child) {
+      border-bottom: 1px solid #74717c; }
   footer .third-col .facebook {
     height: 300px;
     overflow: auto;
@@ -1053,11 +1055,39 @@ ol.breadcrumb li:not(:last-child):after {
     font-size: 24px; }
   section#header #text h1 {
     font-size: 27px; } }
+@media (max-width: 767px) {
+  footer .second-col {
+    min-height: 100%; }
+
+  section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption .icons span:last-child {
+    font-size: 13px; }
+
+  .thumbnail .caption .icons span {
+    margin-left: 5px; }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background-color: #f8f8f8; } }
 @media (max-width: 576px) {
   section#header #text h2 {
     font-size: 18px; }
   section#header #text h1 {
-    font-size: 22px; } }
+    font-size: 22px; }
+
+  section#product .container#main .col-xs-12.col-lg-9 #location #buttons button:not(:first-child) {
+    margin-left: 0;
+    width: 100%; }
+
+  section#product .container#main .col-xs-12.col-lg-9 #location #buttons button:last-child {
+    border: 0; }
+
+  section#product .container#main .col-xs-12.col-lg-9 #price-button .icons {
+    margin-left: 15px; }
+
+  section#product .container#main .col-xs-12.col-lg-9 #location #buttons button:first-child {
+    width: 100%;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #fa9b1b; } }
 @media (max-width: 475px) {
   section#header {
     height: 320px; }
