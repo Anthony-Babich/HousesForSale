@@ -22,7 +22,12 @@ class House
     /**
      * @var string
      */
-    protected $price;
+    protected $priceMin;
+
+    /**
+     * @var string
+     */
+    protected $priceMax;
 
     /**
      * @return string
@@ -84,18 +89,37 @@ class House
     /**
      * @return string
      */
-    public function getPrice()
+    public function getPriceMin()
     {
-        return $this->price;
+        return $this->priceMin;
     }
 
     /**
-     * @param string $price
+     * @param string $priceMin
      * @return House
      */
-    public function setPrice(string $price)
+    public function setPriceMin(string $priceMin)
     {
-        $this->price = $price;
+        $this->priceMin = $priceMin;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPriceMax()
+    {
+        return $this->priceMax;
+    }
+
+    /**
+     * @param string $priceMax
+     * @return House
+     */
+    public function setPriceMax(string $priceMax)
+    {
+        $this->priceMax = $priceMax;
 
         return $this;
     }

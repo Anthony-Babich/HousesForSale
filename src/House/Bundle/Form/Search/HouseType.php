@@ -6,8 +6,7 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class HouseType extends AbstractType
@@ -30,6 +29,13 @@ class HouseType extends AbstractType
                 'attr' => [
                     'class' => 'selectpicker',
                 ],
+                'query_builder' => function (EntityRepository $er) {
+                    $qb = $er->createQueryBuilder('u');
+                    return
+                        $qb
+                            ->select('u')
+                            ->orderBy('u.id', 'ASC');
+                },
                 'choice_label' => 'title',
             ))
             ->add('salesrent', EntityType::class, array(
@@ -68,9 +74,14 @@ class HouseType extends AbstractType
                 ],
                 'choice_label' => 'title',
             ))
-            ->add("price", TextType::class, array(
-                "label" => 'Price',
-                "attr" => array("class" => "form-control"),
+            ->add('priceMin', IntegerType::class, array(
+                'label' => false,
+                'attr' => array('class' => 'form-control'),
+                'required' => false,
+            ))
+            ->add('priceMax', IntegerType::class, array(
+                'label' => false,
+                'attr' => array('class' => 'form-control'),
                 'required' => false,
             ))
         ;

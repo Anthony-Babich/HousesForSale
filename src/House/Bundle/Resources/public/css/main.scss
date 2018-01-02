@@ -229,6 +229,10 @@ section#header{
 		}
 	}
 	#form{
+		.form-control{
+			padding: 5px 12px;
+			height: 30px;
+		}
 		position: absolute;
 		margin-left: -15px;
 		width: inherit;
@@ -1382,6 +1386,19 @@ ol.breadcrumb li:not(:last-child):after {
 	section#product .container#main .col-xs-12.col-lg-9 .row.marg30 {
 		margin-right: -15px;
 		margin-left: -15px;
+	}
+	section#header{
+		form{
+			.row{
+				margin: 0 15px 15px 15px;
+			}
+			.row:first-child{
+				margin: 15px 15px 0 15px;
+			}
+			.col-xs-12 {
+				margin-bottom: 10px;
+			}
+		}
 	}
 }
 @media (max-width: 576px){

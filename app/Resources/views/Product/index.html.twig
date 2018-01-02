@@ -63,9 +63,6 @@
             var rev = $('p.desc');
             rev.text(rev.text().slice(0, 198));
 
-            $('input[name="searchorg[price]"]').attr('id', 'ex12c');
-            $("#ex12c").slider({ id: "slider12c", min: 100, max: 1000000, range: true, value: [100, 1000000], formatter: function(value) {return '$ ' + value[0] + ' : ' + value[1];}});
-
             $('.more-prod').slick({
                 dots: true,
                 infinite: false,
@@ -104,10 +101,6 @@
                 thumbnailArrows: true,
                 autoplay: true,
                 autoplayDelay: 4000
-            });
-            $('.tooltip.tooltip-max.top').css('left', 0);
-            $( window ).resize(function() {
-                $('.tooltip.tooltip-max.top').css('left', 0);
             });
         });
     </script>

@@ -248,13 +248,14 @@ class ParametersController extends Controller
         $bedGet = $request->get('bedGet');
         $salerentGet = $request->get('salerent');
         $typeGet = $request->get('typeGet');
-        $priceGet = $request->get('priceGet');
+        $priceMinGet = $request->get('priceMinGet');
+        $priceMaxGet = $request->get('priceMaxGet');
 
         $offset = $request->get('offset');
         $lang = $request->get('lang');
 
-        if (!empty($bedGet)&&!empty($salerentGet)&&!empty($typeGet)&&!empty($priceGet)){
-            $houses = $this->getMoreSearchHouse($offset, $bedGet, $salerentGet, $typeGet, $priceGet);
+        if (!empty($bedGet)&&!empty($salerentGet)&&!empty($typeGet)&&!empty($priceMinGet)&&!empty($priceMaxGet)){
+            $houses = $this->getMoreSearchHouse($offset, $bedGet, $salerentGet, $typeGet, $priceMinGet, $priceMaxGet);
         }else{
             if ( !empty($_POST['bed']) ){
                 $houses = $this->getMoreHouses($offset, $sale, $type, $bed);
@@ -317,20 +318,15 @@ class ParametersController extends Controller
             ->getResult();
     }
 
-    private function getMoreSearchHouse($offset, $bedGet = null, $salerentGet = null, $typeGet = null, $priceGet = null)
+    private function getMoreSearchHouse($offset, $bedGet = null, $salerentGet = null, $typeGet = null, $priceMinGet = null, $priceMaxGet = null)
     {
-        $price = explode(',', $priceGet);
-        $min = $price[0];
-        $max = $price[1];
-
         $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
             ->createQueryBuilder('n')
             ->select('n')
             ->innerJoin('n.idSalesRent', 's')
             ->innerJoin('n.idType', 't')
             ->innerJoin('n.idBedrooms', 'b')
-            ->where('n.priceSale > :min')
-            ->andWhere('n.priceSale < :max');
+            ->where('1 = 1');
 
         if (!empty($typeGet)){
             $qb->andWhere('t.id = :type')
@@ -341,13 +337,31 @@ class ParametersController extends Controller
                 ->setParameter('bed', $bedGet);
         }
         if (!empty($salerentGet)){
-            $qb->andWhere('(s.title LIKE :buyRent) OR (s.id = :type)')
+            $qb->andWhere('(s.id = :salesrent) OR (s.title LIKE :buyRent)')
                 ->setParameter('buyRent', '%Buy+Rent%')
-                ->setParameter('type', $typeGet);
+                ->setParameter('salesrent', $salerentGet);
+
+            if ($salerentGet == 1){
+                if (!empty($min)){
+                    $qb->andWhere('n.priceSale > :priceMin')
+                        ->setParameter('priceMin', $min);
+                }
+                if (!empty($max)){
+                    $qb->andWhere('n.priceSale < :priceMax')
+                        ->setParameter('priceMax', $max);
+                }
+            }else{
+                if (!empty($min)){
+                    $qb->andWhere('n.priceRent > :priceMin')
+                        ->setParameter('priceMin', $min);
+                }
+                if (!empty($max)){
+                    $qb->andWhere('n.priceRent < :priceMax')
+                        ->setParameter('priceMax', $max);
+                }
+            }
         }
         return $qb
-            ->setParameter('min', $min)
-            ->setParameter('max', $max)
             ->orderBy('n.created', 'DESC')
             ->setFirstResult($offset)
             ->setMaxResults(8)
@@ -426,11 +440,10 @@ class ParametersController extends Controller
 
     private function searchProduct(){
         $bedrooms = htmlspecialchars($_GET['searchorg']['bedrooms']);
-        $salesrent = htmlspecialchars($_GET['searchorg']['salesrent']);
+        $saleRent = htmlspecialchars($_GET['searchorg']['salesrent']);
         $type = htmlspecialchars($_GET['searchorg']['type']);
-        $price = explode(',', htmlspecialchars($_GET['searchorg']['price']));
-        $min = $price[0];
-        $max = $price[1];
+        $min = htmlspecialchars($_GET['searchorg']['priceMin']);
+        $max = htmlspecialchars($_GET['searchorg']['priceMax']);
 
         $qb = $this->getDoctrine()->getManager()->getRepository('HouseBundle:House')
             ->createQueryBuilder('n')
@@ -438,8 +451,7 @@ class ParametersController extends Controller
             ->innerJoin('n.idSalesRent', 's')
             ->innerJoin('n.idType', 't')
             ->innerJoin('n.idBedrooms', 'b')
-            ->where('n.priceSale > :min')
-            ->andWhere('n.priceSale < :max');
+            ->where('1 = 1');
         if (!empty($type)){
             $qb->andWhere('t.id = :type')
                 ->setParameter('type', $type);
@@ -448,14 +460,33 @@ class ParametersController extends Controller
             $qb->andWhere('b.id = :bed')
                 ->setParameter('bed', $bedrooms);
         }
-        if (!empty($salesrent)){
-            $qb->andWhere('(s.title LIKE :buyRent) OR (s.id = :salesrent)')
+        if (!empty($saleRent)){
+            $qb->andWhere('(s.id = :salesrent) OR (s.title LIKE :buyRent)')
                 ->setParameter('buyRent', '%Buy+Rent%')
-                ->setParameter('salesrent', $salesrent);
+                ->setParameter('salesrent', $saleRent);
+
+            if ($saleRent == 1){
+                if (!empty($min)){
+                    $qb->andWhere('n.priceSale > :priceMin')
+                        ->setParameter('priceMin', $min);
+                }
+                if (!empty($max)){
+                    $qb->andWhere('n.priceSale < :priceMax')
+                        ->setParameter('priceMax', $max);
+                }
+            }else{
+                if (!empty($min)){
+                    $qb->andWhere('n.priceRent > :priceMin')
+                        ->setParameter('priceMin', $min);
+                }
+                if (!empty($max)){
+                    $qb->andWhere('n.priceRent < :priceMax')
+                        ->setParameter('priceMax', $max);
+                }
+            }
         }
+
         return $qb
-            ->setParameter('min', $min)
-            ->setParameter('max', $max)
             ->orderBy('n.created', 'DESC')
             ->setMaxResults(8)
             ->getQuery()

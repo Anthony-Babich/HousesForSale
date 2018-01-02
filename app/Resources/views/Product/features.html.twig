@@ -16,8 +16,13 @@
                 <div class="input-group">
                     {{ form_row(search_form.bedrooms) }}
                 </div>
-                <div id="line-price">
-                    {{ form_row(search_form.price)}}
+                <div class="input-group">
+                    <div class="col-xs-6" style="padding: 0;">
+                        {{ form_row(search_form.priceMin)}}
+                    </div>
+                    <div class="col-xs-6" style="padding: 0;">
+                        {{ form_row(search_form.priceMax)}}
+                    </div>
                 </div>
                 <button class="btn-orange" type="submit">{{ 'search'|trans }}</button>
             {{ form_rest(search_form) }}
