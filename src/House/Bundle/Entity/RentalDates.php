@@ -32,8 +32,8 @@ class RentalDates
     /**
      * @var House
      *
-     * @ORM\ManyToOne(targetEntity="House\Bundle\Entity\House", cascade={"persist"})
-     * @ORM\JoinColumn(name="id_house", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="House\Bundle\Entity\House")
+     * @ORM\JoinColumn(name="id_house", referencedColumnName="id", onDelete="CASCADE")
      */
     private $idHouse;
 

@@ -2,7 +2,7 @@ services:
   app.admin.adDetails:
     class: House\Bundle\Admin\AdDetailsAdmin
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Основные характеристики", label: "Характеристики" }
+      - { name: sonata.admin, manager_type: orm, group: "Main characteristics", label: "Characteristics" }
     arguments:
       - ~
       - House\Bundle\Entity\AdDetails
@@ -10,21 +10,10 @@ services:
     calls:
       - [ setTranslationDomain, [House\Bundle]]
     public: true
-  app.admin.addRent:
-    class: House\Bundle\Admin\RentalDatesAdmin
-    tags:
-      - { name: sonata.admin, manager_type: orm, group: "Дома", label: "Аренда" }
-    arguments:
-      - ~
-      - House\Bundle\Entity\RentalDates
-      - ~
-    calls:
-      - [ setTranslationDomain, [House\Bundle]]
-    public: true
   app.admin.features:
     class: House\Bundle\Admin\FeaturesAdmin
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Основные характеристики", label: "Особенности" }
+      - { name: sonata.admin, manager_type: orm, group: "Main characteristics", label: "Features" }
     arguments:
       - ~
       - House\Bundle\Entity\Features
@@ -32,10 +21,32 @@ services:
     calls:
       - [ setTranslationDomain, [House\Bundle]]
     public: true
+  app.admin.addRent:
+    class: House\Bundle\Admin\RentalDatesAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "House", label: "Add Rent House" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\RentalDates
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
+  app.admin.house:
+    class: House\Bundle\Admin\HouseAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: "House", label: "House" }
+    arguments:
+      - ~
+      - House\Bundle\Entity\House
+      - ~
+    calls:
+      - [ setTranslationDomain, [House\Bundle]]
+    public: true
   app.admin.contactus:
     class: House\Bundle\Admin\ContactUSAdmin
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Форма связи", label: "Связаться с нами" }
+      - { name: sonata.admin, manager_type: orm, group: "Contact Form", label: "Contact Form" }
     arguments:
       - ~
       - House\Bundle\Entity\ContactUS
@@ -46,7 +57,7 @@ services:
   app.admin.setting:
     class: House\Bundle\Admin\SettingsAdmin
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Общие настройки", label: "Настройки" }
+      - { name: sonata.admin, manager_type: orm, group: "Settings", label: "Settings" }
     arguments:
       - ~
       - House\Bundle\Entity\Settings
@@ -54,21 +65,10 @@ services:
     calls:
       - [ setTranslationDomain, [House\Bundle]]
     public: true
-  app.admin.house:
-    class: House\Bundle\Admin\HouseAdmin
-    tags:
-      - { name: sonata.admin, manager_type: orm, group: "Дома", label: "Дома" }
-    arguments:
-      - ~
-      - House\Bundle\Entity\House
-      - ~
-    calls:
-      - [ setTranslationDomain, [House\Bundle]]
-    public: true
   app.admin.images:
     class: House\Bundle\Admin\ImagesAdmin
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Картинки", label: "Большие картинки" }
+      - { name: sonata.admin, manager_type: orm, group: "Images", label: "Large images" }
     arguments:
       - ~
       - House\Bundle\Entity\Images
@@ -79,7 +79,7 @@ services:
   app.admin.imagessmall:
     class: House\Bundle\Admin\ImagesSmallAdmin
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Картинки", label: "Маленькие картинки" }
+      - { name: sonata.admin, manager_type: orm, group: "Images", label: "Small images" }
     arguments:
       - ~
       - House\Bundle\Entity\ImagesSmall
@@ -91,7 +91,7 @@ services:
     class: Application\Sonata\UserBundle\Admin\UserAdmin
     arguments: [~, Application\Sonata\UserBundle\Entity\User, SonataAdminBundle:CRUD]
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Пользователи!!!!!", label: "Пользователи" }
+      - { name: sonata.admin, manager_type: orm, group: "Users!!!!!", label: "Users" }
     calls:
       - [ setTranslationDomain, [Application\Sonata\UserBundle]]
     public: true

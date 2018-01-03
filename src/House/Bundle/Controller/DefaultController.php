@@ -11,14 +11,16 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Translation\Translator;
 
 class DefaultController extends Controller
 {
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
+        $translator = new Translator($this->get('translator')->getLocale());
         $searchProducts = new SearchProducts();
-        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+        $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
         return $this->render('homepage/index.html.twig', array(
             'newLng' => $this->get('translator')->getLocale(),

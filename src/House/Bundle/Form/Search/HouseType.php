@@ -8,13 +8,16 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Translation\Translator;
 
 class HouseType extends AbstractType
 {
     private $entityManager;
+    private $translator;
 
-    public function __construct(EntityManager $entityManager)
+    public function __construct(EntityManager $entityManager, Translator $translator)
     {
+        $this->translator = $translator;
         $this->entityManager = $entityManager;
     }
 
@@ -25,10 +28,11 @@ class HouseType extends AbstractType
                 'class' => 'HouseBundle:Bedrooms',
                 'required' => false,
                 'label' => false,
-                'placeholder' => 'Select Bedrooms',
+                'placeholder' => $this->translator->trans('selectBedrooms', array(), 'messages', $this->translator->getLocale()),
                 'attr' => [
                     'class' => 'selectpicker',
                 ],
+                'choice_translation_domain' => true,
                 'query_builder' => function (EntityRepository $er) {
                     $qb = $er->createQueryBuilder('u');
                     return
@@ -42,7 +46,7 @@ class HouseType extends AbstractType
                 'class' => 'HouseBundle:SalesRent',
                 'required' => false,
                 'label' => false,
-                'placeholder' => 'Select Status',
+                'placeholder' => $this->translator->trans('selectStatus', array(), 'messages', $this->translator->getLocale()),
                 'query_builder' => function (EntityRepository $er) {
                     $qb = $er->createQueryBuilder('u');
                     return
@@ -54,13 +58,14 @@ class HouseType extends AbstractType
                 'attr' => [
                     'class' => 'selectpicker',
                 ],
+                'choice_translation_domain' => true,
                 'choice_label' => 'title',
             ))
             ->add('type', EntityType::class, array(
                 'class' => 'HouseBundle:Type',
                 'required' => false,
                 'label' => false,
-                'placeholder' => 'Select Type',
+                'placeholder' => $this->translator->trans('selectType', array(), 'messages', $this->translator->getLocale()),
                 'query_builder' => function (EntityRepository $er) {
                     $qb = $er->createQueryBuilder('u');
                     return
@@ -72,6 +77,7 @@ class HouseType extends AbstractType
                 'attr' => [
                     'class' => 'selectpicker',
                 ],
+                'choice_translation_domain' => true,
                 'choice_label' => 'title',
             ))
             ->add('priceMin', IntegerType::class, array(

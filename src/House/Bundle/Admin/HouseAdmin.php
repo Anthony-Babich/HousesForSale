@@ -16,8 +16,8 @@ class HouseAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->tab('Основные характеристики')
-                ->with('Характеристики', array('class' => 'col-xs-12 col-md-6'))
+            ->tab('Main characteristics')
+                ->with('Characteristics', array('class' => 'col-xs-12 col-md-6'))
                     ->add('title', TextType::class, array(
                         'label' => 'Title En'
                     ))
@@ -40,21 +40,21 @@ class HouseAdmin extends AbstractAdmin
                         'label' => 'Unique name in English'
                     ))
                     ->add('priceRent', IntegerType::class, array(
-                        'label' => 'Цена для аренды',
+                        'label' => 'Price Rent',
                         'required' => false
                     ))
                     ->add('priceSale', IntegerType::class, array(
-                        'label' => 'Цена для продажи',
+                        'label' => 'Price Buy',
                         'required' => false
                     ))
                     ->add('countBath', IntegerType::class, array(
-                        'label' => 'Количество душевых'
+                        'label' => 'Number of shower'
                     ))
                     ->add('countBed', IntegerType::class, array(
-                        'label' => 'Количество комнат'
+                        'label' => 'Number of rooms'
                     ))
                     ->add('sq', IntegerType::class, array(
-                        'label' => 'Площадь'
+                        'label' => 'Square'
                     ))
                     ->add('description', 'genemu_tinymce', array(
                         'label' => 'Description En',
@@ -119,23 +119,23 @@ class HouseAdmin extends AbstractAdmin
                     ->add('idSalesRent', EntityType::class, array(
                         'class' => 'HouseBundle:SalesRent',
                         'property' => 'title',
-                        'label' => 'Аредна/продажа'
+                        'label' => 'Rent/Buy'
                     ))
                     ->add('idType', EntityType::class, array(
                         'class' => 'HouseBundle:Type',
                         'property' => 'title',
-                        'label' => 'Тип недвижимости'
+                        'label' => 'Property Type'
                     ))
                     ->add('idBedrooms', EntityType::class, array(
                         'class' => 'HouseBundle:Bedrooms',
                         'property' => 'title',
-                        'label' => 'Тип комнат'
+                        'label' => 'Room Type'
                     ))
                 ->end()
             ->end()
 
-            ->tab('Картинки')
-                ->with('Большие картинки', array('class' => 'col-xs-12 col-md-6'))
+            ->tab('Images')
+                ->with('Large images', array('class' => 'col-xs-12 col-md-6'))
                     ->add('images', 'sonata_type_model', array(
                         'class' => 'HouseBundle:Images',
                         'property' => 'imageName',
@@ -145,7 +145,7 @@ class HouseAdmin extends AbstractAdmin
                         'label' => false
                     ))
                 ->end()
-                ->with('Маленькие картинки', array('class' => 'col-xs-12 col-md-6'))
+                ->with('Small images', array('class' => 'col-xs-12 col-md-6'))
                     ->add('imagesSmall', 'sonata_type_model', array(
                         'class' => 'HouseBundle:ImagesSmall',
                         'property' => 'imageName',
@@ -157,8 +157,8 @@ class HouseAdmin extends AbstractAdmin
                 ->end()
             ->end()
 
-            ->tab('Подробная информация и особенности')
-                ->with('Подробная информация', array('class' => 'col-xs-12 col-md-6'))
+            ->tab('Detailed information and features')
+                ->with('Detailed information', array('class' => 'col-xs-12 col-md-6'))
                     ->add('adDetails', 'sonata_type_model', array(
                         'class' => 'HouseBundle:AdDetails',
                         'property' => 'name',
@@ -168,7 +168,7 @@ class HouseAdmin extends AbstractAdmin
                         'label' => false
                     ))
                 ->end()
-                ->with('Особенности', array('class' => 'col-xs-12 col-md-6'))
+                ->with('Features', array('class' => 'col-xs-12 col-md-6'))
                     ->add('features', 'sonata_type_model', array(
                         'class' => 'HouseBundle:Features',
                         'property' => 'name',
@@ -199,34 +199,34 @@ class HouseAdmin extends AbstractAdmin
                 'label' => 'Title Ar'
             ))
             ->add('idSalesRent', null, array(
-                'label'    => 'Аредна/продажа'
+                'label'    => 'Rent/Buy'
             ), 'entity', array(
                 'class' => 'HouseBundle:SalesRent',
                 'property' => 'title',
             ))
             ->add('idType', null, array(
-                'label'    => 'Тип недвижимости'
+                'label'    => 'Property Type'
             ), 'entity', array(
                 'class' => 'HouseBundle:Type',
                 'property' => 'title',
             ))
             ->add('idBedrooms', null, array(
-                'label'    => 'Тип комнат'
+                'label'    => 'Room Type'
             ), 'entity', array(
                 'class' => 'HouseBundle:Bedrooms',
                 'property' => 'title',
             ))
             ->add('countBath', null, array(
-                'label' => 'Количество душевых'
+                'label' => 'Number of shower'
             ))
             ->add('countBed', null, array(
-                'label' => 'Количество комнат'
+                'label' => 'Number of rooms'
             ))
             ->add('priceRent', null, array(
-                'label' => 'Цена для аренды'
+                'label' => 'Price Rent'
             ))
             ->add('priceSale', null, array(
-                'label' => 'Цена для продажи'
+                'label' => 'Price Buy'
             ));
     }
     // Fields to be shown on lists
@@ -243,25 +243,25 @@ class HouseAdmin extends AbstractAdmin
                 'label' => 'Title Ar'
             ))
             ->add('idSalesRent.title', null, array(
-                'label'    => 'Аредна/продажа'
+                'label'    => 'Rent/Buy'
             ))
             ->add('idType.title', null, array(
-                'label'    => 'Тип недвижимости'
+                'label'    => 'Property Type'
             ))
             ->add('idBedrooms.title', null, array(
-                'label'    => 'Тип комнат'
+                'label'    => 'Room Type'
             ))
             ->add('countBath', null, array(
-                'label' => 'Количество душевых'
+                'label' => 'Number of shower'
             ))
             ->add('countBed', null, array(
-                'label' => 'Количество комнат'
+                'label' => 'Number of rooms'
             ))
             ->add('priceRent', null, array(
-                'label' => 'Цена для аренды'
+                'label' => 'Price Rent'
             ))
             ->add('priceSale', null, array(
-                'label' => 'Цена для продажи'
+                'label' => 'Price Buy'
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -284,25 +284,25 @@ class HouseAdmin extends AbstractAdmin
                 'label' => 'Title Ar'
             ))
             ->add('idSalesRent.title', null, array(
-                'label'    => 'Аредна/продажа'
+                'label'    => 'Rent/Buy'
             ))
             ->add('idType.title', null, array(
-                'label'    => 'Тип недвижимости'
+                'label'    => 'Property Type'
             ))
             ->add('idBedrooms.title', null, array(
-                'label'    => 'Тип комнат'
+                'label'    => 'Room Type'
             ))
             ->add('countBath', null, array(
-                'label' => 'Количество душевых'
+                'label' => 'Number of shower'
             ))
             ->add('countBed', null, array(
-                'label' => 'Количество комнат'
+                'label' => 'Number of rooms'
             ))
             ->add('priceRent', null, array(
-                'label' => 'Цена для аренды'
+                'label' => 'Price Rent'
             ))
             ->add('priceSale', null, array(
-                'label' => 'Цена для продажи'
+                'label' => 'Price Buy'
             ));
     }
 }

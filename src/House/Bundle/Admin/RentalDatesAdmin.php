@@ -18,16 +18,16 @@ class RentalDatesAdmin extends AbstractAdmin
             ->add('idHouse', EntityType::class, array(
                 'class' => 'HouseBundle:House',
                 'property' => 'title',
-                'label' => 'Дом/квартира'
+                'label' => 'House/apartment'
             ))
             ->add('startDate', DateTimeType::class, array(
-                'label' => 'Аренда с',
+                'label' => 'Rent from',
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
                 'attr' => array('class' => 'date')
             ))
             ->add('endDate', DateTimeType::class, array(
-                'label' => 'по',
+                'label' => 'to',
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
                 'attr' => array('class' => 'date')
@@ -39,16 +39,16 @@ class RentalDatesAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('idHouse', null, array(
-                'label'    => 'Дом/квартира'
+                'label'    => 'House/apartment'
             ), 'entity', array(
                 'class' => 'HouseBundle:House',
                 'property' => 'title',
             ))
             ->add('startDate', null, array(
-                'label' => 'Аренда с'
+                'label' => 'Rent from'
             ))
             ->add('endDate', null, array(
-                'label' => 'по'
+                'label' => 'to'
             ));
     }
     // Fields to be shown on lists
@@ -56,13 +56,13 @@ class RentalDatesAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('idHouse.title', null, array(
-                'label'    => 'Дом/квартира'
+                'label'    => 'House/apartment'
             ))
             ->add('startDate', null, array(
-                'label' => 'Аренда с'
+                'label' => 'Rent from'
             ))
             ->add('endDate', null, array(
-                'label' => 'по'
+                'label' => 'to'
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -76,13 +76,13 @@ class RentalDatesAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('idHouse.title', null, array(
-                'label'    => 'Дом/квартира'
+                'label'    => 'House/apartment'
             ))
             ->add('startDate', null, array(
-                'label' => 'Аренда с'
+                'label' => 'Rent from'
             ))
             ->add('endDate', null, array(
-                'label' => 'по'
+                'label' => 'to'
             ));
     }
 }

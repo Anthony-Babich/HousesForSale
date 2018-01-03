@@ -92,8 +92,8 @@
         {% endblock %}
         <script>
             $( document ).ready(function( $ ) {
-                $('input[name="searchorg[priceMin]"]').attr('placeholder', 'Price from');
-                $('input[name="searchorg[priceMax]"]').attr('placeholder', 'Price to');
+                $('input[name="searchorg[priceMin]"]').attr('placeholder', '{{ 'priceFrom'|trans }}');
+                $('input[name="searchorg[priceMax]"]').attr('placeholder', '{{ 'priceTo'|trans }}');
             });
         </script>
     </body>

@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Translation\Translator;
 
 /**
  * Class ParametersController
@@ -27,8 +28,9 @@ class ParametersController extends Controller
     public function searchProductAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
+        $translator = new Translator($this->get('translator')->getLocale());
         $searchProducts = new SearchProducts();
-        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+        $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchProduct(),
@@ -77,8 +79,9 @@ class ParametersController extends Controller
         $breadcrumbs->addItem($this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale()));
 
         $em = $this->getDoctrine()->getEntityManager();
+        $translator = new Translator($this->get('translator')->getLocale());
         $searchProducts = new SearchProducts();
-        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+        $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchParameter($parameter),
@@ -132,8 +135,9 @@ class ParametersController extends Controller
         $breadcrumbs->addItem($this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale()));
 
         $em = $this->getDoctrine()->getEntityManager();
+        $translator = new Translator($this->get('translator')->getLocale());
         $searchProducts = new SearchProducts();
-        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+        $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
         $head = $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale())
             . ' ' . $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale());
@@ -196,8 +200,9 @@ class ParametersController extends Controller
         $breadcrumbs->addItem($last);
 
         $em = $this->getDoctrine()->getEntityManager();
+        $translator = new Translator($this->get('translator')->getLocale());
         $searchProducts = new SearchProducts();
-        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+        $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
         $head = $this->get('translator')->trans(strtolower($parameter), array(), 'messages', $this->get('translator')->getLocale())
             . ' ' . $this->get('translator')->trans(strtolower($slug), array(), 'messages', $this->get('translator')->getLocale())

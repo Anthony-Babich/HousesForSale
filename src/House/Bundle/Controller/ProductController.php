@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Translation\Translator;
 
 class ProductController extends Controller
 {
@@ -17,7 +18,8 @@ class ProductController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
         $searchProducts = new SearchProducts();
-        $searchForm = $this->createForm(new SearchProductsType($em), $searchProducts);
+        $translator = new Translator($this->get('translator')->getLocale());
+        $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
         $house = $this->findHouse($name);
         $idType = $house->getIdType()->getId();

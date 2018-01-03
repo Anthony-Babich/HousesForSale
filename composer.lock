@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "32d5a57228797a86838131900fc68ce8",
+    "content-hash": "14865081d6ea2b85e473b1bf89c9935e",
     "packages": [
         {
             "name": "adesigns/calendar-bundle",
@@ -1963,16 +1963,16 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "3.30.0",
+            "version": "3.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "e492eb6ad23eed69f250c0bee5a59990d4756bbc"
+                "reference": "dd9675e053255c1e5c0a56e7f6ddb8752d0e7510"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/e492eb6ad23eed69f250c0bee5a59990d4756bbc",
-                "reference": "e492eb6ad23eed69f250c0bee5a59990d4756bbc",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/dd9675e053255c1e5c0a56e7f6ddb8752d0e7510",
+                "reference": "dd9675e053255c1e5c0a56e7f6ddb8752d0e7510",
                 "shasum": ""
             },
             "require": {
@@ -1983,6 +1983,7 @@
                 "sonata-project/block-bundle": "^3.2",
                 "sonata-project/core-bundle": "^3.6",
                 "sonata-project/exporter": "^1.7.1",
+                "symfony/asset": "^2.8 || ^3.2 || ^4.0",
                 "symfony/class-loader": "^2.8 || ^3.2 || ^4.0",
                 "symfony/config": "^2.8 || ^3.2 || ^4.0",
                 "symfony/console": "^2.8 || ^3.2 || ^4.0",
@@ -2057,7 +2058,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2017-12-25T16:13:27+00:00"
+            "time": "2018-01-02T08:27:49+00:00"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2208,12 +2209,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "e6fd7aceb8272881e1af2f008cf1b2986adcb396"
+                "reference": "63c7b79d521bb084376803babc42f82264113075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/e6fd7aceb8272881e1af2f008cf1b2986adcb396",
-                "reference": "e6fd7aceb8272881e1af2f008cf1b2986adcb396",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/63c7b79d521bb084376803babc42f82264113075",
+                "reference": "63c7b79d521bb084376803babc42f82264113075",
                 "shasum": ""
             },
             "require": {
@@ -2275,7 +2276,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2017-12-26T17:35:05+00:00"
+            "time": "2017-12-31T02:25:05+00:00"
         },
         {
             "name": "sonata-project/datagrid-bundle",
@@ -2283,12 +2284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDatagridBundle.git",
-                "reference": "cf2acdb5f252dea4c75d01acb18e8a83bbc7395f"
+                "reference": "826bb0970a6442bc5fee4212a79b2ba3703cf1a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/cf2acdb5f252dea4c75d01acb18e8a83bbc7395f",
-                "reference": "cf2acdb5f252dea4c75d01acb18e8a83bbc7395f",
+                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/826bb0970a6442bc5fee4212a79b2ba3703cf1a2",
+                "reference": "826bb0970a6442bc5fee4212a79b2ba3703cf1a2",
                 "shasum": ""
             },
             "require": {
@@ -2332,7 +2333,7 @@
                 "datagrid",
                 "sonata"
             ],
-            "time": "2017-12-26T17:50:09+00:00"
+            "time": "2017-12-31T02:35:08+00:00"
         },
         {
             "name": "sonata-project/doctrine-extensions",
@@ -2467,12 +2468,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataEasyExtendsBundle.git",
-                "reference": "a71e70edcb2c92a14ec0f4dcc794d3aec5ac9423"
+                "reference": "bd1a8cadd92428bb726f1a3448a182955993a82d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataEasyExtendsBundle/zipball/a71e70edcb2c92a14ec0f4dcc794d3aec5ac9423",
-                "reference": "a71e70edcb2c92a14ec0f4dcc794d3aec5ac9423",
+                "url": "https://api.github.com/repos/sonata-project/SonataEasyExtendsBundle/zipball/bd1a8cadd92428bb726f1a3448a182955993a82d",
+                "reference": "bd1a8cadd92428bb726f1a3448a182955993a82d",
                 "shasum": ""
             },
             "require": {
@@ -2517,7 +2518,7 @@
                 "Easy Extends",
                 "sonata"
             ],
-            "time": "2017-12-26T18:20:09+00:00"
+            "time": "2017-12-31T03:15:07+00:00"
         },
         {
             "name": "sonata-project/exporter",
@@ -2594,12 +2595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "7793d89313b1b226b042575f0add7531760f60a4"
+                "reference": "61f0d840dad2b389922b51347c7d30b0d766666f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/7793d89313b1b226b042575f0add7531760f60a4",
-                "reference": "7793d89313b1b226b042575f0add7531760f60a4",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/61f0d840dad2b389922b51347c7d30b0d766666f",
+                "reference": "61f0d840dad2b389922b51347c7d30b0d766666f",
                 "shasum": ""
             },
             "require": {
@@ -2679,7 +2680,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2017-12-27T01:00:26+00:00"
+            "time": "2018-01-03T01:00:18+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3254,27 +3255,27 @@
         },
         {
             "name": "symfony/security-acl",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-acl.git",
-                "reference": "053b49bf4aa333a392c83296855989bcf88ddad1"
+                "reference": "ab4dfe2d95e038cd367dd04604487b0a3359bcff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-acl/zipball/053b49bf4aa333a392c83296855989bcf88ddad1",
-                "reference": "053b49bf4aa333a392c83296855989bcf88ddad1",
+                "url": "https://api.github.com/repos/symfony/security-acl/zipball/ab4dfe2d95e038cd367dd04604487b0a3359bcff",
+                "reference": "ab4dfe2d95e038cd367dd04604487b0a3359bcff",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9",
-                "symfony/security-core": "~2.8|~3.0"
+                "symfony/security-core": "~2.8|~3.0|~4.0"
             },
             "require-dev": {
                 "doctrine/common": "~2.2",
                 "doctrine/dbal": "~2.2",
                 "psr/log": "~1.0",
-                "symfony/phpunit-bridge": "~2.8|~3.0"
+                "symfony/phpunit-bridge": "~2.8|~3.0|~4.0"
             },
             "suggest": {
                 "doctrine/dbal": "For using the built-in ACL implementation",
@@ -3311,7 +3312,7 @@
             ],
             "description": "Symfony Security Component - ACL (Access Control List)",
             "homepage": "https://symfony.com",
-            "time": "2015-12-28T09:39:46+00:00"
+            "time": "2017-07-21T06:01:18+00:00"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -3973,11 +3974,11 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "genemu/form-bundle": 20,
-        "oh/google-map-form-type-bundle": 20,
         "sonata-project/core-bundle": 20,
         "sonata-project/datagrid-bundle": 20,
         "sonata-project/easy-extends-bundle": 20,
-        "sonata-project/user-bundle": 20
+        "sonata-project/user-bundle": 20,
+        "oh/google-map-form-type-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

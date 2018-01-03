@@ -16,19 +16,19 @@ class ContactUSAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name', TextType::class, array(
-                'label' => 'Имя'
+                'label' => 'Name'
             ))
             ->add('phone', TextType::class, array(
-                'label' => 'Телефон'
+                'label' => 'Phone'
             ))
             ->add('email', TextType::class, array(
                 'label' => 'E-mail'
             ))
             ->add('message', TextType::class, array(
-                'label' => 'Сообщение'
+                'label' => 'Message'
             ))
             ->add('geoIP', TextType::class, array(
-                'label' => 'IP-адресс'
+                'label' => 'IP-address'
             ));
     }
     // Fields to be shown on filter forms
@@ -36,19 +36,19 @@ class ContactUSAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('name', null, array(
-                'label' => 'Имя'
+                'label' => 'Name'
             ))
             ->add('phone', null, array(
-                'label' => 'Телефон'
+                'label' => 'Phone'
             ))
             ->add('email', null, array(
                 'label' => 'E-mail'
             ))
             ->add('message', null, array(
-                'label' => 'Сообщение'
+                'label' => 'Message'
             ))
             ->add('geoIP', null, array(
-                'label' => 'IP-адресс'
+                'label' => 'IP-address'
             ));
     }
     // Fields to be shown on lists
@@ -56,22 +56,22 @@ class ContactUSAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('name', null, array(
-                'label' => 'Имя'
+                'label' => 'Name'
             ))
             ->add('phone', null, array(
-                'label' => 'Телефон'
+                'label' => 'Phone'
             ))
             ->add('email', null, array(
                 'label' => 'E-mail'
             ))
             ->add('message', null, array(
-                'label' => 'Сообщение'
+                'label' => 'Message'
             ))
             ->add('geoIP', null, array(
-                'label' => 'IP-адресс'
+                'label' => 'IP-address'
             ))
             ->add('created', null, array(
-                'label' => 'Время'
+                'label' => 'Date'
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -85,22 +85,22 @@ class ContactUSAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('name', null, array(
-                'label' => 'Имя'
+                'label' => 'Name'
             ))
             ->add('phone', null, array(
-                'label' => 'Телефон'
+                'label' => 'Phone'
             ))
             ->add('email', null, array(
                 'label' => 'E-mail'
             ))
             ->add('message', null, array(
-                'label' => 'Сообщение'
+                'label' => 'Message'
             ))
             ->add('geoIP', null, array(
-                'label' => 'IP-адресс'
+                'label' => 'IP-address'
             ))
             ->add('created', null, array(
-                'label' => 'Время'
+                'label' => 'Date'
             ));
     }
 }

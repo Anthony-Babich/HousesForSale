@@ -15,10 +15,10 @@ class SettingsAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('title', TextType::class, array(
-                'label' => 'Название'
+                'label' => 'Title'
             ))
             ->add('setting', TextType::class, array(
-                'label' => 'Описание'
+                'label' => 'Setting'
             ))
         ;
     }
@@ -27,10 +27,10 @@ class SettingsAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('title', null, array(
-                'label' => 'Название'
+                'label' => 'Title'
             ))
             ->add('setting', null, array(
-                'label' => 'Описание'
+                'label' => 'Setting'
             ));
     }
     // Fields to be shown on lists
@@ -38,10 +38,10 @@ class SettingsAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('title', null, array(
-                'label' => 'Название'
+                'label' => 'Title'
             ))
             ->add('setting', null, array(
-                'label' => 'Описание'
+                'label' => 'Setting'
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -55,10 +55,10 @@ class SettingsAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('title', null, array(
-                'label' => 'Название'
+                'label' => 'Title'
             ))
             ->add('setting', null, array(
-                'label' => 'Описание'
+                'label' => 'Setting'
             ));
     }
 }

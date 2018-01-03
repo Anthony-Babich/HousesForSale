@@ -30,7 +30,7 @@ class ImagesSmallAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('imageName', null, array(
-                'label' => 'Картинка',
+                'label' => 'Image',
             ))
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -44,7 +44,7 @@ class ImagesSmallAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('imageName', null, array(
-                'label' => 'Картинка',
+                'label' => 'Image',
             ));
     }
 }
