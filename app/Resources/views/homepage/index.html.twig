@@ -7,32 +7,10 @@
 {% block main %}
 
     {% include 'homepage/allproducts.html.twig' %}
-    {% include 'map.html.twig' %}
     {% include 'homepage/property.html.twig' %}
 
 {% endblock %}
 {% block map %}
-    <script type="text/javascript">
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: {lat: {{ centerLat }}, lng: {{ centerLong }}}
-            });
-            var markerMain = new google.maps.Marker({
-                position: {lat: {{ centerLat }}, lng: {{ centerLong }}},
-                map: map
-            });
-            {% for house in houses %}
-                var marker{{ loop.index0 }} = new google.maps.Marker({
-                    position: {lat: {{ house.latitude }}, lng: {{ house.longitude }}},
-                    map: map
-                });
-            {% endfor %}
-        }
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzz4dGN9I3osPw94Zk8hzr9dDQOJxUMoU&callback=initMap">
-    </script>
 {% endblock %}
 {% block ajax %}
     {% include 'homepage/ajaxHome.html.twig' %}
