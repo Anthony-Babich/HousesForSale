@@ -1,3 +1,55 @@
+section#loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 2s linear;
+	background: #1E88E5;
+	z-index: 9999;
+}
+span.load {
+	display: flex;
+	position: relative;
+	animation: rotateLoad infinite linear 1s;
+}
+span.load.mini{ width: 15px; height: 15px; }
+span.load.little { width: 25px; height: 25px; }
+span.load { width: 60px; height: 60px; }
+span.load:before,
+span.load:after {
+	display: flex;
+	position: absolute;
+	content: '';
+	background: #fff;
+	border-radius: 50%;
+	width: 55%;
+	height: 55%;
+}
+span.load:before { right: 0; bottom: 0; animation: scaleChange_1 infinite linear 1s; }
+span.load:after { top: 0; left: 0; animation: scaleChange_2 infinite linear 1s; }
+span.load.dark:before,
+span.load.dark:after { background: #222; }
+span.load.mini:after { border-width: 2px; }
+span.load.little:after { border-width: 3px; }
+span.load:after { border-width: 8px; }
+@keyframes rotateLoad {
+	0%      { transform: rotate(0deg); }
+	100%    { transform: rotate(360deg); }
+}
+@keyframes scaleChange_1 {
+	0%      { transform: scale(1); }
+	50%     { transform: scale(0); }
+	100%    { transform: scale(1); }
+}
+@keyframes scaleChange_2 {
+	0%      { transform: scale(0); }
+	50%     { transform: scale(1); }
+	100%    { transform: scale(0); }
+}
 @font-face {
 	font-family: 'MontserratExtraBold';
 	src: url('/web/bundles/house/fonts/MontserratExtraBold.eot');

@@ -55,6 +55,9 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
         {% block body %}
+            <section id="loader">
+                <span class="load"></span>
+            </section>
             {% include 'navigation.html.twig' %}
             {% block header %}
             {% endblock %}
@@ -95,6 +98,9 @@
                 $('input[name="searchorg[priceMin]"]').attr('placeholder', '{{ 'priceFrom'|trans }}');
                 $('input[name="searchorg[priceMax]"]').attr('placeholder', '{{ 'priceTo'|trans }}');
             });
+            window.onload = function () {
+                $('section#loader').css('visibility',  'hidden');
+            };
         </script>
     </body>
 </html>
