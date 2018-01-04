@@ -1386,6 +1386,9 @@ ol.breadcrumb li:not(:last-child):after {
 	margin: 0 3px;
 	padding: 0 5px;
 }
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+	max-height: 390px;
+}
 @media (min-width: 992px){
 	h1{
 		font-size: 44px;
@@ -1421,7 +1424,7 @@ ol.breadcrumb li:not(:last-child):after {
 	}
 }
 @media (max-width: 767px) {
-	footer{
+	footer {
 		.second-col {
 			min-height: 100%;
 		}
@@ -1439,18 +1442,35 @@ ol.breadcrumb li:not(:last-child):after {
 		margin-right: -15px;
 		margin-left: -15px;
 	}
-	section#header{
-		form{
-			.row{
+	section#header {
+		form {
+			.row {
 				margin: 0 15px 15px 15px;
 			}
-			.row:first-child{
+			.row:first-child {
 				margin: 15px 15px 0 15px;
 			}
 			.col-xs-12 {
 				margin-bottom: 10px;
 			}
 		}
+	}
+	#contactus {
+		.modal-dialog {
+			position: absolute;
+			width: 300px;
+			bottom: 40px;
+			right: auto;
+		}
+	}
+	section#product {
+		margin-top: 50px;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		margin-top: 20px;
+	}
+	section#product .container#main .col-xs-12.col-lg-9 .mrightinus15-30 {
+		margin-left: -15px;
 	}
 }
 @media (max-width: 576px){
@@ -1472,7 +1492,7 @@ ol.breadcrumb li:not(:last-child):after {
 		border: 0;
 	}
 	section#product .container#main .col-xs-12.col-lg-9 #price-button .icons {
-		margin-left: 15px;
+		margin-left: 5px;
 	}
 	section#product .container#main .col-xs-12.col-lg-9 #location #buttons button:first-child {
 		width: 100%;
