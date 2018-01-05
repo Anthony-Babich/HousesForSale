@@ -423,7 +423,7 @@ section#product .container#main .col-xs-12.col-lg-9 {
     font-size: 20px;
     text-transform: none;
     margin-bottom: 30px;
-    padding: 7px 20px; }
+    padding: 7px 10px; }
   section#product .container#main .col-xs-12.col-lg-9 #price-button .icons {
     width: 25px;
     height: auto;
@@ -1160,11 +1160,11 @@ ol.breadcrumb li:not(:last-child):after {
     margin-right: -15px;
     margin-left: -15px; }
 
-  section#header form .row {
+  section#header #form .row {
     margin: 0 15px 15px 15px; }
-  section#header form .row:first-child {
+  section#header #form .row:first-child {
     margin: 15px 15px 0 15px; }
-  section#header form .col-xs-12 {
+  section#header #form .col-xs-12 {
     margin-bottom: 10px; }
 
   #contactus .modal-dialog {
@@ -1180,6 +1180,7 @@ ol.breadcrumb li:not(:last-child):after {
     margin-top: 20px; }
 
   section#product .container#main .col-xs-12.col-lg-9 .mrightinus15-30 {
+    margin-top: 15px;
     margin-left: -15px; } }
 @media (max-width: 576px) {
   section#header #text h2 {

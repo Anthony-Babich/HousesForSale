@@ -1,51 +1,50 @@
-(function( $ ) {
+(function( jQuery ) {
 
-	function GoogleMapType(settings, map_el) {
+    function GoogleMapType(settings, map_el) {
 
-		var settings = $.extend( {
-			  'search_input_el'    : null,
-			  'search_action_el'   : null,
-			  'search_error_el'    : null,
-			  'current_position_el': null,
-			  'default_lat'        : '1',
-			  'default_lng'        : '-1',
-			  'default_zoom'       : 10,
-			  'lat_field'          : null,
-			  'lng_field'          : null,
-			  'addr_field'         : 'Turkey',
-			  'callback'           : function (location, gmap) {},
-			  'error_callback'     : function(status) {
-			  	$this.settings.search_error_el.text(status);
-			  }
-			}, settings);
+        settings = jQuery.extend( {
+            'search_input_el'    : null,
+            'search_action_el'   : null,
+            'search_error_el'    : null,
+            'current_position_el': null,
+            'default_zoom'       : 10,
+            'default_lat'        : '36.54852425792014',
+            'default_lng'        : '31.993250191796847',
+            'lat_field'          : null,
+            'lng_field'          : null,
+            'addr_field'         : null,
+            'callback'           : function (location, gmap) {},
+            'error_callback'     : function(status) {
+                $this.settings.search_error_el.text(status);
+            }
+        }, settings);
 
-		this.settings = settings;
+        this.settings = settings;
 
-		this.map_el = map_el;
+        this.map_el = map_el;
 
-		this.geocoder = new google.maps.Geocoder();
+        this.geocoder = new google.maps.Geocoder();
 
-	}
+    }
 
 	GoogleMapType.prototype = {
-		initMap : function(center) {
+		initMap : function() {
 
-			var center = new google.maps.LatLng(this.settings.default_lat, this.settings.default_lng);
+			center = new google.maps.LatLng(this.settings.default_lat, this.settings.default_lng);
 
 			var mapOptions = {
 				zoom: this.settings.default_zoom,
 				center: center,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
+				mapTypeId: 'satellite'
 			};
 
-			var $this = this;
+			this.map = new google.maps.Map(this.map_el[0], mapOptions);
 
-			this.map =  new google.maps.Map(this.map_el[0], mapOptions);
+            var $this = this;
 
 			this.addMarker(center);
 
-			google.maps.event.addListener(this.marker, "dragend", function(event) {
-
+			google.maps.event.addListener(this.marker, "dragend", function() {
 				var point = $this.marker.getPosition();
 				$this.map.panTo(point);
 				$this.updateLocation(point);
@@ -56,9 +55,9 @@
 				$this.insertMarker(event.latLng);
 			});
 
-			this.settings.search_action_el.click($.proxy(this.searchAddress, $this));
+			this.settings.search_action_el.click(jQuery.proxy(this.searchAddress, $this));
 
-			this.settings.current_position_el.click($.proxy(this.currentPosition, $this));
+			this.settings.current_position_el.click(jQuery.proxy(this.currentPosition, $this));
 		},
 
 		searchAddress : function (e){
@@ -66,9 +65,9 @@
 			var $this = this;
 			var address = this.settings.search_input_el.val();
 			this.geocoder.geocode( { 'address': address}, function(results, status) {
-				if (status == google.maps.GeocoderStatus.OK) {
+				if (status === google.maps.GeocoderStatus.OK) {
 					$this.map.setCenter(results[0].geometry.location);
-					$this.map.setZoom(16);
+					$this.map.setZoom(13);
 					$this.insertMarker(results[0].geometry.location);
 					$this.setAddress(results[0].formatted_address)
 				} else {
@@ -80,7 +79,7 @@
 		updateAddress: function (location){
 			var $this = this;
 			this.geocoder.geocode( { 'location': location}, function(results, status) {
-				if (status == google.maps.GeocoderStatus.OK) {
+				if (status === google.maps.GeocoderStatus.OK) {
 					$this.setAddress(results[0].formatted_address);
 				} else {
 					$this.settings.error_callback(status);
@@ -102,7 +101,7 @@
 						var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 						$this.insertMarker(clientPosition);
 						$this.map.setCenter(clientPosition);
-						$this.map.setZoom(16);
+						$this.map.setZoom(13);
 					},
 					function(error) {
 						$this.settings.error_callback(error);
@@ -143,43 +142,36 @@
 			this.updateAddress(position);
 		},
 		removeMarker : function () {
-			if(this.marker != undefined){
+			if(this.marker !== undefined){
 				this.marker.setMap(null);
 			}
 		}
 
-	}
-
-	$.fn.ohGoogleMapType = function(settings) {
-
-		settings = $.extend({}, $.fn.ohGoogleMapType.defaultSettings, settings || {});
-
-		return this.each(function() {
-			var map_el = $(this);
-
-			map_el.data('map', new GoogleMapType( settings, map_el ));
-
-			map_el.data('map').initMap();
-
-		});
-
 	};
 
-	$.fn.ohGoogleMapType.defaultSettings = {
-			  'search_input_el'    : null,
-			  'search_action_el'   : null,
-			  'search_error_el'    : null,
-			  'current_position_el': null,
-			  'default_lat'        : '1',
-			  'default_lng'        : '-1',
-			  'default_zoom'       : 10,
-			  'lat_field'          : null,
-			  'lng_field'          : null,
-			  'addr_field'         : null,
-			  'callback'           : function (location, gmap) {},
-			  'error_callback'     : function(status) {
-			  	$this.settings.search_error_el.text(status);
-			  }
-			}
+    $.fn.ohGoogleMapType = function(settings) {
+		settings = $.extend({}, $.fn.ohGoogleMapType.defaultSettings, settings || {});
+		return this.each(function() {
+			var map_el = $(this);
+			map_el.data('map', new GoogleMapType( settings, map_el ));
+			map_el.data('map').initMap();
+		});
+	};
+
+    $.fn.ohGoogleMapType.defaultSettings = {
+		'search_input_el'    : null,
+		'search_action_el'   : null,
+		'search_error_el'    : null,
+		'current_position_el': null,
+		'default_lat'        : '36.54852425792014',
+		'default_lng'        : '31.993250191796847',
+        'lat_field'          : null,
+        'lng_field'          : null,
+		'addr_field'         : null,
+		'callback'           : function (location, gmap) {},
+		'error_callback'     : function(status) {
+			$this.settings.search_error_el.text(status);
+		}
+	};
 
 })( jQuery );

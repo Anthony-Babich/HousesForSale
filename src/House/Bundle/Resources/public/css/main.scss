@@ -489,7 +489,7 @@ section#product{
 					font-size: 20px;
 					text-transform: none; 
 					margin-bottom: 30px;
-					padding: 7px 20px;
+					padding: 7px 10px;
 				}
 				.icons{
 					width: 25px;
@@ -1443,7 +1443,7 @@ ol.breadcrumb li:not(:last-child):after {
 		margin-left: -15px;
 	}
 	section#header {
-		form {
+		#form {
 			.row {
 				margin: 0 15px 15px 15px;
 			}
@@ -1470,6 +1470,7 @@ ol.breadcrumb li:not(:last-child):after {
 		margin-top: 20px;
 	}
 	section#product .container#main .col-xs-12.col-lg-9 .mrightinus15-30 {
+		margin-top: 15px;
 		margin-left: -15px;
 	}
 }

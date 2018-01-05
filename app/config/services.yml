@@ -1,8 +1,3 @@
 parameters:
 
 services:
-    oh.GoogleMapFormType.form.type.googlemapformtype:
-            class: Oh\GoogleMapFormTypeBundle\Form\Type\GoogleMapType
-            arguments: [~]
-            tags:
-                - { name: form.type, alias: oh_google_maps }

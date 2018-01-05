@@ -84,6 +84,16 @@ class AdDetails
     }
 
     /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getNameFeature()
+    {
+        return $this->name . ': ' . $this->feature;
+    }
+
+    /**
      * Set nameRu
      *
      * @param string $nameRu
@@ -153,6 +163,14 @@ class AdDetails
     public function getFeature()
     {
         return $this->feature;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return strval($this->id);
     }
 }
 

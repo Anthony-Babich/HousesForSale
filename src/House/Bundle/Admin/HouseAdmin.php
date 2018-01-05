@@ -2,6 +2,7 @@
 
 namespace House\Bundle\Admin;
 
+use House\Bundle\Entity\AdDetails;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -58,6 +59,7 @@ class HouseAdmin extends AbstractAdmin
                     ))
                     ->add('description', 'genemu_tinymce', array(
                         'label' => 'Description En',
+                        'required' => true,
                         'configs' => array(
                             'add_unload_trigger' => 'false',
                             'remove_linebreaks' => 'true',
@@ -77,6 +79,7 @@ class HouseAdmin extends AbstractAdmin
                     ))
                     ->add('descriptionRu', 'genemu_tinymce', array(
                         'label' => 'Description Ru',
+                        'required' => true,
                         'configs' => array(
                             'add_unload_trigger' => 'false',
                             'remove_linebreaks' => 'true',
@@ -96,6 +99,7 @@ class HouseAdmin extends AbstractAdmin
                     ))
                     ->add('descriptionAr', 'genemu_tinymce', array(
                         'label' => 'Description Ar',
+                        'required' => true,
                         'configs' => array(
                             'add_unload_trigger' => 'false',
                             'remove_linebreaks' => 'true',
@@ -161,7 +165,7 @@ class HouseAdmin extends AbstractAdmin
                 ->with('Detailed information', array('class' => 'col-xs-12 col-md-6'))
                     ->add('adDetails', 'sonata_type_model', array(
                         'class' => 'HouseBundle:AdDetails',
-                        'property' => 'name',
+                        'property' => 'nameFeature',
                         'multiple' => true,
                         'expanded' => true,
                         'required' => false,
@@ -181,7 +185,7 @@ class HouseAdmin extends AbstractAdmin
             ->end()
 
             ->tab('Map')
-                ->add('latlng', 'oh_google_maps', array())
+                ->add('latlng', 'oh_google_maps')
             ->end()
         ;
     }
