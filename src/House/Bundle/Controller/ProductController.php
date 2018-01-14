@@ -72,7 +72,7 @@ class ProductController extends Controller
 
             'address' => $this->getSetting('address'),
             'footerdesc' => $this->getSettingLng('footer-desc'),
-            'phones' => $this->getSettingLng('phones'),
+            'phones' => $this->getSettingLng('phone'),
             'email' => $this->getSetting('email'),
         ));
     }
