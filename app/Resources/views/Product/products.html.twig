@@ -92,25 +92,25 @@
                                     {% for i in 0..count-1 %}
                                         <tr>
                                             {% if lan == 'en' %}
-                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
-                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                                <th class="col-xs-6 col-md-3">{{ house.adDetails[i].name }}</th>
+                                                <td class="col-xs-6 col-md-3">{{ house.adDetails[i].feature }}</td>
                                                 {% if house.adDetails[i+count] is defined %}
-                                                    <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
-                                                    <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                                    <th class="col-xs-6 col-md-3">{{ house.adDetails[i+count].name }}</th>
+                                                    <td class="col-xs-6 col-md-3">{{ house.adDetails[i+count].feature }}</td>
                                                 {% endif %}
                                             {% elseif lan == 'ru' %}
-                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i].nameRu }}</th>
-                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                                <th class="col-xs-6 col-md-3">{{ house.adDetails[i].nameRu }}</th>
+                                                <td class="col-xs-6 col-md-3">{{ house.adDetails[i].feature }}</td>
                                                 {% if house.adDetails[i+count] is defined %}
-                                                    <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].nameRu }}</th>
-                                                    <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                                    <th class="col-xs-6 col-md-3">{{ house.adDetails[i+count].nameRu }}</th>
+                                                    <td class="col-xs-6 col-md-3">{{ house.adDetails[i+count].feature }}</td>
                                                 {% endif %}
                                             {% else %}
-                                                <th class="col-xs-6 col-md-2">{{ house.adDetails[i].nameAr }}</th>
-                                                <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
+                                                <th class="col-xs-6 col-md-3">{{ house.adDetails[i].nameAr }}</th>
+                                                <td class="col-xs-6 col-md-3">{{ house.adDetails[i].feature }}</td>
                                                 {% if house.adDetails[i+count] is defined %}
-                                                    <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].nameAr }}</th>
-                                                    <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
+                                                    <th class="col-xs-6 col-md-3">{{ house.adDetails[i+count].nameAr }}</th>
+                                                    <td class="col-xs-6 col-md-3">{{ house.adDetails[i+count].feature }}</td>
                                                 {% endif %}
                                             {% endif %}
                                         </tr>
