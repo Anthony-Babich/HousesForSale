@@ -9,7 +9,9 @@
                 <p class="mail"><i class="fa fa-envelope text-right" aria-hidden="true"></i> {{ email }}</p>
             </div>
             <div class="col-xs-12 col-md-8 text-main">
-                {{ contactusdesc }}
+                {% for contactusdesc in contactusdesc %}
+                    {{ contactusdesc.setting }}
+                {% endfor %}
             </div>
         </div>
     </div>

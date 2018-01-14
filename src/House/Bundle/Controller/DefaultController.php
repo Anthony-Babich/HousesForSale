@@ -119,7 +119,7 @@ class DefaultController extends Controller
             'footerdesc' => $this->getSettingLng('footer-desc'),
             'phones' => $this->getSettingLng('phone'),
             'email' => $this->getSetting('email'),
-            'contactusdesc' => $this->getSetting('contactus-desc'),
+            'contactusdesc' => $this->getSettingLng('contactus-desc'),
         ));
     }
 

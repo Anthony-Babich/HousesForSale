@@ -815,6 +815,8 @@ section#allproducts {
     padding-top: 0; }
   section#allproducts #main-content button {
     margin: 45px 0 55px; }
+  section#allproducts button.btn-orange {
+    margin-bottom: 20px; }
 
 section#map-container {
   background-color: #f4f4f4; }

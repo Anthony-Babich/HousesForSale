@@ -946,12 +946,8 @@ section#product{
 	}
 }
 section#allproducts{
-	.container{
-		background-color: #ffffff;
-	}
-	.row:first-child{
-		padding-top: 70px;
-	}
+	.container{ background-color: #ffffff; }
+	.row:first-child{ padding-top: 70px; }
 	.btn-orange.active{
 		background-color: #fa9b1b;
 		color: #ffffff;
@@ -991,6 +987,7 @@ section#allproducts{
 			margin: 45px 0 55px;
 		}
 	}
+	button.btn-orange{ margin-bottom: 20px; }
 }
 section#map-container{
 	background-color: #f4f4f4;

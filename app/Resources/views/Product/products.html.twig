@@ -94,21 +94,21 @@
                                             {% if lan == 'en' %}
                                                 <th class="col-xs-6 col-md-2">{{ house.adDetails[i].name }}</th>
                                                 <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
-                                                {% if house.adDetails|length > i+count %}
+                                                {% if house.adDetails[i+count] is defined %}
                                                     <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].name }}</th>
                                                     <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
                                                 {% endif %}
                                             {% elseif lan == 'ru' %}
                                                 <th class="col-xs-6 col-md-2">{{ house.adDetails[i].nameRu }}</th>
                                                 <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
-                                                {% if house.adDetails|length > i+count %}
+                                                {% if house.adDetails[i+count] is defined %}
                                                     <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].nameRu }}</th>
                                                     <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
                                                 {% endif %}
                                             {% else %}
                                                 <th class="col-xs-6 col-md-2">{{ house.adDetails[i].nameAr }}</th>
                                                 <td class="col-xs-6 col-md-4">{{ house.adDetails[i].feature }}</td>
-                                                {% if house.adDetails|length > i+count %}
+                                                {% if house.adDetails[i+count] is defined %}
                                                     <th class="col-xs-6 col-md-2">{{ house.adDetails[i+count].nameAr }}</th>
                                                     <td class="col-xs-6 col-md-4">{{ house.adDetails[i+count].feature }}</td>
                                                 {% endif %}
@@ -131,17 +131,62 @@
                                     {% for i in 0..count-1 %}
                                         <tr>
                                             {% if lan == 'en' %}
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].name }}</td>
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].name }}</td>
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].name }}</td>
+                                                {% if house.features[i] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i].name }}
+                                                    </td>
+                                                {% endif %}
+                                                {% if house.features[i+count] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i+count].name }}
+                                                    </td>
+                                                {% endif %}
+                                                {% if house.features[i+count+count] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i+count+count].name }}
+                                                    </td>
+                                                {% endif %}
                                             {% elseif lan == 'ru' %}
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].nameRu }}</td>
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].nameRu }}</td>
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].nameRu }}</td>
+                                                {% if house.features[i] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i].nameRu }}
+                                                    </td>
+                                                {% endif %}
+                                                {% if house.features[i+count] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i+count].nameRu }}
+                                                    </td>
+                                                {% endif %}
+                                                {% if house.features[i+count+count] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i+count+count].nameRu }}
+                                                    </td>
+                                                {% endif %}
                                             {% else %}
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i].nameAr }}</td>
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count].nameAr }}</td>
-                                                <td class="col-xs-12 col-sm-6 col-md-3"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ house.features[i+count+count].nameAr }}</td>
+                                                {% if house.features[i] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i].nameAr }}
+                                                    </td>
+                                                {% endif %}
+                                                {% if house.features[i+count] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i+count].nameAr }}
+                                                    </td>
+                                                {% endif %}
+                                                {% if house.features[i+count+count] is defined %}
+                                                    <td class="col-xs-12 col-sm-6 col-md-3">
+                                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                        {{ house.features[i+count+count].nameAr }}
+                                                    </td>
+                                                {% endif %}
                                             {% endif %}
                                         </tr>
                                     {% endfor %}
