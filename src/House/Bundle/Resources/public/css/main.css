@@ -1042,7 +1042,8 @@ section#copyright {
   position: fixed;
   width: 40px;
   height: 40px;
-  background-color: rgba(48, 46, 53, 0.56); }
+  background-color: rgba(48, 46, 53, 0.56);
+  z-index: 1000; }
 #fixed .top-list {
   bottom: 20px;
   right: 40px;

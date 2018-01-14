@@ -83,6 +83,8 @@ sonata_user:
 
 sonata_admin:
     show_mosaic_button: false
+    templates:
+        layout: 'SonataAdminBundle/standard_layout.html.twig'
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -92,13 +94,13 @@ swiftmailer:
     password: '%mailer_password%'
     spool: { type: memory }
 
-genemu_form:
-    tinymce: ~
-
 white_october_breadcrumbs: ~
 
 oh_google_map_form_type:
     api_key: "AIzaSyA0NeKC9z-ySxK6OrDBR9oS2FZWDltgLE0"
+
+genemu_form:
+    tinymce: ~
 
 vich_uploader:
     db_driver: orm

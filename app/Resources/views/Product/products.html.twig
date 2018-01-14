@@ -72,11 +72,11 @@
                     <div class="col-xs-12 text-left">
                         <div class="desc">
                             {% if lan == 'en' %}
-                                {{ house.description }}
+                                {{ house.description|raw }}
                             {% elseif lan == 'ru' %}
-                                {{ house.descriptionRu }}
+                                {{ house.descriptionRu|raw }}
                             {% else %}
-                                {{ house.descriptionAr }}
+                                {{ house.descriptionAr|raw }}
                             {% endif %}
                         </div>
                     </div>

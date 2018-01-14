@@ -69,11 +69,11 @@
                                         </h6>
                                         <p class="description">
                                             {% if lan == 'en' %}
-                                                {{ similar.description }}
+                                                {{ similar.description|raw }}
                                             {% elseif lan == 'ru' %}
-                                                {{ similar.descriptionRu }}
+                                                {{ similar.descriptionRu|raw }}
                                             {% else %}
-                                                {{ similar.descriptionAr }}
+                                                {{ similar.descriptionAr|raw }}
                                             {% endif %}
                                             <a href="{{ path('product', {'name' : similar.name}) }}">[more]</a>
                                         </p>

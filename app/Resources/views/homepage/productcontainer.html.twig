@@ -63,11 +63,11 @@
                     </h6>
                     <p class="description">
                         {% if newLng == 'en' %}
-                            {{ house.description }}
+                            {{ house.description|raw }}
                         {% elseif newLng == 'ru' %}
-                            {{ house.descriptionRu }}
+                            {{ house.descriptionRu|raw }}
                         {% else %}
-                            {{ house.descriptionAr }}
+                            {{ house.descriptionAr|raw }}
                         {% endif %}
                         <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">[more]</a>
                     </p>

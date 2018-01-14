@@ -2,8 +2,20 @@
     <div class="container">
         <div class="row" id="text">
             <div class="col-xs-12">
-                <h2 class="text-left">{{ 'welcometo'|trans }}</h2>
-                <h1 class="text-left">{{ 'layanrealestate'|trans }}</h1>
+                <h2
+                {% if app.request.getLocale() == 'ar' %}
+                    class="text-center" style="font-size: 44px;"
+                {% else %}
+                    class="text-left"
+                {% endif %}
+                >{{ 'welcometo'|trans }}</h2>
+                <h1
+                {% if app.request.getLocale() == 'ar' %}
+                    class="text-center" style="font-size: 50px;"
+                {% else %}
+                    class="text-left"
+                {% endif %}
+                >{{ 'layanrealestate'|trans }}</h1>
             </div>
         </div>
         <div id="form">
