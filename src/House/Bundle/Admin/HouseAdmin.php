@@ -59,7 +59,7 @@ class HouseAdmin extends AbstractAdmin
                     ))
                     ->add('description', 'genemu_tinymce', array(
                         'label' => 'Description En',
-                        'required' => true,
+                        'required' => false,
                         'configs' => array(
                             'add_unload_trigger' => 'false',
                             'remove_linebreaks' => 'true',
@@ -78,7 +78,7 @@ class HouseAdmin extends AbstractAdmin
                     ))
                     ->add('descriptionRu', 'genemu_tinymce', array(
                         'label' => 'Description Ru',
-                        'required' => true,
+                        'required' => false,
                         'configs' => array(
                             'add_unload_trigger' => 'false',
                             'remove_linebreaks' => 'true',
@@ -98,7 +98,7 @@ class HouseAdmin extends AbstractAdmin
                     ))
                     ->add('descriptionAr', 'genemu_tinymce', array(
                         'label' => 'Description Ar',
-                        'required' => true,
+                        'required' => false,
                         'configs' => array(
                             'add_unload_trigger' => 'false',
                             'remove_linebreaks' => 'true',

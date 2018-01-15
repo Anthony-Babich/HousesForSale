@@ -811,15 +811,17 @@ section#product{
 							font-size: 16px;
 							font-weight: 300;
 						}
-						.description{
+						#description-p{
 							margin-left: 4px;
 							margin-top: 16px;
 							font-family: $font-regular;
 							font-size: 13px;
 							line-height: 1.8em;
 							color: #afb4b5;
-							height:84px;
+							max-height:90px;
 							overflow:hidden;
+							-ms-word-wrap: break-word;
+							word-wrap: break-word;
 						}
 						.icons{
 							height: 45px;
@@ -932,6 +934,8 @@ section#map-container{
 		-o-transition: all 1s ease-out;
 		-webkit-transition: all 1s ease-out;
 		opacity: 1;
+		max-height: 250px;
+		overflow: hidden;
 	}
 	.dropdown-menu.open {
 		z-index: 9999;
@@ -971,13 +975,16 @@ section#map-container{
 			font-size: 16px;
 			font-weight: 300;
 		}
-		.description{
+		#description-p{
 			margin-left: 4px;
 			margin-top: 16px;
 			font-family: $font-regular;
-			font-size: 13.1px;
+			font-size: 13px;
 			line-height: 1.8em;
 			color: #afb4b5;
+			max-height:90px;
+			overflow:hidden;
+			-ms-word-wrap: break-word;
 			word-wrap: break-word;
 		}
 		.icons{

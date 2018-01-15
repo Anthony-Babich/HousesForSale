@@ -77,21 +77,21 @@ class House
      *
      * @ORM\Column(name="description", type="string", length=3000)
      */
-    private $description;
+    private $description = '';
 
     /**
      * @var string
      *
      * @ORM\Column(name="description_ru", type="string", length=3000)
      */
-    private $descriptionRu;
+    private $descriptionRu = '';
 
     /**
      * @var string
      *
      * @ORM\Column(name="description_ar", type="string", length=3000)
      */
-    private $descriptionAr;
+    private $descriptionAr = '';
 
     /**
      * @var string

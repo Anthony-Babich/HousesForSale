@@ -67,7 +67,7 @@
                                                 {{ similar.priceSale }}
                                             {% endif %}
                                         </h6>
-                                        <p class="description">
+                                        <div id="description-p">
                                             {% if lan == 'en' %}
                                                 {{ similar.description|raw }}
                                             {% elseif lan == 'ru' %}
@@ -75,8 +75,8 @@
                                             {% else %}
                                                 {{ similar.descriptionAr|raw }}
                                             {% endif %}
-                                            <a href="{{ path('product', {'name' : similar.name}) }}">[more]</a>
-                                        </p>
+                                        </div>
+                                        <a href="{{ path('product', {'name' : similar.name}) }}">[more]</a>
                                         <div class="row icons">
                                             {% if similar.countBed != 0 %}
                                                 <div class="col-xs-3 text-left">

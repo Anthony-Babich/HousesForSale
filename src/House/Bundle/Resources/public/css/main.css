@@ -677,15 +677,17 @@ section#product .container#more-prod {
             font-family: "MontserratBold", serif;
             font-size: 16px;
             font-weight: 300; }
-          section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption .description {
+          section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption #description-p {
             margin-left: 4px;
             margin-top: 16px;
             font-family: "MontserratRegular", serif;
             font-size: 13px;
             line-height: 1.8em;
             color: #afb4b5;
-            height: 84px;
-            overflow: hidden; }
+            max-height: 90px;
+            overflow: hidden;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption .icons {
             height: 45px;
             margin-top: 30px; }
@@ -770,7 +772,9 @@ section#map-container {
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -webkit-transition: all 1s ease-out;
-    opacity: 1; }
+    opacity: 1;
+    max-height: 250px;
+    overflow: hidden; }
   .thumbnail .dropdown-menu.open {
     z-index: 9999; }
   .thumbnail .carousel:hover .item.active img {
@@ -802,13 +806,16 @@ section#map-container {
       font-family: "MontserratBold", serif;
       font-size: 16px;
       font-weight: 300; }
-    .thumbnail .caption .description {
+    .thumbnail .caption #description-p {
       margin-left: 4px;
       margin-top: 16px;
       font-family: "MontserratRegular", serif;
-      font-size: 13.1px;
+      font-size: 13px;
       line-height: 1.8em;
       color: #afb4b5;
+      max-height: 90px;
+      overflow: hidden;
+      -ms-word-wrap: break-word;
       word-wrap: break-word; }
     .thumbnail .caption .icons {
       height: 45px;
