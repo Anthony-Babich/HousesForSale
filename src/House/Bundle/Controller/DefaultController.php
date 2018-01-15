@@ -36,6 +36,7 @@ class DefaultController extends Controller
             'homeDescTop' => $this->getSettingLng('home-desc-top'),
             'houses' => $this->getHouses(['Buy', 'Rent', 'Buy+Rent']),
             'priceType' => ['Buy', 'Rent', 'Buy+Rent'],
+            'number' => 0,
 
             'month' => $this->get('translator')->trans(
                 'month',
@@ -68,6 +69,7 @@ class DefaultController extends Controller
         return $this->render('homepage/productcontainer.html.twig', array(
             'houses' => $this->getHouses($type),
             'newLng' => $lang,
+            'number' => 0,
             'priceType' => $lastType,
             'month' => $this->get('translator')->trans(
                 'month',
@@ -102,6 +104,7 @@ class DefaultController extends Controller
             'houses' => $this->getMoreHouses($type, $offset),
             'priceType' => $lastType,
             'newLng' => $lang,
+            'number' => random_int(1000, 2000),
             'month' => $this->get('translator')->trans(
                 'month',
                 array(),

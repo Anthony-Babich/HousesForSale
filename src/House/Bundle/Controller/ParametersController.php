@@ -286,7 +286,7 @@ class ParametersController extends Controller
             'newLng' => $lang,
             'houses' => $houses,
             'priceType' => $sale,
-            'number' => 1000,
+            'number' => random_int(1000, 2000),
 
             'month' => $this->get('translator')->trans(
                 'month',

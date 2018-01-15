@@ -2,7 +2,7 @@
     {% for house in houses %}
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="thumbnail">
-                <div id="myCarousel{{ loop.index0 }}" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div id="myCarousel{{ loop.index0 + number }}" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
                         {% for image in house.images %}
                             {% if loop.first %}
@@ -33,10 +33,10 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                    <a class="left carousel-control" href="#myCarousel{{ loop.index0 }}" data-slide="prev">
+                    <a class="left carousel-control" href="#myCarousel{{ loop.index0 + number }}" data-slide="prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                     </a>
-                    <a class="right carousel-control" href="#myCarousel{{ loop.index0 }}" data-slide="next">
+                    <a class="right carousel-control" href="#myCarousel{{ loop.index0 + number }}" data-slide="next">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 </div>

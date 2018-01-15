@@ -934,8 +934,6 @@ section#map-container{
 		-o-transition: all 1s ease-out;
 		-webkit-transition: all 1s ease-out;
 		opacity: 1;
-		max-height: 250px;
-		overflow: hidden;
 	}
 	.dropdown-menu.open {
 		z-index: 9999;
@@ -1315,6 +1313,10 @@ ol.breadcrumb li:not(:last-child):after {
 }
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
 	max-height: 390px;
+}
+.carousel-inner > .item {
+	overflow: hidden;
+	max-height: 225px;
 }
 @media (min-width: 992px){
 	h1{
