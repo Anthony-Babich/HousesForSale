@@ -558,48 +558,6 @@ section#product .container#main .col-xs-12.col-lg-3 {
     border: 2px solid #71a5d1;
     -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.25);
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.25); }
-  section#product .container#main .col-xs-12.col-lg-3 #form #line-price {
-    margin-top: 0;
-    margin-bottom: 30px; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price label {
-      font-size: 15px;
-      font-family: "MontserratRegular", serif;
-      color: #7199c0;
-      text-align: left;
-      margin: 0;
-      padding: 0; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price #slider12c .slider-selection {
-      background: #eb8700; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .tooltip-inner {
-      font-family: "MontserratBold", serif;
-      color: #eb8700;
-      background-color: #ffffff; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .tooltip {
-      z-index: 1000; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .tooltip.top .tooltip-arrow {
-      border-top-color: #ffffff; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider-handle {
-      width: 20px;
-      height: 20px;
-      background-color: #f6f6f6;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#eee));
-      background-image: linear-gradient(to bottom, #eee 0%, #eee 100%);
-      background-repeat: repeat-x;
-      -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-      border: 2px solid #fff; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider-handle:hover, section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider-handle:focus, section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider-handle:active {
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#88b2db), to(#88b2db));
-      background-image: linear-gradient(to bottom, #88b2db 0%, #88b2db 100%); }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider.slider-horizontal .slider-track {
-      height: 3px;
-      margin-top: -2px; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider.slider-horizontal {
-      width: calc(100% - 15px);
-      margin-top: 5px;
-      margin-left: 10px; }
-    section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider.slider-horizontal .slider-selection, section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider.slider-horizontal .slider-track-low, section#product .container#main .col-xs-12.col-lg-3 #form #line-price .slider.slider-horizontal .slider-track-high {
-      height: 150%; }
   section#product .container#main .col-xs-12.col-lg-3 hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -628,42 +586,6 @@ section#product .container#main .col-xs-12.col-lg-3 {
     font-size: 15px;
     color: #7199c0;
     text-transform: capitalize; }
-  section#product .container#main .col-xs-12.col-lg-3 #line-price {
-    margin-top: 0;
-    margin-bottom: 30px;
-    margin-right: 5px; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price #slider12c .slider-selection {
-      background: #eb8700; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .tooltip-inner {
-      font-family: "MontserratBold", serif;
-      color: #eb8700;
-      background-color: #ffffff; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .tooltip {
-      z-index: 1000; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .tooltip.top .tooltip-arrow {
-      border-top-color: #ffffff; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .slider-handle {
-      width: 18px;
-      height: 18px;
-      background-color: #f6f6f6;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#eee));
-      background-image: linear-gradient(to bottom, #eee 0%, #eee 100%);
-      background-repeat: repeat-x;
-      -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-      border: 3px solid #fff; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .slider-handle:hover, section#product .container#main .col-xs-12.col-lg-3 #line-price .slider-handle:focus, section#product .container#main .col-xs-12.col-lg-3 #line-price .slider-handle:active {
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#88b2db), to(#88b2db));
-      background-image: linear-gradient(to bottom, #88b2db 0%, #88b2db 100%); }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .slider.slider-horizontal .slider-track {
-      height: 3px;
-      margin-top: -3px; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .slider.slider-horizontal {
-      width: 100%;
-      margin-top: 5px;
-      margin-left: 10px; }
-    section#product .container#main .col-xs-12.col-lg-3 #line-price .slider.slider-horizontal .slider-selection, section#product .container#main .col-xs-12.col-lg-3 #line-price .slider.slider-horizontal .slider-track-low, section#product .container#main .col-xs-12.col-lg-3 #line-price .slider.slider-horizontal .slider-track-high {
-      height: 150%; }
   section#product .container#main .col-xs-12.col-lg-3 .btn-orange {
     width: 100%;
     margin-top: 15px;
@@ -674,7 +596,8 @@ section#product .container#main .col-xs-12.col-lg-3 {
     overflow: hidden;
     display: block;
     width: 75px;
-    height: 75px; }
+    height: 75px;
+    margin-bottom: 5px; }
   section#product .container#main .col-xs-12.col-lg-3 .media img {
     height: 75px;
     vertical-align: top; }
@@ -685,8 +608,7 @@ section#product .container#main .col-xs-12.col-lg-3 {
       line-height: 17px; }
     section#product .container#main .col-xs-12.col-lg-3 .media .media-body h4 {
       font-size: 22px;
-      font-family: "MontserratMedium", serif;
-      margin-bottom: 25px; }
+      font-family: "MontserratMedium", serif; }
     section#product .container#main .col-xs-12.col-lg-3 .media .media-body hr {
       width: 100%;
       border: 1px solid #354c63;
@@ -751,7 +673,8 @@ section#product .container#more-prod {
             font-size: 13px;
             line-height: 1.8em;
             color: #afb4b5;
-            word-wrap: break-word; }
+            height: 84px;
+            overflow: hidden; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption .icons {
             height: 45px;
             margin-top: 30px; }

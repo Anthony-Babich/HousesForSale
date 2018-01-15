@@ -32,6 +32,15 @@ class ParametersController extends Controller
         $searchProducts = new SearchProducts();
         $searchForm = $this->createForm(new SearchProductsType($em, $translator), $searchProducts);
 
+        $priceType = $this->getDoctrine()->getManager()
+            ->getRepository('HouseBundle:SalesRent')
+            ->findOneById(htmlspecialchars($_GET['searchorg']['salesrent']));
+        if (empty($priceType)){
+            $priceType = 'Buy+Rent';
+        }else{
+            $priceType = $priceType->getTitle();
+        }
+
         return $this->render('Parameter/index.html.twig', array(
             'houses' => $this->searchProduct(),
             'features' => $this->features(),
@@ -51,8 +60,8 @@ class ParametersController extends Controller
             ),
 
             'newLng' => $this->get('translator')->getLocale(),
-            'priceType' => 'Buy+Rent',
-            'type' => 'Buy+Rent',
+            'priceType' => $priceType,
+            'type' => $priceType,
             'number' => 0,
             'head' => $this->get('translator')->trans('search', array(), 'messages', $this->get('translator')->getLocale()),
 
