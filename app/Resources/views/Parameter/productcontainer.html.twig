@@ -61,7 +61,7 @@
                             {{ house.priceSale }}
                         {% endif %}
                     </h6>
-                    <p class="description">
+                    <div id="description-p">
                         {% if newLng == 'en' %}
                             {{ house.description|raw }}
                         {% elseif newLng == 'ru' %}
@@ -69,8 +69,8 @@
                         {% else %}
                             {{ house.descriptionAr|raw }}
                         {% endif %}
-                        <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">[more]</a>
-                    </p>
+                    </div>
+                    <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">[more]</a>
                     <div class="row icons">
                         {% if house.countBed != 0 %}
                             <div class="col-xs-3 text-left">

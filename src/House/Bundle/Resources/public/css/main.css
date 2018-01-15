@@ -434,6 +434,17 @@ section#product .container#main .col-xs-12.col-lg-9 {
     font-family: "MontserratRegular", serif;
     font-size: 13px;
     color: #393b41; }
+  section#product .container#main .col-xs-12.col-lg-9 #description-p {
+    margin-left: 4px;
+    margin-top: 16px;
+    font-family: "MontserratRegular", serif;
+    font-size: 13px;
+    line-height: 1.8em;
+    color: #afb4b5;
+    max-height: 84px;
+    overflow: hidden;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word; }
   section#product .container#main .col-xs-12.col-lg-9 .desc {
     color: #616566;
     font-family: "MontserratRegular", serif;

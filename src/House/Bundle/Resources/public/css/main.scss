@@ -504,6 +504,18 @@ section#product{
 					color: #393b41;
 				}
 			}
+			#description-p{
+				margin-left: 4px;
+				margin-top: 16px;
+				font-family: $font-regular;
+				font-size: 13px;
+				line-height: 1.8em;
+				color: #afb4b5;
+				max-height:84px;
+				overflow:hidden;
+				-ms-word-wrap: break-word;
+				word-wrap: break-word;
+			}
 			.desc{
 				color: #616566;
 				font-family: $font-regular;
