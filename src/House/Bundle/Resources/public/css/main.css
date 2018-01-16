@@ -434,6 +434,8 @@ section#product .container#main .col-xs-12.col-lg-9 {
     font-family: "MontserratRegular", serif;
     font-size: 13px;
     color: #393b41; }
+  section#product .container#main .col-xs-12.col-lg-9 a {
+    margin-left: 4px; }
   section#product .container#main .col-xs-12.col-lg-9 #description-p {
     margin-left: 4px;
     margin-top: 16px;
@@ -441,7 +443,7 @@ section#product .container#main .col-xs-12.col-lg-9 {
     font-size: 13px;
     line-height: 1.8em;
     color: #afb4b5;
-    max-height: 90px;
+    max-height: 68px;
     overflow: hidden;
     -ms-word-wrap: break-word;
     word-wrap: break-word; }
@@ -664,7 +666,8 @@ section#product .container#more-prod {
         section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption {
           font-size: 13px; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption a {
-            color: #393b41; }
+            color: #393b41;
+            margin-left: 4px; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption a:hover {
             color: #337ab7; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption h4 {
@@ -684,7 +687,7 @@ section#product .container#more-prod {
             font-size: 13px;
             line-height: 1.8em;
             color: #afb4b5;
-            max-height: 90px;
+            max-height: 68px;
             overflow: hidden;
             -ms-word-wrap: break-word;
             word-wrap: break-word; }
@@ -794,6 +797,8 @@ section#map-container {
   .thumbnail .caption {
     color: #393b41;
     font-size: 13px; }
+    .thumbnail .caption a {
+      margin-left: 4px; }
     .thumbnail .caption h4 {
       margin-top: 8px;
       font-family: "MontserratMedium", serif;
@@ -811,7 +816,7 @@ section#map-container {
       font-size: 13px;
       line-height: 1.8em;
       color: #afb4b5;
-      max-height: 90px;
+      max-height: 68px;
       overflow: hidden;
       -ms-word-wrap: break-word;
       word-wrap: break-word; }
