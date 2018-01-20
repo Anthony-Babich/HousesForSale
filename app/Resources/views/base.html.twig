@@ -17,22 +17,16 @@
             {% endblock %}
         </title>
 
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/font-awesome.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-select.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap-slider.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/slider-pro.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/slick/slick.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/slick/slick-theme.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/fullcalendar.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/house/css/main.css') }}">
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/house/css/header.css') }}">
 
         {% block stylesheets %}
             <style>
                 section#header{
-                    background-image: url({{ asset('bundles/house/img/banner.png') }});
+                    background: url({{ asset('bundles/house/img/banner.png') }});
                 }
             </style>
         {% endblock %}
@@ -47,13 +41,6 @@
             js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
         {% block body %}
             <section id="loader">
                 <span class="load"></span>
@@ -73,11 +60,22 @@
         {% endblock %}
 
         {% block javascripts %}
-            <script type="text/javascript" src="{{ asset('bundles/house/js/jquery-3.2.1.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/jquery-3.2.1.min.js') }}"></script>
+            <script async>
+                $("head")
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/css/font-awesome.min.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/css/bootstrap-select.min.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/css/bootstrap-slider.min.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/css/slider-pro.min.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/slick/slick.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/slick/slick-theme.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/css/fullcalendar.min.css') }}">')
+                    .append('<link rel="stylesheet" type="text/css" href="{{ asset('bundles/house/css/main.css') }}">');
+            </script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/jquery.fullcalendar.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-select.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-slider.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-select.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/house/js/bootstrap-slider.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/main.js') }}"></script>
             <script type="text/javascript" src="{{ asset('bundles/house/js/ajax.js') }}"></script>
             <script type="text/javascript" >
