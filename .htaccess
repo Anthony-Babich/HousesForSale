@@ -6,15 +6,15 @@ DirectoryIndex app.php
 
 #кэшировать html и htm файлы на один день
 <FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "max-age=43200"
+    Header set Cache-Control "max-age=900"
 </FilesMatch>
 #кэшировать css, javascript и текстовые файлы на одну неделю
 <FilesMatch "\.(js|css|txt)$">
-    Header set Cache-Control "max-age=604800"
+    Header set Cache-Control "max-age=900"
 </FilesMatch>
 #кэшировать флэш и изображения на месяц
 <FilesMatch "\.(flv|swf|ico|gif|jpg|pdf|webp|jpeg|png|svg)$">
-    Header set Cache-Control "max-age=2592000"
+    Header set Cache-Control "max-age=900"
 </FilesMatch>
 #отключить кэширование
 <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
