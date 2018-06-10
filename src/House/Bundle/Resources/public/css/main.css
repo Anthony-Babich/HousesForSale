@@ -359,6 +359,8 @@ section#product .container#more-prod {
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption a {
             color: #393b41;
             margin-left: 4px; }
+          section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption a.margin-left-0 {
+            margin-left: 0; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption a:hover {
             color: #337ab7; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption h4 {
@@ -461,6 +463,9 @@ section#map-container {
   section#map-container #map {
     height: 370px; }
 
+.margin-left-0 {
+  margin-left: 0; }
+
 .thumbnail {
   border: 1px solid #ebebeb;
   padding: 0; }
@@ -492,6 +497,8 @@ section#map-container {
     font-size: 13px; }
     .thumbnail .caption a {
       margin-left: 4px; }
+    .thumbnail .caption a.margin-left-0 {
+      margin-left: 0; }
     .thumbnail .caption h4 {
       margin-top: 8px;
       font-family: "MontserratMedium", serif;

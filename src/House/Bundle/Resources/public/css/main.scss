@@ -469,6 +469,9 @@ section#product{
 							color: #393b41;
 							margin-left: 4px;
 						}
+						a.margin-left-0{
+							margin-left: 0;
+						}
 						a:hover{
 							color: #337ab7;
 						}
@@ -601,6 +604,9 @@ section#map-container{
 		height: 370px;
 	}
 }
+.margin-left-0{
+	margin-left: 0;
+}
 .thumbnail {
 	border: 1px solid #ebebeb;
 	padding: 0;
@@ -638,6 +644,9 @@ section#map-container{
 		font-size: 13px;
 		a{
 			margin-left: 4px;
+		}
+		a.margin-left-0{
+			margin-left: 0;
 		}
 		h4{
 			margin-top: 8px;

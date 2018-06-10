@@ -42,7 +42,7 @@
                 </div>
                 <div class="caption text-left">
                     <h4>
-                        <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">
+                        <a class="margin-left-0" href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">
                             {% if newLng == 'en' %}
                                 {{ house.title }}
                             {% elseif newLng == 'ru' %}

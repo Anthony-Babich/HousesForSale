@@ -47,8 +47,8 @@
                                         </a>
                                     </div>
                                     <div class="caption text-left">
-                                        <a href="{{ path('product', {'name' : similar.name}) }}">
-                                            <h4>
+                                        <h4>
+                                            <a class="margin-left-0" href="{{ path('product', {'name' : similar.name}) }}">
                                                 {% if lan == 'en' %}
                                                     {{ similar.title }}
                                                 {% elseif lan == 'ru' %}
@@ -56,8 +56,8 @@
                                                 {% else %}
                                                     {{ similar.titleAr }}
                                                 {% endif %}
-                                            </h4>
-                                        </a>
+                                            </a>
+                                        </h4>
                                         <h6>$
                                             {% if similar.idSalesRent.title == 'Rent'  %}
                                                 {{ similar.priceRent }} / {{ month }}
