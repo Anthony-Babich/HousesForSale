@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ee805a2-a097-48d8-a154-8ce5bef5a3a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/HousesForSale.iml" afterPath="$PROJECT_DIR$/.idea/HousesForSale.iml" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Product/features.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Product/features.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Product/header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Product/header.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Product/similarProperties.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Product/similarProperties.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/homepage/productcontainer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/homepage/productcontainer.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/navigation.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/navigation.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css.map" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" />
+      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ar.yml" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ar.yml" />
+      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.en.yml" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.en.yml" />
+      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ru.yml" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ru.yml" />
+      <change beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" executionDataType="PHAR" phpInterpreterId="d4d320ec-fbd0-4b5e-a8e1-9bb8aad31bab" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>D:\OpenServer\domains\HousesForSale\composer.json</pharConfigPath>
+    <pharPath>D:\OpenServer\modules\php\PHP-7.1-x64\php.exe</pharPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tran</find>
+      <find>new Sear</find>
+      <find>sea</find>
+      <find>mo</find>
+      <find>Number of shower</find>
+      <find>AdminLTEOptions</find>
+      <find>o.</find>
+      <find>jQuery</find>
+      <find>$.AdminLTE</find>
+      <find>$</find>
+      <find>goog</find>
+      <find>initMap</find>
+      <find>description</find>
+      <find>descri</find>
+      <find>fullsc</find>
+      <find>max-hei</find>
+      <find>$font</find>
+      <find>more</find>
+      <find>[MORE</find>
+      <find>MORE</find>
+      <find>thum</find>
+      <find>description-p</find>
+      <find>caption</find>
+      <find>.caption</find>
+      <find>title_</find>
+      <find>ень</find>
+      <find>.media-body</find>
+      <find>section#product .container#main .col-xs-12.col-lg-9 a</find>
+      <find>carousel-c</find>
+      <find>media-body</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\OpenServer\domains\HousesForSale\src\House\Bundle</dir>
+      <dir>D:\OpenServer\domains\HousesForSale</dir>
+      <dir>D:\OpenServer\domains\HousesForSale\src\House\Bundle\Entity</dir>
+      <dir>D:\OpenServer\domains\HousesForSale\app\Resources</dir>
+      <dir>D:\OpenServer\domains\HousesForSale\app\Resources\views</dir>
+    </dirStrings>
+  </component>
+  <component name="FrameworkRootSettings" id="Symfony2">
+    <option name="typedPaths">
+      <list>
+        <element elementPath="$PROJECT_DIR$/app" typeId="app_directory" />
+        <element elementPath="$PROJECT_DIR$/vendor" typeId="vendor_directory" />
+        <element elementPath="$PROJECT_DIR$/web" typeId="web_directory" />
+      </list>
+    </option>
+    <option name="myTypedPaths">
+      <list>
+        <element elementPath="$PROJECT_DIR$/app" typeId="app_directory" />
+        <element elementPath="$PROJECT_DIR$/vendor" typeId="vendor_directory" />
+        <element elementPath="$PROJECT_DIR$/web" typeId="web_directory" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web/bundles/house/js/adminlte.js" />
+        <option value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle/src/Resources/public/vendor/admin-lte/dist/js/app.min.js" />
+        <option value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle/src/Resources/public/vendor/admin-lte/dist/js/app.js" />
+        <option value="$PROJECT_DIR$/web/bundles/sonataadmin/vendor/admin-lte/dist/js/app.js" />
+        <option value="$PROJECT_DIR$/web/bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js" />
+        <option value="$PROJECT_DIR$/app/Resources/Oh/GoogleMapFormTypeBundle/Resources/views/Form/google_maps.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/OhGoogleMapFormTypeBundle/views/Form/google_maps.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/OhGoogleMapFormTypeBundle/views/Form/fields.html.twig" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Entity/AdDetails.php" />
+        <option value="$PROJECT_DIR$/web/bundles/house/js/jquery.ohgooglemaps.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/contact/contact-us-main.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/homepage/header.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Form/fields.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/SonataAdminBundle/views/standard_layout.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle/src/Resources/views/standard_layout.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Product/products.html.twig" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Parameter/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Admin/HouseAdmin.php" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Entity/House.php" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Controller/ParametersController.php" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/header.scss" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/web/bundles/house/js/jquery-3.2.1.min.js" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/bootstrap-select.min.css" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/bootstrap-slider.min.css" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/fullcalendar.min.css" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/slider-pro.min.css" />
+        <option value="$PROJECT_DIR$/web/bundles/house/js/bootstrap-select.min.js" />
+        <option value="$PROJECT_DIR$/web/bundles/house/js/bootstrap-slider.min.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/web/robots.txt" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ru.yml" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.en.yml" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ar.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/homepage/productcontainer.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Product/similarProperties.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/main.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/navigation.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Product/header.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/main.scss" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Product/features.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig" />
+        <option value="$PROJECT_DIR$/web/app.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="PhpDebugGeneral" break_at_first_line="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="4dc3224e-e14d-493e-a9c2-5a13e609c77e" name="xdebug-server" />
+      <server host="housesforsale" id="86416d67-95b2-45e8-93d6-397c18b18c7e" name="housesforsale" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP7.1.0">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/ircmaxell/password-compat" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-acl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php54" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php55" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/whiteoctober/breadcrumbs-bundle" />
+      <path value="$PROJECT_DIR$/vendor/genemu/form-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/core-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/cache" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/block-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/datagrid-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-orm-admin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/easy-extends-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle" />
+      <path value="$PROJECT_DIR$/vendor/adesigns/calendar-bundle" />
+      <path value="$PROJECT_DIR$/vendor/oh/google-map-form-type-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="683" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/web/bundles/house/css/main.scss&#10;D:/OpenServer/domains/HousesForSale/web/bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/main.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/js/jquery-3.2.1.min.js&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/bootstrap-select.min.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/js/bootstrap-select.min.js&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/fullcalendar.min.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/js/bootstrap-slider.js&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/slider-pro.min.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/js/jquery.ohgooglemaps.js&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/bootstrap.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/bootstrap.min.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/bootstrap-slider.min.css&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/js/bootstrap-slider.min.js&#10;D:/OpenServer/domains/HousesForSale/web/bundles/house/css/header.scss" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\HousesForSale\app\Resources\views\SonataAdminBundle" />
+      <recent name="D:\OpenServer\domains\HousesForSale\app\Resources\OhGoogleMapFormTypeBundle" />
+      <recent name="D:\OpenServer\domains\HousesForSale\app\Resources\Oh\GoogleMapFormTypeBundle" />
+      <recent name="D:\OpenServer\domains\HousesForSale\web\bundles\sonataadmin\vendor\admin-lte\dist\js" />
+      <recent name="D:\OpenServer\domains\HousesForSale\web\bundles\house\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\HousesForSale\src\House\Bundle\Resources\public" />
+      <recent name="D:\OpenServer\domains\HousesForSale\web\bundles\house\js" />
+      <recent name="D:\OpenServer\domains\HousesForSale\web\bundles\house\css" />
+      <recent name="D:\OpenServer\domains\HousesForSale\src\House\Bundle\Resources\public\css" />
+      <recent name="D:\OpenServer\domains\HousesForSale\app\Resources\views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Remote Debug.xDebug">
+    <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/vendor/sonata-project/admin-bundle/src/Resources/public/vendor/admin-lte/dist/js" />
+    <configuration name="xDebug" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="xdebug-server" session_id="&quot;PHPSTORM&quot;" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="PHP Remote Debug.xDebug" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.app.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Anton\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ee805a2-a097-48d8-a154-8ce5bef5a3a6" name="Default" comment="" />
+      <created>1511081190528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1511081190528</updated>
+      <workItem from="1511081192464" duration="11920000" />
+      <workItem from="1511094915820" duration="349000" />
+      <workItem from="1511095294432" duration="616000" />
+      <workItem from="1511095925241" duration="15202000" />
+      <workItem from="1511157503894" duration="17161000" />
+      <workItem from="1511213488020" duration="719000" />
+      <workItem from="1511214280598" duration="1047000" />
+      <workItem from="1511247041769" duration="1005000" />
+      <workItem from="1511255954781" duration="65977000" />
+      <workItem from="1511326848736" duration="30906000" />
+      <workItem from="1514367899284" duration="2167000" />
+      <workItem from="1514392115983" duration="6803000" />
+      <workItem from="1514446409514" duration="20459000" />
+      <workItem from="1514472577969" duration="18038000" />
+      <workItem from="1514539951016" duration="43104000" />
+      <workItem from="1514628432073" duration="14473000" />
+      <workItem from="1514650792122" duration="13754000" />
+      <workItem from="1514667525746" duration="1582000" />
+      <workItem from="1514906429741" duration="9950000" />
+      <workItem from="1514919538750" duration="1574000" />
+      <workItem from="1514974681812" duration="10995000" />
+      <workItem from="1514990611519" duration="2922000" />
+      <workItem from="1515027982690" duration="3588000" />
+      <workItem from="1515063680890" duration="1007000" />
+      <workItem from="1515092450977" duration="22173000" />
+      <workItem from="1515154346696" duration="35000" />
+      <workItem from="1515155387004" duration="12161000" />
+      <workItem from="1515497806814" duration="748000" />
+      <workItem from="1515934159633" duration="1843000" />
+      <workItem from="1515940893338" duration="9220000" />
+      <workItem from="1515997073421" duration="3918000" />
+      <workItem from="1516005852262" duration="5059000" />
+      <workItem from="1516028193796" duration="5675000" />
+      <workItem from="1516074213485" duration="1109000" />
+      <workItem from="1516247572486" duration="79000" />
+      <workItem from="1516444172894" duration="4907000" />
+      <workItem from="1516974157239" duration="140000" />
+      <workItem from="1528612800648" duration="9642000" />
+    </task>
+    <task id="LOCAL-00008" summary="Готовая админка для тестирования.">
+      <created>1511331780946</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511331780946</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Готовая админка для тестирования.">
+      <created>1511347313394</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511347313394</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Изменение вывода характеристик.&#10;Изменил вывод описания домов - tinyMCE.&#10;Добавление твиттера.">
+      <created>1511367281051</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511367281051</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Изменение вывода характеристик.&#10;Изменил вывод описания домов - tinyMCE.&#10;Добавление твиттера.">
+      <created>1511367497689</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1511367497689</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Перенос слов.&#10;Facebook.">
+      <created>1511369786592</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1511369786592</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Перенос слов.&#10;Facebook.">
+      <created>1511370217671</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1511370217671</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Перенос слов.&#10;Facebook.">
+      <created>1511370338957</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1511370338957</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Готовая большая часть + многоязычность. &#10;Английский, русский, арабский.">
+      <created>1511385363681</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1511385363681</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Готовая большая часть + многоязычность. &#10;Английский, русский, арабский.">
+      <created>1511385587482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1511385587482</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Готовая большая часть + многоязычность. &#10;Английский, русский, арабский.">
+      <created>1511386321170</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511386321170</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Готовая большая часть + многоязычность. &#10;Английский, русский, арабский.">
+      <created>1511392291143</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1511392291143</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Готовая большая часть + многоязычность. &#10;Английский, русский, арабский.">
+      <created>1511392519144</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1511392519144</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Обновление проекта до последней версии бандлов, после отпуска.">
+      <created>1514396702635</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1514396702635</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Изменение вывода title на главной странице по языкам.&#10;Вывод языка первым, если он актиный.">
+      <created>1514399400895</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1514399400895</updated>
+    </task>
+    <task id="LOCAL-00022" summary="commit перед созданием календаря.">
+      <created>1514448392763</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1514448392763</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Бета версия календаря.">
+      <created>1514468691190</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1514468691190</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Готовый календарь и добавление данных о квартирах в аренду через админку.">
+      <created>1514482595068</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1514482595068</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Готовый календарь и добавление данных о квартирах в аренду через админку.">
+      <created>1514484791032</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1514484791033</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Готовый календарь и добавление данных о квартирах в аренду через админку.">
+      <created>1514485028187</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1514485028187</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Поиск координат квартиры при добавлении через google maps.">
+      <created>1514540275839</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1514540275839</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Поиск координат квартиры при добавлении через google maps.&#10;Перевод на 3 языка: англ, рус, араб.">
+      <created>1514559265043</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1514559265044</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Админ панель: добавление полей для редактирования.">
+      <created>1514560151456</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1514560151456</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Кнопки поделиться: facebook, twitter.&#10;Поиск по параметрам: кол-во комнат, кол-во душевых, тип дома.">
+      <created>1514642905605</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1514642905605</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Добавление ссылок на страницы facebook, twitter.&#10;Кнопка перехода с главной страницы на страницу контанты.">
+      <created>1514644532026</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1514644532037</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Изменение поиска: статус, кол-во комнат, тип.&#10;Вывод на карту всех квартир и домов.">
+      <created>1514660431518</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1514660431518</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Изменение поиска: статус, кол-во комнат, тип.&#10;Вывод на карту всех квартир и домов.">
+      <created>1514661630040</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1514661630040</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Изменение поиска: статус, кол-во комнат, тип.&#10;Вывод на карту всех квартир и домов.">
+      <created>1514662076287</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1514662076287</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Небольшое изменение адаптивки">
+      <created>1514666365053</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1514666365053</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Небольшое изменение адаптивки">
+      <created>1514668111013</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1514668111013</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Небольшое изменение адаптивки">
+      <created>1514668493323</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1514668493323</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Небольшое изменение адаптивки">
+      <created>1514668802495</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1514668802495</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Изменение ползунка в фильтре: на 2 поля (мин, макс).">
+      <created>1514920960022</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1514920960022</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Перевод админки на английский язык.&#10;Перевод формы поиска на рус, англ, араб.&#10;При удаление дома теперь удаляются и записи в таблице с арендой.">
+      <created>1514985628526</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1514985628526</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Удаление карты с главной страницы.">
+      <created>1514986515678</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1514986515678</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Добавление прелоадера.">
+      <created>1514993586094</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1514993586094</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Изменение адаптивки">
+      <created>1515064710694</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1515064710694</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Изменение карты.">
+      <created>1515167263943</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1515167263943</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Изменение оформления небольшое (отступы и др.).&#10;Добавление проверок на существование данных.">
+      <created>1515935620923</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1515935620923</updated>
+    </task>
+    <task id="LOCAL-00046" summary="col-md-3 для всех характеристик">
+      <created>1515936094530</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1515936094530</updated>
+    </task>
+    <task id="LOCAL-00047" summary="TyniMCE на англ языке для описания дома.&#10;Изменение перевода некоторых слов на арабском языке.">
+      <created>1515949108310</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1515949108310</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Phone footer fix">
+      <created>1515949690561</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1515949690561</updated>
+    </task>
+    <task id="LOCAL-00049" summary="css description fix">
+      <created>1516001012866</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1516001012866</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix description on product">
+      <created>1516012152808</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1516012152810</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fix description on product">
+      <created>1516012512271</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1516012512271</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix description">
+      <created>1516032725561</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1516032725571</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix big images in carousel">
+      <created>1516035481437</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1516035481438</updated>
+    </task>
+    <task id="LOCAL-00054" summary="подровнял кнопку more в писании товара и уменьшил вывод до 3 строк">
+      <created>1516075092490</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1516075092492</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Настройка файлов htaccess и robots.txt.&#10;Отключение debug.&#10;Минимизация некоторых файлов css, js.&#10;Ассинхронная загрузка css-файлов.">
+      <created>1516448607230</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1516448607232</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Настройка файлов htaccess и robots.txt.&#10;Отключение debug.&#10;Минимизация некоторых файлов css, js.&#10;Ассинхронная загрузка css-файлов.">
+      <created>1516448648148</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1516448648148</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="372027000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.318555" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41543514" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.49425286" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2934947" sideWeight="0.50574714" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40722495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Бета версия календаря." />
+    <MESSAGE value="Готовый календарь и добавление данных о квартирах в аренду через админку." />
+    <MESSAGE value="Поиск координат квартиры при добавлении через google maps." />
+    <MESSAGE value="Поиск координат квартиры при добавлении через google maps.&#10;Перевод на 3 языка: англ, рус, араб." />
+    <MESSAGE value="Админ панель: добавление полей для редактирования." />
+    <MESSAGE value="Кнопки поделиться: facebook, twitter.&#10;Поиск по параметрам: кол-во комнат, кол-во душевых, тип дома." />
+    <MESSAGE value="Добавление ссылок на страницы facebook, twitter.&#10;Кнопка перехода с главной страницы на страницу контанты." />
+    <MESSAGE value="Изменение поиска: статус, кол-во комнат, тип.&#10;Вывод на карту всех квартир и домов." />
+    <MESSAGE value="Небольшое изменение адаптивки" />
+    <MESSAGE value="Изменение ползунка в фильтре: на 2 поля (мин, макс)." />
+    <MESSAGE value="Перевод админки на английский язык.&#10;Перевод формы поиска на рус, англ, араб.&#10;При удаление дома теперь удаляются и записи в таблице с арендой." />
+    <MESSAGE value="Удаление карты с главной страницы." />
+    <MESSAGE value="Добавление прелоадера." />
+    <MESSAGE value="Изменение адаптивки" />
+    <MESSAGE value="Изменение карты." />
+    <MESSAGE value="Изменение оформления небольшое (отступы и др.).&#10;Добавление проверок на существование данных." />
+    <MESSAGE value="col-md-3 для всех характеристик" />
+    <MESSAGE value="TyniMCE на англ языке для описания дома.&#10;Изменение перевода некоторых слов на арабском языке." />
+    <MESSAGE value="Phone footer fix" />
+    <MESSAGE value="css description fix" />
+    <MESSAGE value="fix description on product" />
+    <MESSAGE value="fix description" />
+    <MESSAGE value="fix big images in carousel" />
+    <MESSAGE value="подровнял кнопку more в писании товара и уменьшил вывод до 3 строк" />
+    <MESSAGE value="Настройка файлов htaccess и robots.txt.&#10;Отключение debug.&#10;Минимизация некоторых файлов css, js.&#10;Ассинхронная загрузка css-файлов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Настройка файлов htaccess и robots.txt.&#10;Отключение debug.&#10;Минимизация некоторых файлов css, js.&#10;Ассинхронная загрузка css-файлов." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="119" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="4" column="386" lean-forward="true" selection-start-line="4" selection-start-column="386" selection-end-line="4" selection-end-column="386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="6757" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="43755" lean-forward="false" selection-start-line="0" selection-start-column="43755" selection-end-line="0" selection-end-column="43755" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/jquery-3.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/bootstrap-select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/bootstrap-select.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6392" lean-forward="false" selection-start-line="5" selection-start-column="6392" selection-end-line="5" selection-end-column="6392" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/bootstrap-slider.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/fullcalendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/fullcalendar.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="67" lean-forward="true" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/slider-pro.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/bootstrap-select.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/bootstrap-slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/calendar-settings.min.js" />
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/jquery.sliderPro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/bootstrap-select.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32865" lean-forward="false" selection-start-line="0" selection-start-column="32865" selection-end-line="0" selection-end-column="32865" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/js/bootstrap-slider.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34076" lean-forward="false" selection-start-line="0" selection-start-column="34076" selection-end-line="0" selection-end-column="34076" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/public/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="70" column="119" lean-forward="false" selection-start-line="70" selection-start-column="119" selection-end-line="70" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/EventListener/CalendarEventListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ar.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UPGRADE-2.8.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/homepage/productcontainer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-712">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/navigation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="96" column="17" lean-forward="false" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/whiteoctober/breadcrumbs-bundle/WhiteOctober/BreadcrumbsBundle/Twig/Extension/BreadcrumbsExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Product/similarProperties.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Product/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ar.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="503" column="23" lean-forward="false" selection-start-line="503" selection-start-column="23" selection-end-line="503" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="174" column="14" lean-forward="true" selection-start-line="174" selection-start-column="14" selection-end-line="174" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="44" lean-forward="false" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Product/products.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="223" column="40" lean-forward="false" selection-start-line="223" selection-start-column="40" selection-end-line="223" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Product/features.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="57" column="59" lean-forward="false" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="87" column="51" lean-forward="false" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

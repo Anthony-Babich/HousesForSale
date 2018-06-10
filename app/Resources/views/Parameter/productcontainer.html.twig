@@ -33,7 +33,7 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                    <a class="left carousel-control" href="#myCarousel{{ loop.index0 + number }}" data-slide="prev">
+                    <a class="left carousel-control margin-left-0" href="#myCarousel{{ loop.index0 + number }}" data-slide="prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                     </a>
                     <a class="right carousel-control" href="#myCarousel{{ loop.index0 + number }}" data-slide="next">
@@ -70,7 +70,9 @@
                             {{ house.descriptionAr|raw }}
                         {% endif %}
                     </div>
-                    <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">[more]</a>
+                    <a href="{{ path('product', {'name' : house.name, '_locale': newLng}) }}">
+                        [{{ 'More'|trans }}]
+                    </a>
                     <div class="row icons">
                         {% if house.countBed != 0 %}
                             <div class="col-xs-3 text-left">

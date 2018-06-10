@@ -74,18 +74,16 @@
                                 <div class="media-body">
                                     <h5 class="media-heading">{{ feature.title }}</h5>
                                     <hr>
-                                    <h4><sup>$</sup>
-                                        {% if type == 'Buy' %}
+                                    <h4>
+                                        {% if type == 'Buy'%}
                                             {% if feature.priceSale != 0 %}
+                                                <sup>$</sup>
                                                 {{ feature.priceSale }}
-                                            {% else %}
-                                                {{ feature.priceRent }}
                                             {% endif %}
                                         {% else %}
                                             {% if feature.priceRent != 0 %}
-                                                {{ feature.priceRent }}
-                                            {% else %}
-                                                {{ feature.priceSale }}
+                                                <sup>$</sup>
+                                                {{ feature.priceRent }} / {{ 'month'|trans }}
                                             {% endif %}
                                         {% endif %}
                                     </h4>

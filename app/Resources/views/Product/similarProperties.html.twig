@@ -39,7 +39,7 @@
                                                 {% endif %}
                                             {% endfor %}
                                         </div>
-                                        <a class="left carousel-control" href="#myCarousel{{ loop.index0 }}11" data-slide="prev">
+                                        <a class="left carousel-control margin-left-0" href="#myCarousel{{ loop.index0 }}11" data-slide="prev">
                                             <i class="fa fa-angle-left" aria-hidden="true"></i>
                                         </a>
                                         <a class="right carousel-control" href="#myCarousel{{ loop.index0 }}11" data-slide="next">
@@ -76,7 +76,9 @@
                                                 {{ similar.descriptionAr|raw }}
                                             {% endif %}
                                         </div>
-                                        <a href="{{ path('product', {'name' : similar.name}) }}">[more]</a>
+                                        <a href="{{ path('product', {'name' : similar.name}) }}">
+                                            [{{ 'More'|trans }}]
+                                        </a>
                                         <div class="row icons">
                                             {% if similar.countBed != 0 %}
                                                 <div class="col-xs-3 text-left">

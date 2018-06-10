@@ -124,9 +124,12 @@ section#product .container#main .col-xs-12.col-lg-9 {
     color: #393b41; }
   section#product .container#main .col-xs-12.col-lg-9 a {
     margin-left: 4px; }
+  section#product .container#main .col-xs-12.col-lg-9 a.margin-left-0 {
+    margin-left: 0; }
   section#product .container#main .col-xs-12.col-lg-9 #description-p {
     margin-left: 4px;
     margin-top: 16px;
+    min-height: 68px;
     font-family: "MontserratRegular", serif;
     font-size: 13px;
     line-height: 1.8em;
@@ -308,7 +311,7 @@ section#product .container#main .col-xs-12.col-lg-3 {
       font-size: 13px;
       line-height: 17px; }
     section#product .container#main .col-xs-12.col-lg-3 .media .media-body h4 {
-      font-size: 22px;
+      font-size: 18px;
       font-family: "MontserratMedium", serif; }
     section#product .container#main .col-xs-12.col-lg-3 .media .media-body hr {
       width: 100%;
@@ -361,7 +364,8 @@ section#product .container#more-prod {
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption h4 {
             margin-top: 8px;
             font-family: "MontserratMedium", serif;
-            margin-left: 4px; }
+            margin-left: 4px;
+            height: 10px; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption h6 {
             margin-left: 4px;
             margin-top: 12px;
@@ -371,6 +375,7 @@ section#product .container#more-prod {
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption #description-p {
             margin-left: 4px;
             margin-top: 16px;
+            min-height: 68px;
             font-family: "MontserratRegular", serif;
             font-size: 13px;
             line-height: 1.8em;
@@ -490,7 +495,8 @@ section#map-container {
     .thumbnail .caption h4 {
       margin-top: 8px;
       font-family: "MontserratMedium", serif;
-      margin-left: 4px; }
+      margin-left: 4px;
+      height: 10px; }
     .thumbnail .caption h6 {
       margin-left: 4px;
       margin-top: 12px;
@@ -500,6 +506,7 @@ section#map-container {
     .thumbnail .caption #description-p {
       margin-left: 4px;
       margin-top: 16px;
+      min-height: 68px;
       font-family: "MontserratRegular", serif;
       font-size: 13px;
       line-height: 1.8em;

@@ -172,9 +172,13 @@ section#product{
 			a{
 				margin-left: 4px;
 			}
+			a.margin-left-0{
+				margin-left: 0;
+			}
 			#description-p{
 				margin-left: 4px;
 				margin-top: 16px;
+				min-height: 68px;
 				font-family: $font-regular;
 				font-size: 13px;
 				line-height: 1.8em;
@@ -404,7 +408,7 @@ section#product{
 						line-height: 17px;
 					}
 					h4{
-						font-size: 22px;
+						font-size: 18px;
 						font-family: $font-medium;
 					}
 					hr{
@@ -472,6 +476,7 @@ section#product{
 							margin-top: 8px;
 							font-family: $font-medium;
 							margin-left: 4px;
+							height: 10px;
 						}
 						h6{
 							margin-left: 4px;
@@ -483,6 +488,7 @@ section#product{
 						#description-p{
 							margin-left: 4px;
 							margin-top: 16px;
+							min-height: 68px;
 							font-family: $font-regular;
 							font-size: 13px;
 							line-height: 1.8em;
@@ -637,6 +643,7 @@ section#map-container{
 			margin-top: 8px;
 			font-family: $font-medium;
 			margin-left: 4px;
+			height: 10px;
 		}
 		h6{
 			margin-left: 4px;
@@ -648,6 +655,7 @@ section#map-container{
 		#description-p{
 			margin-left: 4px;
 			margin-top: 16px;
+			min-height: 68px;
 			font-family: $font-regular;
 			font-size: 13px;
 			line-height: 1.8em;
