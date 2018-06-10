@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ee805a2-a097-48d8-a154-8ce5bef5a3a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HousesForSale.iml" afterPath="$PROJECT_DIR$/.idea/HousesForSale.iml" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Product/features.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Product/features.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Product/header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Product/header.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Product/similarProperties.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Product/similarProperties.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/homepage/productcontainer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/homepage/productcontainer.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/navigation.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/navigation.html.twig" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css.map" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.css.map" />
       <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" />
-      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ar.yml" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ar.yml" />
-      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.en.yml" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.en.yml" />
-      <change beforePath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ru.yml" afterPath="$PROJECT_DIR$/src/House/Bundle/Resources/translations/messages.ru.yml" />
-      <change beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +53,6 @@
       <find>more</find>
       <find>[MORE</find>
       <find>MORE</find>
-      <find>thum</find>
       <find>description-p</find>
       <find>caption</find>
       <find>.caption</find>
@@ -75,6 +62,7 @@
       <find>section#product .container#main .col-xs-12.col-lg-9 a</find>
       <find>carousel-c</find>
       <find>media-body</find>
+      <find>thum</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -154,12 +142,12 @@
         <option value="$PROJECT_DIR$/web/bundles/house/css/main.css" />
         <option value="$PROJECT_DIR$/app/Resources/views/navigation.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Product/header.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/house/css/main.scss" />
-        <option value="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" />
         <option value="$PROJECT_DIR$/app/Resources/views/Product/features.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Parameter/allproducts.html.twig" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss" />
+        <option value="$PROJECT_DIR$/web/bundles/house/css/main.scss" />
       </list>
     </option>
   </component>
@@ -248,7 +236,7 @@
       <path value="$PROJECT_DIR$/vendor/oh/google-map-form-type-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="683" />
@@ -279,6 +267,77 @@
             <path>
               <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
               <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="House" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="House" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="House" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="House" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="House" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="house" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="HousesForSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousesForSale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="house" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -385,7 +444,7 @@
       <workItem from="1516247572486" duration="79000" />
       <workItem from="1516444172894" duration="4907000" />
       <workItem from="1516974157239" duration="140000" />
-      <workItem from="1528612800648" duration="9642000" />
+      <workItem from="1528612800648" duration="10228000" />
     </task>
     <task id="LOCAL-00008" summary="Готовая админка для тестирования.">
       <created>1511331780946</created>
@@ -734,10 +793,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372027000" />
+    <option name="totallyTimeSpent" value="372613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.318555" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
@@ -1119,22 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="174" column="14" lean-forward="true" selection-start-line="174" selection-start-column="14" selection-end-line="174" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Parameter/productcontainer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
@@ -1179,6 +1222,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/house/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="645" column="0" lean-forward="false" selection-start-line="645" selection-start-column="0" selection-end-line="646" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House/Bundle/Resources/public/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5733">
+          <caret line="645" column="25" lean-forward="true" selection-start-line="645" selection-start-column="25" selection-end-line="645" selection-end-column="25" />
           <folding />
         </state>
       </provider>

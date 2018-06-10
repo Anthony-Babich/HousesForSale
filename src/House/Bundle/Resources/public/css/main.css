@@ -365,7 +365,7 @@ section#product .container#more-prod {
             margin-top: 8px;
             font-family: "MontserratMedium", serif;
             margin-left: 4px;
-            height: 10px; }
+            height: 30px; }
           section#product .container#more-prod .col-xs-11 .more-prod .thumbnail .caption h6 {
             margin-left: 4px;
             margin-top: 12px;
@@ -496,7 +496,7 @@ section#map-container {
       margin-top: 8px;
       font-family: "MontserratMedium", serif;
       margin-left: 4px;
-      height: 10px; }
+      height: 30px; }
     .thumbnail .caption h6 {
       margin-left: 4px;
       margin-top: 12px;
